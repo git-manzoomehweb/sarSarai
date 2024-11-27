@@ -1,0 +1,235 @@
+<basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+    <member type="list" name="list" request="taglist" preview=""></member>
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="18" name="db" usedforid="[##cms.query.catid##]">
+    <member name="scalar" type="scalar" typeid="150" />
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
+    <member name="navigation" type="tree" request="navcatid" parentid="[##cms.query.catid##]" />
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="[##cms.query.catid##]">
+    <member name="tour-list" type="list" link="tour.bc" propertyid="3087374,8181,8076,10000504" perpage="20" pageno="[##cms.query.pagenum|(1)##]" size="311x196" typeid="" order="[##cms.Host.tour-list-order|(ord)##]" />
+    <member name="paging" type="list" request="paging" count="5" parentname="tour-list" /> 
+  </basis>
+  <basis core="dbsource" source="basiscore" mid="1" name="list" lid="1" schemaid="987" term="[##cms.query.term##]">
+    <member name="airline" type="list" request="spelist" />
+  </basis>
+  <basis core="inlinesource" name="joining">
+    <member name="list" lefttblcol="db.tour-list.prp_10000504" righttblcol="list.airline.name" format="join" jointype="leftjoin" />
+</basis>
+<basis core="dbsource" source="basiscore" name="db" mid="1" lid="1" usedforid="[##cms.query.aid##]">
+    <member name="aid-text" type="view" />
+</basis>
+<!doctype html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
+    <title>[##cms.seo.title|(شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا)##]</title>
+    <meta name="description" content="[##cms.seo.description|(شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا)##]">
+    <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+        <member type="list" name="list" request="taglist" preview=""></member>
+    </basis>
+    <basis core="print" datamembername="tag.list">
+        <face filter="key = 'canonical'">
+            <link rel="canonical" href="@value" />
+        </face>
+        <face>
+            <meta property="@key" content="@value" />
+        </face>
+    </basis>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="[##cms.cms.cdn##]/images/custom_icon.png" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="manifest" href="homescreen-manifest.inc">
+    <basis core="call" file="style.inc" />
+    <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js" type="text/javascript"></script>
+</head>
+<body>
+  <main>
+    <div class="loginRegister"></div>
+    <basis core="call" file="header.inc"/> 
+    <div class="w-full bg-[#f4f4f4] relative">
+        <div class="relative w-[1280px] m-auto dir-rtl max-xl:w-full max-xl:px-3 py-6">
+            <div class="flex-col justify-start items-start gap-[90px] inline-flex">
+                <div class="self-stretch flex-col justify-start items-start gap-10 flex">
+                  <div class="self-stretch h-[98px] flex-col justify-start items-start gap-3 flex">
+                    <div class="breadcrumbs h-[43px] text-right w-auto flex-col justify-start items-start gap-3 inline-flex">
+                        <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+                            <li class="inline-block text-sm text-zinc-500 font-normal" itemprop="itemListElement" itemscope
+                            itemtype="https://schema.org/ListItem"> <a class="text-zinc-500 hover:text-primary-500" itemprop="item" href="/" aria-label="home"><span itemprop="name">خانه</span> <meta itemprop="position" content="1" />
+                            </a> </li>
+                            <basis core="print" datamembername="db.navigation">
+                                <face filter="RowNumber=max(RowNumber) and parentcatid<>201107">
+                                    <li class="inline-block text-sm text-zinc-500 font-normal" itemprop="itemListElement" itemscope
+                                    itemtype="https://schema.org/ListItem"> <span itemprop="name">@title</span><meta itemprop="position" content="@rownumber" /> </li>
+                                </face>
+                                <face filter="link is null and parentcatid<>201107">
+                                    <li class="inline-block text-sm text-zinc-500 font-normal" itemprop="itemListElement" itemscope
+                                    itemtype="https://schema.org/ListItem"> <a class="text-zinc-500 hover:text-primary-500" itemprop="item" href="/tour-list.bc?catid=@parentcatid" aria-label="@title"><span itemprop="name">@title</span><meta itemprop="position" content="@rownumber" /></a> </li>
+                                </face>
+                                <face filter="parentcatid<>201107">
+                                    <li class="inline-block text-sm text-zinc-500 font-normal" itemprop="itemListElement" itemscope
+                                    itemtype="https://schema.org/ListItem"> <a class="text-zinc-500 hover:text-primary-500" itemprop="item" href="@link" aria-label="@title"><span itemprop="name">@title</span><meta itemprop="position" content="@rownumber" /></a> </li>
+                                </face>
+                            </basis>
+                        </ul>
+                    </div>
+                    <basis core="print" datamembername="db.scalar"><face><h1 class="self-stretch h-[43px] text-right text-zinc-900 text-3xl font-bold leading-9">@Column1</h1></face></basis>
+                  </div>
+                  <basis core="list" datamembername="joining.list">
+                    <else-layout>
+                        <div class="w-full block py-10">
+                            <div class="self-stretch text-center text-zinc-900 text-base font-normal eading-normal">بارگزاری صفحه با مشکل مواجه شد </div>
+                            <span class="block w-[126px] h-12 border border-solid border-secondary-600 rounded-2xl text-center text-secondary-600 text-base font-normal leading-[48px] cursor-pointer hover:text-primary-500 m-auto mt-[30px]">تلاش مجدد</span>
+                          </div>
+                    </else-layout>
+                    <layout>
+                        <div class="self-stretch flex-col justify-start items-start gap-3 flex">
+                            <div class="items-center grid grid-cols-3 gap-x-44 gap-y-4 w-full max-xl:grid-cols-2">@child</div>
+                        </div>
+                    </layout>
+                    <face filter="link is null">
+                        <article class="w-[311px] h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
+                            <a href="/tour.bc?id=@db.tour-list.id" aria-label="@db.tour-list.title" class="w-full h-full block group">
+                              <header class="px-[17px] py-3">
+                                <h2 class="w-[276px] text-right text-zinc-900 text-xl font-semibold leading-[34px] group-hover:text-primary-600">@db.tour-list.title</h2>
+                              </header>
+                              <figure>
+                                <img class="w-[311px] h-[196px]" loading="lazy" src="[##cms.cms.cdn##]/@db.tour-list.00311X00196prp" alt="@db.tour-list.title" width="311" height="196">
+                              </figure>
+                              <footer class="relative mt-7 px-[17px] w-full flex-col justify-start items-end gap-3 inline-flex">
+                                <div class="absolute -top-[59px] right-[17px] w-[100px] h-12 px-4 py-2 bg-secondary-600 rounded-2xl justify-center items-center gap-2.5 inline-flex group-hover:bg-primary-500">
+                                  <div class="text-zinc-900 text-base font-normal leading-normal">مشاهده</div>
+                                </div>
+                                <div class="self-stretch h-[102px] flex-col justify-start items-start flex">
+                                  <div class="bg-white w-full justify-center items-center inline-flex">
+                                    <div class="self-stretch justify-between items-center inline-flex leading-[48px] h-12 w-full">
+                                      <div class="w-auto h-[29px] px-3 py-1 bg-[#b2e1ff]/50 rounded-3xl justify-end items-center flex">
+                                        <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-list.prp_8076</div>
+                                      </div>
+                                      <div class="justify-start items-center gap-1 flex">
+                                        <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-list.prp_3087374</div>
+                                        <div class="justify-end items-center gap-2.5 flex">
+                                          <div class="w-[30px] h-[30px] p-[5px] justify-center items-center gap-2.5 flex"><img loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal2.png" width="30" height="30" alt="article-list-cal2"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="self-stretch justify-between items-center inline-flex">
+                                    <div class="pl-[18px] py-2 justify-end items-center flex">
+                                      <div class="self-stretch justify-start items-center gap-1 inline-flex">
+                                        <img class="w-auto h-5" src="@list.airline.pic" width="auto" height="20" alt="@db.tour-list.title airline"/>
+                                        <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-list.prp_10000504</div>
+                                      </div>
+                                    </div>
+                                    <div class="dir-ltr flex-col justify-start items-start inline-flex">
+                                      <div class="text-left text-zinc-500 text-sm font-normal leading-tight">بهای تور</div>
+                                      <div class="text-zinc-900 text-xl font-normal leading-[34px] tour-price">@db.tour-list.prp_8181</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </footer>
+                            </a>
+                        </article>
+                    </face>
+                    <face>
+                        <article class="w-[311px] h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
+                            <a href="@db.tour-popular.link" aria-label="@db.tour-list.title" class="w-full h-full block group">
+                              <header class="px-[17px] py-3">
+                                <h2 class="w-[276px] text-right text-zinc-900 text-xl font-semibold leading-[34px] group-hover:text-primary-600">@db.tour-list.title</h2>
+                              </header>
+                              <figure>
+                                <img class="w-[311px] h-[196px]" loading="lazy" src="[##cms.cms.cdn##]/@db.tour-list.00311X00196prp" alt="@db.tour-list.title" width="311" height="196">
+                              </figure>
+                              <footer class="relative mt-7 px-[17px] w-full flex-col justify-start items-end gap-3 inline-flex">
+                                <div class="absolute -top-[59px] right-[17px] w-[100px] h-12 px-4 py-2 bg-secondary-600 rounded-2xl justify-center items-center gap-2.5 inline-flex group-hover:bg-primary-500">
+                                  <div class="text-zinc-900 text-base font-normal leading-normal">مشاهده</div>
+                                </div>
+                                <div class="self-stretch h-[102px] flex-col justify-start items-start flex">
+                                  <div class="bg-white w-full justify-center items-center inline-flex">
+                                    <div class="self-stretch justify-between items-center inline-flex leading-[48px] h-12 w-full">
+                                      <div class="w-auto h-[29px] px-3 py-1 bg-[#b2e1ff]/50 rounded-3xl justify-end items-center flex">
+                                        <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-list.prp_8076</div>
+                                      </div>
+                                      <div class="justify-start items-center gap-1 flex">
+                                        <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-list.prp_3087374</div>
+                                        <div class="justify-end items-center gap-2.5 flex">
+                                          <div class="w-[30px] h-[30px] p-[5px] justify-center items-center gap-2.5 flex"><img loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal2.png" width="30" height="30" alt="article-list-cal2"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="self-stretch justify-between items-center inline-flex">
+                                    <div class="pl-[18px] py-2 justify-end items-center flex">
+                                      <div class="self-stretch justify-start items-center gap-1 inline-flex">
+                                        <img class="w-auto h-5" src="@list.airline.pic" width="auto" height="20" alt="@db.tour-list.title airline"/>
+                                        <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-list.prp_10000504</div>
+                                      </div>
+                                    </div>
+                                    <div class="dir-ltr flex-col justify-start items-start inline-flex">
+                                      <div class="text-left text-zinc-500 text-sm font-normal leading-tight">بهای تور</div>
+                                      <div class="text-zinc-900 text-xl font-normal leading-[34px] tour-price">@db.tour-list.prp_8181</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </footer>
+                            </a>
+                        </article>
+                    </face>
+                  </basis>
+                </div>
+                <div id="paging" class="w-full h-auto text-center clear-both dir-rtl float-right my-7">
+                    <ul class="cd-pagination no-space dir-ltr" id="wibpaging">
+                    <basis core="print" datamembername="db.paging">  
+                    <face  filter="(@sta='pre')and('[##cms.cms.pageurl##]'='')">  
+                    <li class="page-no prev-page w-12 h-12 leading-[48px] bg-secondary-600 rounded-2xl overflow-hidden text-sm mx-6 mb-2.5 inline-block hover:bg-primary-500"><a class="text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page" aria-label="angle-left"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.7499 16.914L0.335938 8.5L8.7499 0.0859985L10.1639 1.5L3.1639 8.5L10.1639 15.5L8.7499 16.914Z" fill="#18181B"/></svg></a></li>
+                    </face>
+                    <face  filter="(@sta='pre')and('[##cms.cms.pageurl##]'<>'')">  
+                    <li class="page-no prev-page w-12 h-12 leading-[48px] bg-secondary-600  rounded-2xl overflow-hidden text-sm mx-6 mb-2.5 inline-block hover:bg-primary-500"><a class="text-zinc-900" href="/[##cms.cms.pageurl##]?pagenum=@page" aria-label="angle-left"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.7499 16.914L0.335938 8.5L8.7499 0.0859985L10.1639 1.5L3.1639 8.5L10.1639 15.5L8.7499 16.914Z" fill="#18181B"/></svg></a></li>
+                    </face>
+                    </basis>
+                    <basis core="print" datamembername="db.paging">   
+                    <face filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'='')">
+                    <li class="page-no w-12 h-12 leading-[48px] bg-white rounded-2xl overflow-hidden text-sm mx-1 mb-2.5 inline-block hover:bg-primary-500"><a class="text-zinc-900" class="current font-color-1" href="/[##cms.cms.link_page##]&pagenum=@page">@page</a></li>
+                    </face>   
+                    <face filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'<>'')">
+                    <li class="page-no w-12 h-12 leading-[48px] bg-white rounded-2xl overflow-hidden text-sm mx-1 mb-2.5 inline-block hover:bg-primary-500"><a class="text-zinc-900" class="current font-color-1" href="/[##cms.cms.pageurl##]?pagenum=@page">@page</a></li>
+                    </face>    
+                    <face filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'='') ">
+                    <li class="page-no w-12 h-12 leading-[48px] bg-white rounded-2xl overflow-hidden text-sm mx-1 mb-2.5 inline-block hover:bg-primary-500"><a class="text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page">@page</a></li>
+                    </face> 
+                    <face filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'<>'') ">
+                    <li class="page-no w-12 h-12 leading-[48px] bg-white rounded-2xl overflow-hidden text-sm mx-1 mb-2.5 inline-block hover:bg-primary-500"><a class="text-zinc-900" href="/[##cms.cms.pageurl##]?pagenum=@page">@page</a></li>
+                    </face>   
+                    </basis>
+                    <basis core="print" datamembername="db.paging">  
+                    <face  filter="(@sta='nex') and ('[##cms.cms.pageurl##]'='')">  
+                    <li class="page-no next-page w-12 h-12 leading-[48px] bg-secondary-600 rounded-2xl overflow-hidden text-sm mx-6 mb-2.5 inline-block hover:bg-primary-500"><a class="text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page" aria-label="angle-right"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.2501 0.0860016L10.6641 8.5L2.2501 16.914L0.836102 15.5L7.8361 8.5L0.836103 1.5L2.2501 0.0860016Z" fill="#18181B"/></svg></a></li>
+                    </face>
+                    <face  filter="(@sta='nex') and ('[##cms.cms.pageurl##]'<>'')">  
+                    <li class="page-no next-page w-12 h-12 leading-[48px] bg-secondary-600 rounded-2xl overflow-hidden text-sm mx-6 mb-2.5 inline-block hover:bg-primary-500"><a class="text-zinc-900" href="/[##cms.cms.pageurl##]?pagenum=@page" aria-label="angle-right"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.2501 0.0860016L10.6641 8.5L2.2501 16.914L0.836102 15.5L7.8361 8.5L0.836103 1.5L2.2501 0.0860016Z" fill="#18181B"/></svg></a></li>
+                    </face>
+                    </basis>
+                 </ul>
+                  </div>
+                  <basis core="print" datamembername="db.aid-text">
+                    <face filter="typeid not in(159,150,160,161,162) and prpid not in (7249,7248)">
+                        <article class="block w-full">
+                            <div class="self-stretch flex-col justify-start items-start gap-6 flex">
+                              <div class="self-stretch flex-col justify-start items-end gap-8 flex">
+                                <header class="self-stretch text-right leading-9"><h3 class="text-black text-3xl font-bold" itemprop="@vocabulary">@text</h3></header>
+                                <footer class="self-stretch text-right text-zinc-900 text-base font-normal leading-normal" itemprop="@vocabulary">@largetext</footer>
+                              </div>
+                            </div>
+                        </article>
+                    </face>
+                  </basis>
+            </div>
+        </div>
+    </div>
+    <basis core="call" file="footer.inc"/>
+  </main>
+</body>
+</html>

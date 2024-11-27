@@ -1,0 +1,231 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sarsara</title>
+    <link href="./HF-output.css" rel="stylesheet" />
+    <script src="js/jquery-3.6.3.min.js" type="text/javascript"></script>
+  </head>
+<body>
+  <main>
+    <div class="loginRegister"></div>
+     <!-- <basis core="call" file="header.inc"/> -->
+     <!-- header start -->
+     <header id="header-resize" class="w-full h-[100px] leading-[100px] bg-white flex flex-col justify-center items-center gap-2.5 max-xl:h-auto max-xl:leading-normal">
+      <div class="header-inner w-[1280px] m-auto max-xl:w-full max-xl:px-3 max-lg:px-0 max-xl:float-right">
+        <section class="hidden h-16 w-full mx-auto bg-white relative z-10 max-xl:block max-xl:px-3 max-xl:h-[77px] max-xl:leading-[77px] max-xl:py-3.5">
+          <div class="w-full dir-ltr">
+              <div class="block w-1/2 float-left text-left">
+                  <a href="/" aria-label="sarsara-m-logo" class="float-left">
+                      <img loading="lazy" src="images/M_logo.png" alt="sarsara" width="48" height="52">
+                  </a>
+              </div>
+
+          </div>
+      </section>
+      <div class="hidden text-primary-800 text-xs pt-3 text-center w-full cursor-pointer max-xl:text-sm max-xl:block" onclick="openHamburgerMenu(this)">
+        <svg class="w-[30px] h-[30px] align-middle absolute top-5 right-3 z-50" viewBox="0 0 30 31" xmlns="http://www.w3.org/2000/svg"><path d="m25 25.5h-20c-0.69 0-1.25-0.5588-1.25-1.25s0.56-1.25 1.25-1.25h20c0.69 0 1.25 0.5588 1.25 1.25s-0.56 1.25-1.25 1.25z" clip-rule="evenodd" fill="#6E6E6E" fill-rule="evenodd"/><path d="m25 8h-20c-0.69 0-1.25-0.55875-1.25-1.25s0.56-1.25 1.25-1.25h20c0.69 0 1.25 0.55875 1.25 1.25s-0.56 1.25-1.25 1.25z" clip-rule="evenodd" fill="#6E6E6E" fill-rule="evenodd"/><path d="m25 16.75h-20c-0.69 0-1.25-0.5588-1.25-1.25s0.56-1.25 1.25-1.25h20c0.69 0 1.25 0.5588 1.25 1.25s-0.56 1.25-1.25 1.25z" clip-rule="evenodd" fill="#6E6E6E" fill-rule="evenodd"/></svg>        
+      </div>
+        <div id="menu-box" class="w-full self-stretch justify-between items-center inline-flex relative transition-all duration-700 max-xl:w-full max-xl:h-full max-xl:bg-white max-xl:max-w-7xl max-xl:fixed max-xl:top-0 max-xl:right-0 max-xl:left-0 max-xl:z-50 max-xl:invisible max-xl:translate-x-[150%] max-xl:px-3">
+          <div onclick="closeHamburgerMenu(this)" class="px-4 hidden max-xl:block max-xl:cursor-pointer absolute top-0 right-0 w-full bg-secondary-500 h-[90px] leading-[90px]">
+            <a href="/" aria-label="sarsara" class="block h-auto float-right dir-rtl"><img class="w-12 h-[52px] align-middle" loading="lazy" src="images/M_logo.png" width="48" height="52" alt="sarsara-gashta"/><span class="text-sm text-zic-900 mr-2">سرسرای گشتا</span></a>
+            <svg class="close-hamburger-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns=""><path d="M6.70714 5.29292C6.31663 4.90238 5.68346 4.90236 5.29292 5.29286C4.90238 5.68337 4.90236 6.31654 5.29286 6.70708L10.5858 12.0005L5.29384 17.2929C4.90333 17.6835 4.90336 18.3166 5.2939 18.7071C5.68444 19.0976 6.3176 19.0976 6.70811 18.7071L12 13.4148L17.2919 18.7071C17.6824 19.0976 18.3156 19.0976 18.7061 18.7071C19.0966 18.3166 19.0967 17.6835 18.7062 17.2929L13.4142 12.0005L18.7071 6.70708C19.0976 6.31654 19.0976 5.68337 18.7071 5.29286C18.3165 4.90236 17.6834 4.90238 17.2929 5.29292L12 10.5862L6.70714 5.29292Z" fill="#000"></path></svg>
+        </div>
+          <div class="justify-start items-center gap-2 flex">
+            <a href="/" aria-label="sarsara" class="block h-auto max-xl:hidden"><img class="w-12 h-[52px] align-middle" loading="lazy" src="images/logo.png" width="48" height="52" alt="sarsara-gashta"/></a>
+            <div class="w-[134px] h-[51px] px-3.5 bg-primary-500 rounded-2xl justify-center items-center gap-2.5 flex hover:bg-secondary cursor-pointer max-xl:absolute max-xl:top-[110px] max-xl:right-4">
+              <div class="w-[90px] file:placeholder:text-right text-Backgerand text-white text-base font-normal ">ورود/ ثبت نام</div>
+            </div>
+            <div class="justify-start items-center flex">
+              <div class="w-12 h-12 pl-3 pr-[11px] pt-3 pb-[11px] justify-center items-center flex">
+                <div class="w-[25px] h-[25px] relative flex-col justify-start items-start flex"><img class="inline-block align-middle" loading="lazy" src="images/sarsara-call-icon.png" width="25" height="25" alt="sarsara-call"></div>
+              </div>
+              <a href="tel:02188540400" class="w-[107px] text-right text-zinc-950 text-base font-normal  hover:text-secondary">021-55886633</a>
+            </div>
+          </div>
+          <nav class="float-right text-right dir-rtl max-xl:fixed max-xl:top-[180px] max-xl:left-0 max-xl:right-0 max-xl:overflow-y-scroll max-xl:h-calc-hamburgermenu max-xl:px-3 max-xl:w-full max-xl:mx-auto">
+              <ul class="justify-start items-center gap-[31px] flex max-xl:block">
+                <li class="max-xl:block max-xl:w-ful max-xl:mx-2 max-lg:mx-0 max-xl:border-b max-xl:border-solid max-xl:border-zinc-100 max-xl:h-[48px] max-xl:leading-[48px]">
+                  <a class="text-right text-zinc-950 text-base font-normal hover:text-secondary" href="">تور خارجی</a>
+                </li>
+                <li class="text-right text-zinc-950 text-base font-normal max-xl:block max-xl:w-ful max-xl:mx-2 max-lg:mx-0 max-xl:border-b max-xl:border-solid max-xl:border-zinc-100 max-xl:h-[48px] max-xl:leading-[48px]">
+                  <a class="text-right text-zinc-950 text-base font-normal hover:text-secondary" href="">تور داخلی</a>
+                </li>
+                <li class="text-right text-zinc-950 text-base font-normal relative max-xl:block max-xl:w-ful max-lg:mx-0 max-xl:mx-2 max-xl:border-b max-xl:border-solid max-xl:border-zinc-100 max-xl:leading-[48px] max-xl:h-auto max-xl:min-h-[48px]">
+                  <div onclick="openParentdropDown(this)" data-dropdown-toggle="dropdownNavbar" class="toggleSubMenuBox cursor-pointer flex items-center justify-between w-full md:p-0 md:w-auto group max-xl:h-full"><span class="text-right text-zinc-950 text-base font-normal group-hover:text-secondary">خدمات سفر</span>
+                      <svg class="arrow-icon-menu inline-block align-middle mr-2.5 mt-2 max-xl:ml-3" fill="none" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m20.414 8.2501-8.414 8.414-8.414-8.414 1.414-1.414 7 7 7-7 1.414 1.414z" clip-rule="evenodd" fill="#000" fill-rule="evenodd"/></svg>
+                    </div>
+                    <div class="dropdownmenu-parent dropdownmenu absolute cursor-pointer hidden group-hover/firstlevel:block z-10 top-[100%] font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 max-xl:shadow-none max-xl:w-full max-xl:bg-inherit max-xl:relative max-lg:static:w-full">
+                        <ul class="py-2 text-sm text-zinc-950 divide-y divide-gray-100 rounded-lg shadow w-44 max-lg:w-full max-xl:shadow-none" aria-labelledby="dropdownLargeButton">
+                          <li class="relative">
+                            <div class="block text-zinc-950 cursor-pointer px-4 py-2 hover:text-secondary text-right max-xl:px-0"
+                                onclick="opendropDown(this)">
+                                <span>
+                                  تور1
+                                </span>
+                                <svg class="arrow-icon-menu float-left w-2.5 h-2.5 ms-2.5 rotate-90 max-lg:rotate-0 inline-block mt-1 max-xl:ml-[19px]"
+                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                    viewBox="0 0 10 6">
+                                    <path stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4" />
+                                </svg>
+                            </div>
+                            <ul 
+                            class="dropdownmenu cursor-pointer group-hover/secondlevel:block hidden absolute right-full top-0 py-2 text-sm z-10  font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44   max-lg:static max-lg:w-full max-lg:right-full max-xl:shadow-none"
+                            aria-labelledby="dropdownLargeButton">
+                            <li class="relative">
+                              <a href="@link" class="block text-zinc-950 px-4 py-2 hover:text-secondary text-right max-lg:w-full">تور2</a>
+                            </li>
+                            </ul>
+                        </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="max-xl:block max-xl:w-ful max-xl:mx-2 max-lg:mx-0 max-xl:border-b max-xl:border-solid max-xl:border-zinc-100 max-xl:h-[48px] max-xl:leading-[48px]">
+                  <a class="text-right text-zinc-950 text-base font-normal hover:text-secondary" href="">مجله گردشگری</a>
+                </li>
+                <li class="max-xl:block max-xl:w-ful max-xl:mx-2 max-lg:mx-0 max-xl:h-[48px] max-xl:leading-[48px]">
+                  <a class="text-right text-zinc-950 text-base font-normal hover:text-secondary" href="">تماس با ما</a>
+                </li>
+              </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+     <!-- header end -->
+    <!-- <basis core="call" file="footer.inc"/> -->
+    <!-- footer start -->
+    <!-- footer end -->
+    <footer id="footer-resize" class="w-full h-auto relative bg-white dir-rtl">
+      <div class="self-stretch h-[148px] px-6 py-4 bg-primary-600 flex-col justify-center items-center gap-2.5 flex max-xl:h-auto">
+        <div class="self-stretch w-[1280px] h-[116px] m-auto flex-col justify-start items-start gap-2.5 flex max-xl:w-full max-xl:h-auto max-xl:px-3 max-lg:px-0">
+          <div class="self-stretch h-[50px] flex-col justify-start items-end gap-4 flex max-xl:w-[150px] max-xl:h-auto">
+            <div class="self-stretch opacity-90 text-right text-zinc-950 text-xl font-bold  leading-[34px] max-xl:text-sm max-xl:font-normal">ارتباط با ما</div>
+            <div class="w-full h-[0px] border-2 border-primary-300"></div>
+          </div>
+          <div class="self-stretch justify-between items-center inline-flex max-xl:block">
+            <div class="justify-start items-center gap-3 flex max-xl:mb-6">
+              <div class="p-1 bg-secondary-600 rounded-2xl justify-start items-center gap-2.5 flex">
+                <div class="w-12 h-12 pl-2.5 pr-[11px] pt-2.5 pb-[11px] justify-center items-center flex">
+                  <div class="relative flex-col justify-start items-start flex">
+                    <svg class="inline-block align-middle" width="27" height="27" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg"><path d="m13.499 11.975c-1.3275 0-2.4075-1.08-2.4075-2.4075s1.08-2.4075 2.4075-2.4075 2.4075 1.08 2.4075 2.4075-1.08 2.4075-2.4075 2.4075zm0-9.3037c-3.8363 0-6.9525 3.1162-6.9525 6.9525 0 4.7587 5.4337 9.45 6.9525 9.45 1.5075 0 6.9412-4.6913 6.9412-9.45 0-3.8362-3.1162-6.9525-6.9412-6.9525z" clip-rule="evenodd" fill="#FAFAFA" fill-rule="evenodd"/><path d="m21.164 16.645c-0.4061-0.2295-0.9214-0.0832-1.1486 0.3229-0.2284 0.4061-0.0844 0.9203 0.3228 1.1486 0.8719 0.4894 1.3523 1.0362 1.3523 1.5413 0 0.6784-0.8471 1.2555-1.3691 1.5491-0.3432 0.2025-0.7268 0.3803-1.1757 0.5445-3.1005 1.1486-8.1821 1.1509-11.294-0.0022-0.41512-0.1508-0.81675-0.3364-1.1959-0.5524-0.50624-0.2824-1.3534-0.8595-1.3534-1.539 0-0.6818 0.84713-1.2578 1.3534-1.5413 0.40613-0.2283 0.55013-0.7425 0.32288-1.1486-0.22837-0.4061-0.74137-0.5501-1.1498-0.3229-1.8292 1.026-2.214 2.2039-2.214 3.0128 0 0.8066 0.38475 1.9845 2.2106 3.0094 0.45787 0.2598 0.94612 0.4848 1.4445 0.666 1.7336 0.6423 3.9465 0.9967 6.2303 0.9967 2.286 0 4.4989-0.3544 6.228-0.9956 0.5434-0.1969 1.0181-0.4185 1.4355-0.666 1.8292-1.0271 2.214-2.2039 2.214-3.0105 0-0.8078-0.3848-1.9856-2.214-3.0128z" clip-rule="evenodd" fill="#FAFAFA" fill-rule="evenodd"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="justify-start items-center gap-2 flex max-xl:block">
+                <div class="justify-start items-center gap-2 flex max-xl:block">
+                  <div class="w-[317px] text-right text-zinc-950 text-xl font-normal  leading-[34px] dir-rtl ectText--1 max-xl:text-sm">تهران خیابان بهار شمالی کوچه ییییییییییییییییییییییییییییطیبا</div>
+                </div>
+              </div>
+            </div>
+            <div class="justify-start items-center gap-3 flex max-xl:mb-6">
+              <div class="p-1 bg-secondary-600 rounded-2xl justify-start items-center gap-2.5 flex">
+                <div class="w-12 h-12 pl-2.5 pr-[11px] pt-2.5 pb-[11px] justify-center items-center flex">
+                  <div class="justify-center items-center inline-flex">
+                    <svg class="inline-block align-middle" fill="none" width="28" height="27" viewBox="0 0 28 27" xmlns="http://www.w3.org/2000/svg"><path d="m10.906 2.8125h6.1874c2.5437 0 4.6125 2.0689 4.6125 4.6114v12.151c0 2.5436-2.0688 4.6125-4.6125 4.6125h-6.1874c-2.5437 0-4.6125-2.0689-4.6125-4.6125v-12.151c0-2.5425 2.0689-4.6114 4.6125-4.6114zm1.5187 5.5688h3.15c0.4657 0 0.8437-0.378 0.8437-0.84375s-0.378-0.84375-0.8437-0.84375h-3.15c-0.4658 0-0.8437 0.378-0.8437 0.84375s0.3779 0.84375 0.8437 0.84375zm0.5062 10.969c0 0.5996 0.4692 1.0687 1.0688 1.0687 0.5051 0 1.0687-0.4567 1.0687-1.0687s-0.5636-1.0688-1.0687-1.0688c-0.504 0-1.0688 0.4568-1.0688 1.0688z" clip-rule="evenodd" fill="#fff" fill-rule="evenodd"/></svg>
+                  </div>
+                </div>
+              </div>
+              <div class="justify-start items-center gap-2 flex">
+                <a href="tel:@answer" class="text-right text-zinc-950 text-xl font-normal  leading-[34px] hover:text-secondary-500 max-xl:text-sm">021-98559966</a>
+                <a href="tel:@answer" class="text-right text-zinc-950 text-xl font-normal  leading-[34px] hover:text-secondary-500 max-xl:text-sm">021-55332244</a>
+              </div>
+            </div>
+            <div class="justify-start items-center gap-3 flex">
+              <div class="p-1 bg-secondary-600 rounded-2xl justify-start items-center gap-2.5 flex">
+                <div class="w-12 h-12 pl-2.5 pr-[11px] pt-2.5 pb-[11px] justify-center items-center flex">
+                  <div class="justify-center items-center inline-flex">
+                    <svg class="inline-block align-middle" fill="none" width="27" height="27" viewBox="0 0 27 27" xmlns="http://www.w3.org/2000/svg"><path d="m19.058 3.375c1.5087 0 2.9599 0.59625 4.0275 1.6661 1.0688 1.0676 1.6662 2.5076 1.6662 4.0151v8.8874c0 3.1388-2.5538 5.6813-5.6937 5.6813h-11.114c-3.1399 0-5.6925-2.5425-5.6925-5.6813v-8.8874c0-3.1388 2.5414-5.6812 5.6925-5.6812h11.114zm1.2724 5.85c-0.2362-0.01238-0.4612 0.0675-0.6311 0.225l-5.0726 4.05c-0.6525 0.5411-1.5874 0.5411-2.25 0l-5.0626-4.05c-0.34987-0.25875-0.83362-0.225-1.125 0.07875-0.30375 0.30375-0.3375 0.78745-0.07987 1.125l0.14737 0.1463 5.1188 3.9937c0.63 0.495 1.3939 0.7651 2.1938 0.7651 0.7976 0 1.575-0.2701 2.2038-0.7651l5.0749-4.0612 0.09-0.09c0.2689-0.3263 0.2689-0.79875-0.0124-1.125-0.1563-0.16763-0.3712-0.27-0.5951-0.2925z" fill="#fff"/></svg>
+                  </div>
+                </div>
+              </div>
+              <a href="mailto:@answer" class="text-right text-zinc-950 text-xl font-normal  leading-[34px] hover:text-secondary-500 max-xl:text-sm">info.suport.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-inner w-[1280px] m-auto flex flex-col justify-start items-start max-xl:w-full max-xl:px-3 max-lg:px-0">
+        <div class="self-stretch px-6 py-[34px] flex-col justify-start items-center gap-2.5 flex">
+          <div class="self-stretch flex-col justify-start items-start gap-11 flex">
+            <div class="self-stretch justify-start items-center gap-[31px] inline-flex dir-ltr max-xl:block">
+              <div class="grow shrink basis-0 flex-col justify-start items-end gap-6 inline-flex max-xl:block max-xl:w-full">
+                <div class="self-stretch flex-col justify-start items-end gap-3 flex max-xl:block">
+                  <div class="self-stretch text-right text-base font-bold  leading-[34px] max-xl:mb-3">اطلاعات تکمیلی</div>
+                  <ul class="self-stretch justify-between items-center inline-flex dir-rtl leading-tight max-xl:block">
+                    <li class="max-xl:mb-3 max-xl:block"><a href="" class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">عوارض خروج از کشور</a></li>
+                    <li class="max-xl:mb-3 max-xl:block"><a href="" class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">سوالات متداول</a></li>
+                    <li class="max-xl:mb-3 max-xl:block"><a href="" class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">قوانین و مقررات</a></li>
+                    <li class="max-xl:mb-3 max-xl:block"><a href="" class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">راهنمای خرید</a></li>
+                    <li class="max-xl:mb-3 max-xl:block"><a href="" class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">راهنمای استرداد</a></li>
+                  </ul>
+                </div>
+                <div class="self-stretch flex-col justify-start items-start gap-3 flex max-xl:block">
+                  <div class="self-stretch text-right text-base font-bold  leading-[34px] max-xl:mb-3">لینک های مفید</div>
+                  <ul class="self-stretch justify-start items-center gap-[31px] inline-flex dir-rtl leading-tight max-xl:block">
+                    <li class="max-xl:mb-3 max-xl:block"><a href="" class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">بلیط قطار</a></li>
+                    <li class="max-xl:mb-3 max-xl:block"><a href="" class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">تور موتورسواری</a></li>
+                    <li class="max-xl:mb-3 max-xl:block"><a href="" class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">تور دبی</a></li>
+                    <li class="max-xl:mb-3 max-xl:block"><a href="" class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">تور استانبول</a></li>
+                  </ul>
+                </div>
+                <div class="self-stretch justify-between items-end inline-flex max-xl:block">
+                  <div class="grow shrink basis-0 h-14 justify-end items-center gap-[22px] flex max-xl:block max-xl:h-auto">
+                    <div class="justify-start items-center gap-1 flex dir-rtl max-xl:mb-3 max-xl:justify-center">
+                      <a href="@largetext" class="w-12 h-12 p-[9px] justify-center items-center flex rounded-lg hover:bg-secondary-500" aria-label="instagram" rel="noopener">
+                        <img class="inline-block align-middle" loading="lazy" src="images/instagram-icon.png" alt="instagram-icon" width="30" height="31">
+                      </a>
+                      <a href="@largetext" class="w-12 h-12 p-[9px] justify-center items-center flex rounded-lg hover:bg-secondary-500" aria-label="whatsapp" rel="noopener">
+                        <img class="inline-block align-middle" loading="lazy" src="images/whatsapp-icon.png" alt="whatsapp-icon" width="30" height="31">
+                      </a>
+                      <a href="@largetext" class="w-12 h-12 p-[9px] justify-center items-center flex rounded-lg hover:bg-secondary-500" aria-label="aparat" rel="noopener">
+                        <img class="inline-block align-middle" loading="lazy" src="images/aparat-icon.png" alt="aparat-icon" width="30" height="31">
+                      </a>
+                      <a href="@largetext" class="w-12 h-12 p-[9px] justify-center items-center flex rounded-lg hover:bg-secondary-500" aria-label="twitter" rel="noopener">
+                        <img class="inline-block align-middle" loading="lazy" src="images/twitter-icon.png" alt="twitter-icon" width="30" height="31">
+                      </a>
+                      <a href="@largetext" class="w-12 h-12 p-[9px] justify-center items-center flex rounded-lg hover:bg-secondary-500" aria-label="linkedin" rel="noopener">
+                        <img class="inline-block align-middle" loading="lazy" src="images/linkedin-icon.png" alt="linkedin-icon" width="30" height="31">
+                      </a>
+                      <a href="@largetext" class="w-12 h-12 p-[9px] justify-center items-center flex rounded-lg hover:bg-secondary-500" aria-label="telegram" rel="noopener">
+                        <img class="inline-block align-middle" loading="lazy" src="images/telegram-icon.png" alt="telegram-icon" width="30" height="31">
+                      </a>
+                    </div>
+                    <div class="justify-start items-center gap-[22px] flex dir-rtl max-xl:mb-3 max-xl:justify-center">
+                      <a rel="nofollow" href="https://www.cao.ir/" class="w-14 h-14 p-1 rounded-lg border border-[#2e2e2e] justify-center items-center flex">
+                        <img class="w-12 h-12 relative inline-block align-middle" loading="lazy" src="images/sign1.png" alt="sign1" width="48" height="48">
+                      </a>
+                      <a rel="nofollow" href="https://www.aira.ir/" class="w-14 h-14 p-1 rounded-lg border border-[#2e2e2e] justify-center items-center flex">
+                        <img class="w-12 h-12 relative inline-block align-middle" loading="lazy" src="images/sign2.png" alt="sign2" width="48" height="48">
+                      </a>
+                      <a rel="nofollow" href="" class="w-14 h-14 p-1 rounded-lg border border-[#2e2e2e] justify-center items-center flex">
+                        <img class="w-12 h-12 relative inline-block align-middle" loading="lazy" src="images/sign3.png" alt="sign3" width="48" height="48">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-px h-full min-h-[260px] border border-zinc-300 max-xl:hidden"></div>
+              <div class="grow shrink basis-0 flex-col justify-start items-end gap-[35px] inline-flex max-xl:block max-xl:mt-6">
+                <div class="self-stretch h-[221px] flex-col justify-start items-start gap-[7px] flex">
+                  <div class="self-stretch text-right text-zinc-950 text-base font-bold  leading-[34px]">درباه‌ی ما</div>
+                  <div class="self-stretch text-right text-zinc-900 text-sm font-normal  leading-5 ectText--9 dir-rtl">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوعلورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع</div>
+                </div>
+              </div>
+            </div>
+            <div class="self-stretch justify-between items-center inline-flex max-xl:block max-xl:text-center">
+              <div class="block max-xl:mb-3">
+                <a href="https://www.basisfly.com/طراحی-سایت-مخصوص-آژانس-مسافرتی" class="inline-block text-right text-zinc-600 text-xs font-normal  hover:text-secondary">طراحی سایت آژانس مسافرتی <a href="https://www.basisfly.com/" class="inline-block text-right text-zinc-600 text-xs font-normal  hover:text-secondary">و رزرواسیون آنلاین توسط بیسیس فلای</a>
+                <img class="inline-block align-middle mr-5 max-xl:mr-0" loading="lazy" src="images/basisfly-logo.png" alt="basisfly-logo" width="68" height="17">
+              </div>
+              <img class="inline-block align-middle max-xl:m-auto" loading="lazy" src="images/trust-logo.png" alt="trust-logo" width="90" height="15">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </footer>
+    <script src="js/sarsara-core.js" type="text/javascript"></script>
+  </main>
+</body>
+</html>

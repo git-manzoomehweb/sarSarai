@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
+    <title>[##cms.seo.title|(شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا)##]</title>
+    <meta name="description" content="[##cms.seo.description|(شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا)##]">
+    <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+        <member type="list" name="list" request="taglist" preview=""></member>
+    </basis>
+    <basis core="print" datamembername="tag.list">
+        <face filter="key = 'canonical'">
+            <link rel="canonical" href="@value" />
+        </face>
+        <face>
+            <meta property="@key" content="@value" />
+        </face>
+    </basis>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="[##cms.cms.cdn##]/images/custom_icon.png" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="manifest" href="homescreen-manifest.inc">
+    <basis core="call" file="style.inc"/>
+    <script src="<[##cms.cms.cdn##]>/_js/jquery/jquery-3.6.3.min.js" type="text/javascript"></script>
+</head>
+<body>
+  <main>
+    <div class="loginRegister"></div>
+     <basis core="call" file="header.inc"/>
+    <div class="w-full relative py-[215px]">
+        <div class="relative w-[1280px] m-auto dir-rtl max-xl:w-full max-xl:px-3">
+            <div class="w-full flex-col justify-start items-center gap-[34px] inline-flex">
+                <img class="rounded-2xl max-xl:w-full max-xl:h-auto max-xl:m-auto max-xl:max-w-max" loading="lazy" src="[##cms.cms.cdn##]/images/404.png" width="425" height="297" alt="404"/>
+                <h1 class="self-stretch text-center text-zinc-900 text-base font-normal eading-normal">صفحه مورد نظر یافت نشد</h1>
+                <a href="/" class="w-[179px] h-12 bg-primary-600 rounded-2xl text-center text-zinc-50 text-base font-normal leading-[48px] cursor-pointer hover:bg-secondary-500">بازگشت به صفحه اصلی</a>
+            </div>
+        </div>
+    </div>
+    <basis core="call" file="footer.inc"/>
+  </main>
+</body>
+</html>

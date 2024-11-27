@@ -1,0 +1,368 @@
+<basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+  <member type="list" name="list" request="taglist" preview=""></member>
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="18" name="db" usedforid="[##cms.query.catid##]">
+  <member name="scalar" type="scalar" typeid="150" />
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
+  <member name="navigation" type="tree" request="navcatid" parentid="[##cms.query.catid##]" />
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
+  <member name="article-top" type="list" link="article.bc" propertyid="7244" perpage="1" size="828x351" order="ord"/>
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="201117">
+  <member name="article-side" type="list" link="article.bc" propertyid="7244" perpage="10" size="134x134" order="ord"/>
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
+  <member name="article-list" type="list" link="article.bc" propertyid="7244" perpage="20" pageno="[##cms.query.pagenum|(1)##]" size="407x245" order="ord"/>
+  <member name="paging" type="list" request="paging" count="5" parentname="article-list" /> 
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="201487">
+  <member name="tour-popular" type="list" link="tour.bc" propertyid="3087374,8181,8076,10000504" perpage="4" size="311x196" typeid="" order="[##cms.Host.tour-list-order|(ord)##]" />
+</basis>
+<basis core="dbsource" source="basiscore" mid="1" name="list" lid="1" schemaid="987" term="[##cms.query.term##]">
+  <member name="airline" type="list" request="spelist" />
+</basis>
+<basis core="inlinesource" name="joining">
+  <member name="list" lefttblcol="db.tour-popular.prp_10000504" righttblcol="list.airline.name" format="join" jointype="leftjoin" />
+</basis>
+<!doctype html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
+    <title>[##cms.seo.title|(شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا)##]</title>
+    <meta name="description" content="[##cms.seo.description|(شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا)##]">
+    <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+        <member type="list" name="list" request="taglist" preview=""></member>
+    </basis>
+    <basis core="print" datamembername="tag.list">
+        <face filter="key = 'canonical'">
+            <link rel="canonical" href="@value" />
+        </face>
+        <face>
+            <meta property="@key" content="@value" />
+        </face>
+    </basis>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="[##cms.cms.cdn##]/images/custom_icon.png" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="manifest" href="homescreen-manifest.inc">
+    <basis core="call" file="style.inc" />
+    <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <main>
+    <div class="loginRegister"></div>
+    <basis core="call" file="header.inc"/>
+    <div class="w-full bg-[#f4f4f4] relative py-6">
+        <div class="relative w-[1280px] m-auto dir-rtl max-xl:w-full max-xl:px-3">
+            <div class="flex-col justify-start items-start gap-[69px] inline-flex w-full">
+              <div class="self-stretch flex-col justify-start items-start gap-[18px] flex">
+                <div class="self-stretch justify-between items-center inline-flex">
+                    <div class="breadcrumbs w-auto flex-col justify-start items-start gap-3 inline-flex">
+                      <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+                          <li class="inline-block text-sm text-zinc-500 font-normal" itemprop="itemListElement" itemscope
+                          itemtype="https://schema.org/ListItem"> <a class="text-zinc-500 hover:text-primary-500" itemprop="item" href="/" aria-label="home"><span itemprop="name">خانه</span> <meta itemprop="position" content="1" />
+                          </a> </li>
+                          <basis core="print" datamembername="db.navigation">
+                              <face filter="RowNumber=max(RowNumber) and parentcatid<>201108">
+                                  <li class="inline-block text-sm text-zinc-500 font-normal" itemprop="itemListElement" itemscope
+                                  itemtype="https://schema.org/ListItem"> <span itemprop="name">@title</span><meta itemprop="position" content="@rownumber" /> </li>
+                              </face>
+                              <face filter="link is null and parentcatid<>201108">
+                                  <li class="inline-block text-sm text-zinc-500 font-normal" itemprop="itemListElement" itemscope
+                                  itemtype="https://schema.org/ListItem"> <a class="text-zinc-500 hover:text-primary-500" itemprop="item" href="/article-list.bc?catid=@parentcatid" aria-label="@title"><span itemprop="name">@title</span><meta itemprop="position" content="@rownumber" /></a> </li>
+                              </face>
+                              <face filter="parentcatid<>201108">
+                                  <li class="inline-block text-sm text-zinc-500 font-normal" itemprop="itemListElement" itemscope
+                                  itemtype="https://schema.org/ListItem"> <a class="text-zinc-500 hover:text-primary-500" itemprop="item" href="@link" aria-label="@title"><span itemprop="name">@title</span><meta itemprop="position" content="@rownumber" /></a> </li>
+                              </face>
+                          </basis>
+                      </ul>
+                  </div>
+
+                    <div class="w-[434px] p-[11px] bg-white rounded-2xl flex-col justify-start items-end gap-2.5 inline-flex">
+                        <form method="get" action="/search_content.bc" class="content-search-form self-stretch justify-start items-center inline-flex">
+                            <div class="w-12 h-12 p-3 justify-center items-center flex">
+                                <button type="submit" aria-label="search content" class="bg-[unset] cursor-pointer grow shrink basis-0 self-stretch p-0.5 justify-center items-center inline-flex">
+                                    <svg class="inline-block align-middle" fill="none" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m17.621 17.654c0.3865-0.3839 1.0061-0.3839 1.3927 0l2.5546 2.0621h0.0444c0.5168 0.5224 0.5168 1.3694 0 1.8918-0.5169 0.5224-1.3548 0.5224-1.8717 0l-2.12-2.4297-0.0804-0.0908c-0.1499-0.1897-0.2327-0.4262-0.2327-0.6713 0-0.286 0.1127-0.5602 0.3131-0.7621zm-7.0431-15.654c2.275 0 4.4567 0.91344 6.0653 2.5394 1.6087 1.6259 2.5124 3.8312 2.5124 6.1305 0 4.7883-3.8404 8.67-8.5777 8.67-4.7373 0-8.5776-3.8817-8.5776-8.67 0-4.7882 3.8403-8.6699 8.5776-8.6699z" fill="#71717A"/></svg> 
+                                </button>
+                            </div>
+                            <div class="text-right text-zinc-500 text-sm font-normal leading-normal"><input type="text" value="" class="contect-searching" name="search-content-name" placeholder="جستجو" aria-label="contect-searching"></div>
+                        </form>
+                      </div>
+                </div>
+                <div class="block w-full">
+                  <div class="w-[830px] float-right max-xl:w-full max-xl:mb-4">
+                    <basis core="list" datamembername="db.article-top">
+                      <layout>@child</layout>
+                      <face filter="link is null">
+                        <a href="article.bc?id=@id" aria-label="@title" class="h-[351px] overflow-hidden mb-[22px] bg-white rounded-2xl justify-center items-center inline-flex max-xl:text-center max-xl:bg-[unset] max-xl:block max-xl:m-auto max-xl:h-auto max-xl:mb-4">
+                          <img class="w-[828px] h-[351px] max-xl:w-full max-xl:h-auto max-xl:max-w-max max-xl:m-auto max-xl:rounded-2xl" loading="lazy" src="[##cms.cms.cdn##]/@00828X00351prp" alt="@title" width="828" height="351"/>
+                        </a>
+                      </face>
+                      <face>
+                        <a href="@link" aria-label="@title" class="h-[351px] overflow-hidden mb-[22px] bg-white rounded-2xl justify-center items-center inline-flex max-xl:text-center max-xl:bg-[unset] max-xl:block max-xl:m-auto max-xl:h-auto max-xl:mb-4">
+                          <img class="w-[828px] h-[351px] max-xl:w-full max-xl:h-auto max-xl:max-w-max max-xl:m-auto max-xl:rounded-2xl" loading="lazy" src="[##cms.cms.cdn##]/@00828X00351prp" alt="@title" width="828" height="351"/>
+                        </a>
+                      </face>
+                    </basis>
+                    <div class="self-stretch flex-col justify-start items-end gap-[11px] flex">
+                      <basis core="print" datamembername="db.scalar"><face><h1 class="self-stretch text-right text-zinc-900 text-3xl font-bold leading-9 mb-[11px]">@Column1</h1></face></basis>
+                      <basis core="list" datamembername="db.article-list">
+                        <else-layout>
+                          <div class="w-full block py-10">
+                            <div class="self-stretch text-center text-zinc-900 text-base font-normal eading-normal">بارگزاری صفحه با مشکل مواجه شد </div>
+                            <span class="block w-[126px] h-12 border border-solid border-secondary-600 rounded-2xl text-center text-secondary-600 text-base font-normal leading-[48px] cursor-pointer hover:text-primary-500 m-auto mt-[30px]">تلاش مجدد</span>
+                          </div>
+                        </else-layout>
+                        <layout>
+                          <div class="self-stretch flex-col justify-start items-start gap-4 flex">
+                            <div class="grid grid-cols-2 gap-4 max-xl:grid-cols-1 max-xl:w-full">@child</div>
+                          </div>
+                        </layout>
+                        <face filter="link is null">
+                          <article class="w-[407px] h-[407px] pb-7 bg-white rounded-2xl overflow-hidden max-xl:m-auto">
+                            <a href="/article.bc?id=@id" aria-label="hizha-m-logo" class="w-full h-full group">
+                              <figure>
+                                <img class="w-[407px] h-[245px]" loading="lazy" src="[##cms.cms.cdn##]/@00407X00245prp" alt="@title" width="407" height="245" />
+                              </figure>
+                              <div class="flex-col justify-start items-start gap-[5px] inline-flex px-[19px] w-full">
+                                <header>
+                                  <h2 class="self-stretch mb-[5px] text-right text-zinc-900 text-base font-normal leading-normal group-hover:text-primary-700">@title</h2>
+                                  <div class="ectText--2 mb-[5px] self-stretch text-right text-zinc-900 text-sm font-normal leading-5">@prp_7244</div>
+                                </header>
+                                <footer class="self-stretch justify-between items-center inline-flex leading-[48px] h-12">
+                                  <div class="text-right text-primary-700 text-sm font-normal group-hover:text-secondary-600">خواندن بیشتر</div>
+                                  <div class="bg-white rounded-2xl justify-end items-center flex">
+                                    <div class="text-right text-zinc-600 text-sm font-normal pl-3">@date</div> 
+                                    <div class="justify-center items-center flex">
+                                      <img loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal.png" width="30" height="29" alt="article-list-cal">
+                                    </div>
+                                  </div>
+                                </footer>
+                              </div>
+                            </a>
+                          </article>
+                        </face>
+                        <face>
+                          <article class="w-[407px] h-[407px] pb-7 bg-white rounded-2xl overflow-hidden max-xl:m-auto">
+                            <a href="@link" aria-label="hizha-m-logo" class="w-full h-full group">
+                              <figure>
+                                <img class="w-[407px] h-[245px]" loading="lazy" src="[##cms.cms.cdn##]/@00407X00245prp" alt="@title" width="407" height="245" />
+                              </figure>
+                              <div class="flex-col justify-start items-start gap-[5px] inline-flex px-[19px] w-full">
+                                <header>
+                                  <h2 class="self-stretch mb-[5px] text-right text-zinc-900 text-base font-normal leading-normal group-hover:text-primary-700">@title</h2>
+                                  <div class="ectText--2 mb-[5px] self-stretch text-right text-zinc-900 text-sm font-normal leading-5">@prp_7244</div>
+                                </header>
+                                <footer class="self-stretch justify-between items-center inline-flex leading-[48px] h-12">
+                                  <div class="text-right text-primary-700 text-sm font-normal group-hover:text-secondary-600">خواندن بیشتر</div>
+                                  <div class="bg-white rounded-2xl justify-end items-center flex">
+                                    <div class="text-right text-zinc-600 text-sm font-normal pl-3">@date</div> 
+                                    <div class="justify-center items-center flex">
+                                      <img loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal.png" width="30" height="29" alt="article-list-cal">
+                                    </div>
+                                  </div>
+                                </footer>
+                              </div>
+                            </a>
+                          </article>
+                        </face>
+                      </basis>
+                    </div>
+                  </div>
+                  <div class="px-3 py-6 bg-white rounded-2xl float-left mr-4  max-xl:w-full max-xl:mb-4 max-xl:mr-0">
+                    <div class="w-[410px] flex-col justify-start items-start gap-3 inline-flex max-xl:w-full">
+                      <div class="self-stretch flex-col justify-start items-start gap-[21px] flex">
+                        <h2 class="w-[410px] text-right text-zinc-900 text-xl font-bold leading-[34px] border-b border-zinc-300 pb-5 max-xl:w-full">آخرین اخبار</h2>
+                        <basis core="list" datamembername="db.article-side">
+                          <layout><div class="last-news self-stretch flex-col justify-start items-start gap-3 flex">@child</div></layout>
+                          <face filter="link is null">
+                            <article class="border-b border-zinc-300 py-3 w-full">
+                              <a href="/article.bc?id=@id" aria-label="@title" class="w-full h-full block group float-right">
+                                <figure class="w-[134px] h-[134px] float-right rounded-2xl overflow-hidden"><img loading="lazy" src="[##cms.cms.cdn##]/@00134X00134prp" width="134" height="134" alt="@title"></figure>
+                                <div class="pr-[18px] w-calc-134 flex-col justify-start items-end gap-1 inline-flex">
+                                  <header class="w-full">
+                                    <h2 class="self-stretch text-right text-zinc-900 text-base font-bold leading-[34px] group-hover:text-primary-700">@title</h2>
+                                    <div class="self-stretch text-right text-zinc-900 text-sm font-normal leading-tight">@prp_7244</div>
+                                  </header>
+                                  <footer class="self-stretch justify-between items-center inline-flex leading-[48px] h-12">
+                                    <div class="text-right text-primary-700 text-sm font-normal group-hover:text-secondary-600">خواندن بیشتر</div>
+                                    <div class="bg-white rounded-2xl justify-end items-center flex">
+                                      <div class="text-right text-zinc-600 text-sm font-normal pl-3">@date</div> 
+                                      <div class="justify-center items-center flex">
+                                        <img loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal.png" width="30" height="29" alt="article-list-cal">
+                                      </div>
+                                    </div>
+                                  </footer>
+                                </div>
+                              </a>
+                            </article>
+                          </face>
+                          <face>
+                            <article class="border-b border-zinc-300 py-3 w-full">
+                              <a href="@link" aria-label="@title" class="w-full h-full block group float-right">
+                                <figure class="w-[134px] h-[134px] float-right rounded-2xl overflow-hidden"><img loading="lazy" src="[##cms.cms.cdn##]/@00134X00134prp" width="134" height="134" alt="@title"></figure>
+                                <div class="pr-[18px] w-calc-134 flex-col justify-start items-end gap-1 inline-flex">
+                                  <header class="w-full">
+                                    <h2 class="self-stretch text-right text-zinc-900 text-base font-bold leading-[34px] group-hover:text-primary-700">@title</h2>
+                                    <div class="self-stretch text-right text-zinc-900 text-sm font-normal leading-tight">@prp_7244</div>
+                                  </header>
+                                  <footer class="self-stretch justify-between items-center inline-flex leading-[48px] h-12">
+                                    <div class="text-right text-primary-700 text-sm font-normal group-hover:text-secondary-600">خواندن بیشتر</div>
+                                    <div class="bg-white rounded-2xl justify-end items-center flex">
+                                      <div class="text-right text-zinc-600 text-sm font-normal pl-3">@date</div> 
+                                      <div class="justify-center items-center flex">
+                                        <img loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal.png" width="30" height="29" alt="article-list-cal">
+                                      </div>
+                                    </div>
+                                  </footer>
+                                </div>
+                              </a>
+                            </article>
+                          </face>
+                        </basis>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="paging" class="w-full h-auto text-center clear-both dir-rtl float-right my-7">
+                <ul class="cd-pagination no-space dir-ltr" id="wibpaging">
+                <basis core="print" datamembername="db.paging">  
+                <face  filter="(@sta='pre')and('[##cms.cms.pageurl##]'='')">  
+                <li class="page-no prev-page w-12 h-12 leading-[48px] bg-secondary-600 rounded-2xl overflow-hidden text-sm mx-6 mb-2.5 inline-block hover:bg-primary-500"><a class="text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page" aria-label="angle-left"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.7499 16.914L0.335938 8.5L8.7499 0.0859985L10.1639 1.5L3.1639 8.5L10.1639 15.5L8.7499 16.914Z" fill="#18181B"/></svg></a></li>
+                </face>
+                <face  filter="(@sta='pre')and('[##cms.cms.pageurl##]'<>'')">  
+                <li class="page-no prev-page w-12 h-12 leading-[48px] bg-secondary-600  rounded-2xl overflow-hidden text-sm mx-6 mb-2.5 inline-block hover:bg-primary-500"><a class="text-zinc-900" href="/[##cms.cms.pageurl##]?pagenum=@page" aria-label="angle-left"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.7499 16.914L0.335938 8.5L8.7499 0.0859985L10.1639 1.5L3.1639 8.5L10.1639 15.5L8.7499 16.914Z" fill="#18181B"/></svg></a></li>
+                </face>
+                </basis>
+                <basis core="print" datamembername="db.paging">   
+                <face filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'='')">
+                <li class="page-no w-12 h-12 leading-[48px] bg-white rounded-2xl overflow-hidden text-sm mx-1 mb-2.5 inline-block hover:bg-primary-500"><a class="text-zinc-900" class="current font-color-1" href="/[##cms.cms.link_page##]&pagenum=@page">@page</a></li>
+                </face>   
+                <face filter="(@page=[##cms.query.pagenum|(1)##])and('[##cms.cms.pageurl##]'<>'')">
+                <li class="page-no w-12 h-12 leading-[48px] bg-white rounded-2xl overflow-hidden text-sm mx-1 mb-2.5 inline-block hover:bg-primary-500"><a class="text-zinc-900" class="current font-color-1" href="/[##cms.cms.pageurl##]?pagenum=@page">@page</a></li>
+                </face>    
+                <face filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'='') ">
+                <li class="page-no w-12 h-12 leading-[48px] bg-white rounded-2xl overflow-hidden text-sm mx-1 mb-2.5 inline-block hover:bg-primary-500"><a class="text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page">@page</a></li>
+                </face> 
+                <face filter="(@page<>[##cms.query.pagenum|(1)##]) and (@page>0) and (@sta='no') and ('[##cms.cms.pageurl##]'<>'') ">
+                <li class="page-no w-12 h-12 leading-[48px] bg-white rounded-2xl overflow-hidden text-sm mx-1 mb-2.5 inline-block hover:bg-primary-500"><a class="text-zinc-900" href="/[##cms.cms.pageurl##]?pagenum=@page">@page</a></li>
+                </face>   
+                </basis>
+                <basis core="print" datamembername="db.paging">  
+                <face  filter="(@sta='nex') and ('[##cms.cms.pageurl##]'='')">  
+                <li class="page-no next-page w-12 h-12 leading-[48px] bg-secondary-600 rounded-2xl overflow-hidden text-sm mx-6 mb-2.5 inline-block hover:bg-primary-500"><a class="text-zinc-900" href="/[##cms.cms.link_page##]&pagenum=@page" aria-label="angle-right"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.2501 0.0860016L10.6641 8.5L2.2501 16.914L0.836102 15.5L7.8361 8.5L0.836103 1.5L2.2501 0.0860016Z" fill="#18181B"/></svg></a></li>
+                </face>
+                <face  filter="(@sta='nex') and ('[##cms.cms.pageurl##]'<>'')">  
+                <li class="page-no next-page w-12 h-12 leading-[48px] bg-secondary-600 rounded-2xl overflow-hidden text-sm mx-6 mb-2.5 inline-block hover:bg-primary-500"><a class="text-zinc-900" href="/[##cms.cms.pageurl##]?pagenum=@page" aria-label="angle-right"><svg width="11" height="17" class="inline-block align-middle" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.2501 0.0860016L10.6641 8.5L2.2501 16.914L0.836102 15.5L7.8361 8.5L0.836103 1.5L2.2501 0.0860016Z" fill="#18181B"/></svg></a></li>
+                </face>
+                </basis>
+             </ul>
+              </div>
+              <div class="block w-full">
+                <h3 class="mb-6 text-right text-zinc-900 text-2xl font-semibold">تور های محبوب</h3>
+                <basis core="list" datamembername="joining.list">
+                  <layout><div class="items-center grid grid-cols-4 gap-4 max-xl:grid-cols-2  max-xl:w-full">@child</div></layout>
+                  <face filter="link is null">
+                    <article class="w-[311px] h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
+                      <a href="/tour.bc?id=@db.tour-popular.id" aria-label="@db.tour-popular.title" class="w-full h-full block group">
+                        <header class="px-[17px] py-3">
+                          <h2 class="w-[276px] text-right text-zinc-900 text-xl font-semibold leading-[34px] group-hover:text-primary-600">@db.tour-popular.title</h2>
+                        </header>
+                        <figure>
+                          <img class="w-[311px] h-[196px]" loading="lazy" src="[##cms.cms.cdn##]/@db.tour-popular.00311X00196prp" alt="@db.tour-popular.title" width="311" height="196">
+                        </figure>
+                        <footer class="relative mt-9 px-[17px] w-full flex-col justify-start items-end gap-3 inline-flex">
+                          <div class="absolute -top-[66px] right-[17px] w-[100px] h-12 px-4 py-2 bg-secondary-600 rounded-2xl justify-center items-center gap-2.5 inline-flex group-hover:bg-primary-500">
+                            <div class="text-zinc-900 text-base font-normal leading-normal">مشاهده</div>
+                          </div>
+                          <div class="self-stretch h-[102px] flex-col justify-start items-start flex">
+                            <div class="bg-white w-full justify-center items-center inline-flex">
+                              <div class="self-stretch justify-between items-center inline-flex leading-[48px] h-12 w-full">
+                                <div class="justify-start items-center gap-1 flex">
+                                  <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_3087374</div>
+                                  <div class="w-12 h-12 justify-center items-center gap-2.5 flex">
+                                    <div class="w-[30px] h-[30px] p-[5px] justify-center items-center gap-2.5 flex"><img loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal2.png" width="30" height="30" alt="article-list-cal2"></div>
+                                  </div>
+                                </div>
+                                <div class="w-auto h-[29px] px-3 py-1 bg-[#b2e1ff]/50 rounded-3xl justify-end items-center flex">
+                                  <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8076</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="self-stretch justify-between items-center inline-flex">
+                              <div class="pl-[18px] py-2 justify-end items-center flex">
+                                <div class="self-stretch justify-start items-center gap-1 inline-flex">
+                                  <img class="w-auto h-5" src="@list.airline.pic" width="auto" height="20" alt="@db.tour-popular.title airline"/>
+                                  <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_10000504</div>
+                                </div>
+                              </div>
+                              <div class="dir-ltr flex-col justify-start items-start inline-flex">
+                                <div class="text-left text-primary-500 text-sm font-normal leading-tight">بهای تور</div>
+                                <div class="text-zinc-900 text-xl font-normal leading-[34px] tour-price">@db.tour-popular.prp_8181</div>
+                              </div>
+                            </div>
+                          </div>
+                        </footer>
+                      </a>
+                    </article>
+                  </face>
+                  <face>
+                    <article class="w-[311px] h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
+                      <a href="@db.tour-popular.link" aria-label="@db.tour-popular.title" class="w-full h-full block group">
+                        <header class="px-[17px] py-3">
+                          <h2 class="w-[276px] text-right text-zinc-900 text-xl font-semibold leading-[34px] group-hover:text-primary-600">@db.tour-popular.title</h2>
+                        </header>
+                        <figure>
+                          <img class="w-[311px] h-[196px]" loading="lazy" src="[##cms.cms.cdn##]/@db.tour-popular.00311X00196prp" alt="@db.tour-popular.title" width="311" height="196">
+                        </figure>
+                        <footer class="relative mt-9 px-[17px] w-full flex-col justify-start items-end gap-3 inline-flex">
+                          <div class="absolute -top-[66px] right-[17px] w-[100px] h-12 px-4 py-2 bg-secondary-600 rounded-2xl justify-center items-center gap-2.5 inline-flex group-hover:bg-primary-500">
+                            <div class="text-zinc-900 text-base font-normal leading-normal">مشاهده</div>
+                          </div>
+                          <div class="self-stretch h-[102px] flex-col justify-start items-start flex">
+                            <div class="bg-white w-full justify-center items-center inline-flex">
+                              <div class="self-stretch justify-between items-center inline-flex leading-[48px] h-12 w-full">
+                                <div class="justify-start items-center gap-1 flex">
+                                  <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_3087374</div>
+                                  <div class="w-12 h-12 justify-center items-center gap-2.5 flex">
+                                    <div class="w-[30px] h-[30px] p-[5px] justify-center items-center gap-2.5 flex"><img loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal2.png" width="30" height="30" alt="article-list-cal2"></div>
+                                  </div>
+                                </div>
+                                <div class="w-auto h-[29px] px-3 py-1 bg-[#b2e1ff]/50 rounded-3xl justify-end items-center flex">
+                                  <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8076</div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="self-stretch justify-between items-center inline-flex">
+                              <div class="pl-[18px] py-2 justify-end items-center flex">
+                                <div class="self-stretch justify-start items-center gap-1 inline-flex">
+                                  <img class="w-auto h-5" src="@list.airline.pic" width="auto" height="20" alt="@db.tour-popular.title airline"/>
+                                  <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_10000504</div>
+                                </div>
+                              </div>
+                              <div class="dir-ltr flex-col justify-start items-start inline-flex">
+                                <div class="text-left text-primary-500 text-sm font-normal leading-tight">بهای تور</div>
+                                <div class="text-zinc-900 text-xl font-normal leading-[34px] tour-price">@db.tour-popular.prp_8181</div>
+                              </div>
+                            </div>
+                          </div>
+                        </footer>
+                      </a>
+                    </article>
+                  </face>
+                </basis>
+              </div>
+            </div>
+          </div>
+    </div>
+    <basis core="call" file="footer.inc"/>
+  </main>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<basis core="dbsource" source="basiscore" name="db" mid="1" lid="1" usedforid="2369208">
+  <member name="sarsara-services" type="view" />
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db">
+  <member name="tourcat" type="tree" request="cat" parentid="211890" perpage="5" order="[##cms.Host.tour-cat-order##]"></member>
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="211896">
+  <member name="qu-list" type="list" link="article.bc" propertyid="" perpage="" typeid="159" order="ord"/>
+</basis>
+<!doctype html>
+<html lang="fa">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
+        <title>شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا</title>
+        <meta name="description" content="ارائه بهترین سفر ها و تورهای خارجی و تور های داخلی و طبیعتگردی با بهترین کیفیت بصورت صفر تا صد تمامی خدمات سفر بلیط هواپیما و رزرو هتل بصورت آنلاین و تهیه بیمه مسافرتی و ویزا های کشورهای مختلف مانند تور سوییس و تور استانبول و تور فرانسه و تورآلپ خدمات سرسرای گشـتا می باشد.">
+        <link rel="canonical" href="[##cms.request.:scheme##]://[##cms.request.full-url##]" />
+        <meta name="og:locale" content="fa_IR">
+        <meta property="og:title" content="شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا">
+        <meta property="og:url" content="[##cms.cms.cdn##]">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="sarsarai">
+        <meta property="og:image" content="[##cms.cms.cdn##]/images/logo.png">
+        <meta property="og:image:alt" content="سرسرای گشـتا">
+        <meta property="og:description" content="ارائه بهترین سفر ها و تورهای خارجی و تور های داخلی و طبیعتگردی با بهترین کیفیت بصورت صفر تا صد تمامی خدمات سفر بلیط هواپیما و رزرو هتل بصورت آنلاین و تهیه بیمه مسافرتی و ویزا های کشورهای مختلف مانند تور سوییس و تور استانبول و تور فرانسه و تورآلپ خدمات سرسرای گشـتا می باشد.">
+        <meta property="og:image:height" content="512">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:type" content="image/png">
+        <meta property="seo:robots" content="index, follow" />
+        <!-- samandehi-enamad optional -->
+        <meta name="enamad" content="" />
+        <meta name="samandehi" content="" />
+        <!-- pwa metatags -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="apple-touch-icon" href="[##cms.cms.cdn##]/images/custom_icon.png" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <link rel="manifest" href="homescreen-manifest.inc">
+        <!-- preload banner images -->
+        <!-- define -->
+        <!-- <link rel="preload" as="image" imageSrcSet="image address" fetchpriority="high" /> -->
+        <!-- common styles for all page -->
+        <basis core="call" file="style.inc" />
+        <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js" type="text/javascript"></script>
+    </head>
+<body onload="loadContentHomaPage()">
+  <div id="bk-popup" class="hidden"></div>
+    <div id="image-popup" class="hidden w-full fixed z-60 right-0 left-0 m-auto text-center">
+        <div class="wrapper-popup">
+            <div class="checked-img">
+                <span id="close-popup" class="text-white float-left ml-6 mt-6 text-4xl cursor-pointer" onclick="closePopup()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M18.3 5.7a1 1 0 0 1 0 1.4L13.4 12l4.9 4.9a1 1 0 0 1-1.4 1.4L12 13.4l-4.9 4.9a1 1 0 1 1-1.4-1.4L10.6 12 5.7 7.1a1 1 0 0 1 1.4-1.4L12 10.6l4.9-4.9a1 1 0 0 1 1.4 0Z"/></svg></span>
+            </div>
+            <figure class="each-figure fade">
+                <div class="container-popup w-1/2 max-w-max m-auto block"><img class="w-full h-auto max-w-max" src="[##cms.cms.cdn##]/images/sarsara-popup.jpg" width="500" height="301" alt="sarsara popup"></div>
+            </figure>
+        </div>
+    </div>
+  <main>
+    <div class="loginRegister"></div>
+     <basis core="call" file="header.inc"/>
+    <div class="w-full bg-white">
+      <div class="search-bg clear-both mb-[126px] rounded-b-[50px] m-auto max-xl:bg-none max-xl:h-auto max-xl:w-full max-xl:mb-7">
+        <div class="search-box-container fa w-[1280px] m-auto clear-both max-xl:w-full">
+            <div id="search-box" class="backdrop-opacity rounded-2xl mt-[250px] py-[30px] px-[22px] w-full m-auto float-right max-xl:bg-[#B7B7B7] max-xl:mt-8 max-xl:p-1"><div id="ballsWaveG"><div id="ballsWaveG_1" class="ballsWaveG"></div><div id="ballsWaveG_2" class="ballsWaveG"></div><div id="ballsWaveG_3" class="ballsWaveG"></div><div id="ballsWaveG_4" class="ballsWaveG"></div><div id="ballsWaveG_5" class="ballsWaveG"></div><div id="ballsWaveG_6" class="ballsWaveG"></div><div id="ballsWaveG_7" class="ballsWaveG"></div><div id="ballsWaveG_8" class="ballsWaveG"></div></div></div>
+            <div class="clr"></div>
+        </div>
+        <div class="clr"></div>
+      </div>
+      <div class="w-[1280px] m-auto dir-rtl max-xl:w-full max-xl:px-3">
+        <basis core="print" datamembername="db.sarsara-services">
+            <layout>
+              <div class="mb-[70px] max-xl:mb-7">
+                <div class="self-stretch flex-col justify-start items-center flex max-xl:block">
+                  <h3 class="self-stretch mb-9 text-right text-zinc-900 text-3xl font-bold leading-9 max-xl:text-base max-xl:leading-normal">خدمات سرسرای گشتا</h3>
+                  <div class="grid grid-cols-3 gap-2 dir-rtl max-xl:block">
+                    @child
+                  </div>
+                </div>
+              </div>
+            </layout> 
+            <face filter="prpID=7246 and RowNumber<6">
+              <article class="h-20 justify-start items-center gap-2 flex overflow-hidden max-xl:w-full max-xl:clear-both max-xl:mb-2">
+                <figure class="p-4 bg-secondary-500 rounded-2xl justify-start items-center gap-2.5 flex max-xl:p-[7px]">
+                  <div class="w-12 h-12 p-[3px] justify-center items-center flex">
+                    <div class="w-[42px] h-[42px] pl-[5.87px] pr-[5px] py-[3.94px] justify-center items-center inline-flex"><img class="inline-block align-middle" loading="lazy" src="[##cms.cms.cdn##]/images/paper-icon.png" width="42" height="42" alt="paper-icon"></div>
+                  </div>
+                </figure>
+                <div class="grow shrink basis-0 flex-col justify-start items-end gap-2 inline-flex">
+                  <header class="self-stretch text-right text-primary-500 ectText--1"><h3 class=" text-base font-bold leading-[34px]">@text</h3></header>
+                  <footer class="self-stretch text-right text-zinc-900 text-sm font-normal leading-tight ectText--2">@largetext</footer>
+                </div>
+              </article>
+            </face>
+        </basis>
+        <basis core="tree" dataMemberName="db.tourcat" idCol="catid" parentidCol="ParentID" nullvalue="211890">
+          <layout>
+            <div class="block mb-[70px] max-xl:mb-7">
+              <h3 class="self-stretch mb-9 text-right text-zinc-900 text-3xl font-bold leading-9 max-xl:text-base">مقاصد گردشگری خارجی</h3>
+              <div class="self-stretch grow shrink basis-0 justify-start items-center gap-3 inline-flex dir-rtl max-xl:block">
+                @child
+              </div>
+            </div>
+          </layout>
+          <face filter="link is null">
+            <article class="w-[246px] h-[246px] relative overflow-hidden grow shrink basis-0 self-stretch bg-Backgerand rounded-2xl justify-center items-center gap-2.5 flex max-xl:block max-xl:w-[168px] max-xl:h-[168px] max-xl:m-auto max-xl:mb-5">
+              <a class="w-full h-full group" href="tour-list.bc?catidid=@catid" aria-label="@title">
+                <figure class="absolute top-0 right-0 w-full h-full"><img loading="lazy" src="[##cms.cms.cdn##]/@image" alt="@title" width="246" height="246"></figure>
+                <header class="absolute top-0 right-0 w-full h-full grow shrink basis-0 self-stretch px-4 py-6 tour-gradient flex-col justify-end items-center gap-2.5 inline-flex">
+                  <h2 class="self-stretch text-center text-white text-3xl font-bold leading-9 group-hover:text-secondary-600">@title</h2>
+                </header>
+              </a>
+            </article>
+          </face>
+          <face>
+            <article class="w-[246px] h-[246px] relative overflow-hidden grow shrink basis-0 self-stretch bg-Backgerand rounded-2xl justify-center items-center gap-2.5 flex max-xl:block max-xl:w-[168px] max-xl:h-[168px] max-xl:m-auto max-xl:mb-5">
+              <a class="w-full h-full group" href="@link" aria-label="@title">
+                <figure class="absolute top-0 right-0 w-full h-full"><img loading="lazy" src="[##cms.cms.cdn##]/@image" alt="@title" width="246" height="246"></figure>
+                <header class="absolute top-0 right-0 w-full h-full grow shrink basis-0 self-stretch px-4 py-6 tour-gradient flex-col justify-end items-center gap-2.5 inline-flex">
+                  <h2 class="self-stretch text-center text-white text-3xl font-bold leading-9 group-hover:text-secondary-600">@title</h2>
+                </header>
+              </a>
+            </article>
+          </face>
+        </basis>
+        <div class="question-show block mb-[70px] max-xl:mb-7">
+            <div class="block w-full mb-6">
+              <h3 class="text-right mb-3 text-Text 900 text-3xl font-bold leading-9">سوالات متداول</h3>
+              <div class="text-right text-Text 900 text-base font-normal leading-normal">آماده پاسخگویی شبانه روزی به شما هستیم. لطفا پیش از تماس تلفنی یا ارسال ایمیل، </div>
+            </div>
+            <basis core="list" datamembername="db.qu-list">
+              <layout><ul class="question-items mb-6 justify-start items-center gap-2 inline-flex">@child</ul></layout>
+              <face>
+                <li class="group cursor-pointer w-auto bg-zinc-200 text-zinc-500 text-base px-6 py-4 rounded-2xl flex-col justify-start items-start gap-2.5 inline-flex hover:bg-primary-600 hover:text-white max-xl:w-[110px]  max-xl:h-[54px] max-xl:leading-[54px] max-xl:p-0" data-id="@id" onclick="load_questions(this)">
+                  <div class="text-center text-base font-normal leading-normal group-hover:text-white max-xl:text-sm max-xl:w-full max-xl:leading-[54px]">@title</div>
+                </li>
+              </face>
+            </basis>
+            <div class="w-full m-auto py-12 float-right question-loading hidden">
+              <div id="ballsWaveG">
+                <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                <div id="ballsWaveG_8" class="ballsWaveG"></div>
+              </div>
+            </div>
+            <div class="load-question clear-both mt-16 float-right w-full"></div>
+            <div class="clr"></div>
+        </div>
+        <div class="clr"></div>
+      </div>
+      <div class="clr"></div>
+    </div>
+    <basis core="call" file="footer.inc"/>
+  </main>
+  <link href="https://cdn.basiscore.net/basisfly.com/css/reservation_multiLang_css_calendar.css" type="text/css" rel="stylesheet" />
+</body>
+</html>

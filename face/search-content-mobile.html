@@ -1,0 +1,114 @@
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" q="[##cms.query.search-content-name##]">
+    <member name="article-list" type="list" link="article.bc" propertyid="7244" perpage="" size="305x180" order="ord"/>
+</basis>
+<!doctype html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
+    <title>[##cms.seo.title|(شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا)##]</title>
+    <meta name="description" content="[##cms.seo.description|(شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا)##]">
+    <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+        <member type="list" name="list" request="taglist" preview=""></member>
+    </basis>
+    <basis core="print" datamembername="tag.list">
+        <face filter="key = 'canonical'">
+            <link rel="canonical" href="@value" />
+        </face>
+        <face>
+            <meta property="@key" content="@value" />
+        </face>
+    </basis>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="[##cms.cms.cdn##]/images/custom_icon.png" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="manifest" href="homescreen-manifest.inc">
+    <basis core="call" file="style.inc" pageindex="[##cms.cms.pageindex##]"></basis>
+    <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js" type="text/javascript"></script>
+</head>
+<body class="bg-zinc-50">
+  <main>
+    <div class="loginRegister"></div>
+    <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"></basis>
+    <div class="w-full">
+      <div class="relative w-full m-auto dir-rtl px-2 py-6">
+            <div class="flex-col justify-start items-start flex">
+                <div class="breadcrumbs h-[43px] text-right w-auto flex-col justify-start items-start gap-3 inline-flex">
+                    <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li class="inline-block text-sm text-zinc-500 font-normal" itemprop="itemListElement" itemscope
+                        itemtype="https://schema.org/ListItem"> <a class="text-zinc-500 hover:text-primary-500" itemprop="item" href="/" aria-label="home"><span itemprop="name">خانه</span> <meta itemprop="position" content="1" />
+                        </a> </li>
+                        <li class="inline-block text-sm text-zinc-500 font-normal" itemprop="itemListElement" itemscope
+                                itemtype="https://schema.org/ListItem"> <span itemprop="name">جستجو محتوا</span><meta itemprop="position" content="2" /> </li>
+                    </ul>
+                </div>
+                <h1 class="self-stretch text-right text-zinc-900 text-base font-bold leading-9 mb-3">جستجو محتوا</h1>
+            </div>
+            <basis core="list" datamembername="db.article-list">
+                <else-layout>
+                    <div class="w-full block py-10">
+                        <div class="self-stretch text-center text-zinc-900 text-base font-normal eading-normal">بارگزاری صفحه با مشکل مواجه شد </div>
+                        <span class="block w-[126px] h-12 border border-solid border-secondary-600 rounded-2xl text-center text-secondary-600 text-base font-normal leading-[48px] cursor-pointer hover:text-primary-500 m-auto mt-[30px]">تلاش مجدد</span>
+                      </div>
+                </else-layout>
+                <layout>
+                    <div class="self-stretch flex-col justify-start items-start gap-4 flex">
+                        <div class="w-full">@child</div>
+                    </div>
+                </layout>
+                <face filter="link is null">
+                    <article class="w-[305px] max-w-[100%] h-[340px] m-auto mb-4 pb-7 bg-white rounded-2xl overflow-hidden">
+                        <a href="/article.bc?id=@id" aria-label="hizha-m-logo" class="w-full h-full group block">
+                          <figure>
+                            <img class="w-[305px] h-[180px]" loading="lazy" src="[##cms.cms.cdn##]/@00305X00180prp" alt="@title" width="305" height="180" />
+                          </figure>
+                          <div class="px-[19px] w-full">
+                            <header>
+                              <h2 class="mb-[5px] text-right text-zinc-900 text-base font-normal leading-normal group-hover:text-primary-700">@title</h2>
+                              <div class="ectText--3 mb-[5px] text-right text-zinc-900 text-sm font-normal leading-5">@prp_7244</div>
+                            </header>
+                            <footer class="flex justify-between items-center leading-[48px] h-12">
+                              <div class="text-right text-primary-700 text-sm font-normal group-hover:text-secondary-600">خواندن بیشتر</div>
+                              <div class="bg-white rounded-2xl justify-end items-center flex">
+                                <div class="text-right text-zinc-600 text-sm font-normal pl-3">@date</div> 
+                                <div class="justify-center items-center flex">
+                                  <img loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal.png" width="30" height="29" alt="article-list-cal">
+                                </div>
+                              </div>
+                            </footer>
+                          </div>
+                        </a>
+                      </article>
+                </face>
+                <face>
+                    <article class="w-[305px] max-w-[100%] h-[340px] m-auto mb-4 pb-7 bg-white rounded-2xl overflow-hidden">
+                        <a href="@link" aria-label="hizha-m-logo" class="w-full h-full group block">
+                          <figure>
+                            <img class="w-[305px] h-[180px]" loading="lazy" src="[##cms.cms.cdn##]/@00305X00180prp" alt="@title" width="305" height="180" />
+                          </figure>
+                          <div class="px-[19px] w-full">
+                            <header>
+                              <h2 class="mb-[5px] text-right text-zinc-900 text-base font-normal leading-normal group-hover:text-primary-700">@title</h2>
+                              <div class="ectText--3 mb-[5px] text-right text-zinc-900 text-sm font-normal leading-5">@prp_7244</div>
+                            </header>
+                            <footer class="flex justify-between items-center leading-[48px] h-12">
+                              <div class="text-right text-primary-700 text-sm font-normal group-hover:text-secondary-600">خواندن بیشتر</div>
+                              <div class="bg-white rounded-2xl justify-end items-center flex">
+                                <div class="text-right text-zinc-600 text-sm font-normal pl-3">@date</div> 
+                                <div class="justify-center items-center flex">
+                                  <img loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal.png" width="30" height="29" alt="article-list-cal">
+                                </div>
+                              </div>
+                            </footer>
+                          </div>
+                        </a>
+                    </article>
+                </face>
+             </basis> 
+        </div>
+    </div>
+    <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"></basis>
+  </main>
+</body>
+</html>

@@ -1,0 +1,291 @@
+@charset "utf-8";
+/* header footer styles start */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+	font-display: swap;
+	font-family: 'DanaFaNum';
+	font-style: normal;
+	font-weight: normal;
+	src: url('fonts/DanaFaNum-Regular.ttf') format('truetype');
+}
+@font-face {
+	font-display: swap;
+	font-family: 'DanaFaNum-Medium';
+	font-style: normal;
+	font-weight: normal;
+	src: url('fonts/DanaFaNum-Medium.ttf') format('truetype');
+}
+@font-face {
+	font-display: swap;
+	font-family: 'DanaFaNum-Bold';
+	font-style: normal;
+	font-weight: normal;
+	src: url('fonts/DanaFaNum-Bold.ttf') format('truetype');
+}
+:root {
+    --primary: #153FAB;
+    --primary-700: #1370DD;
+    --primary-600: #0E82F0;
+	--primary-500: #0091FF;
+    --primary-300: #5CB1FF;
+	--secondary:#FE6806;
+	--secondary-600: #FFAD00;
+    --secondary-500: #FFBB00;
+    --secondary-800: #FE8903;
+}
+* {
+	border-width: 0;
+	border-style: solid;
+	border-color: #e5e7eb;
+	text-decoration: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.clr{clear:both;margin:0 auto;display:block}
+html {
+	font-family: 'DanaFaNum';
+}
+input,select,button,textarea {font-family: 'DanaFaNum';}
+.DanaFaNum-Bold {font-family: 'DanaFaNum-Bold';}
+.dir-ltr {direction: ltr;}
+.dir-rtl {direction: rtl;}
+.bg-unset {background-color: unset;}
+.bg-opacity {background: #0009;}
+.ectText--1 {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+}
+.ectText--9 {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 9;
+}
+#footer-resize {
+	background-image: url(images/footer-bg.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+@media not all and (min-width: 1280px) {
+	.header-visible {
+	  visibility: visible !important;
+	  opacity: 1;
+	  transform: translateX(0px) !important;
+	  transition: transform 0.5s ease-in-out;
+	  transition-property: transform;
+	  transition-duration: 0.5s;
+	  transition-timing-function: ease-in-out;
+	}
+  }
+/* header footer styles end */
+.search-bg {
+	background-image: url(images/searchbox-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+	min-height: 740px;
+}
+.rezervation-item li {
+	background-color: var(--primary-500);color: #fff;
+}
+.rezervation-item .inactive {
+	background-color: unset;color: #09090b;
+}
+#ballsWaveG {
+    position: relative;
+    width: 70px;
+    height: 16px;
+    margin: auto
+}
+
+.ballsWaveG {
+    position: absolute;
+    top: 0;
+    background-color: #bababa;
+    width: 9px;
+    height: 9px;
+    animation-name: ballsWaveG;
+    -o-animation-name: ballsWaveG;
+    -ms-animation-name: ballsWaveG;
+    -webkit-animation-name: ballsWaveG;
+    -moz-animation-name: ballsWaveG;
+    animation-duration: 1.5s;
+    -o-animation-duration: 1.5s;
+    -ms-animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    -o-animation-iteration-count: infinite;
+    -ms-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-direction: normal;
+    -o-animation-direction: normal;
+    -ms-animation-direction: normal;
+    -webkit-animation-direction: normal;
+    -moz-animation-direction: normal;
+    border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px
+}
+
+#ballsWaveG_1 {
+    left: 0;
+    animation-delay: .6s;
+    -o-animation-delay: .6s;
+    -ms-animation-delay: .6s;
+    -webkit-animation-delay: .6s;
+    -moz-animation-delay: .6s
+}
+
+#ballsWaveG_2 {
+    left: 9px;
+    animation-delay: .75s;
+    -o-animation-delay: .75s;
+    -ms-animation-delay: .75s;
+    -webkit-animation-delay: .75s;
+    -moz-animation-delay: .75s
+}
+
+#ballsWaveG_3 {
+    left: 18px;
+    animation-delay: .9s;
+    -o-animation-delay: .9s;
+    -ms-animation-delay: .9s;
+    -webkit-animation-delay: .9s;
+    -moz-animation-delay: .9s
+}
+
+#ballsWaveG_4 {
+    left: 26px;
+    animation-delay: 1.05s;
+    -o-animation-delay: 1.05s;
+    -ms-animation-delay: 1.05s;
+    -webkit-animation-delay: 1.05s;
+    -moz-animation-delay: 1.05s
+}
+
+#ballsWaveG_5 {
+    left: 35px;
+    animation-delay: 1.2s;
+    -o-animation-delay: 1.2s;
+    -ms-animation-delay: 1.2s;
+    -webkit-animation-delay: 1.2s;
+    -moz-animation-delay: 1.2s
+}
+
+#ballsWaveG_6 {
+    left: 44px;
+    animation-delay: 1.35s;
+    -o-animation-delay: 1.35s;
+    -ms-animation-delay: 1.35s;
+    -webkit-animation-delay: 1.35s;
+    -moz-animation-delay: 1.35s
+}
+
+#ballsWaveG_7 {
+    left: 53px;
+    animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
+    -ms-animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s
+}
+
+#ballsWaveG_8 {
+    left: 62px;
+    animation-delay: 1.64s;
+    -o-animation-delay: 1.64s;
+    -ms-animation-delay: 1.64s;
+    -webkit-animation-delay: 1.64s;
+    -moz-animation-delay: 1.64s
+}
+
+@keyframes ballsWaveG {
+    0% {
+        background-color: rgba(158, 158, 158, .97)
+    }
+
+    100% {
+        background-color: #fff
+    }
+}
+.search-box-container input::placeholder{color:#71717a;font-size:16px}
+.disabled-date{opacity: .3;}
+input:focus {
+    border: none;
+    outline: none;
+  }
+.fa-spinner::before{content:"\f110";font-family:'fontawesome'}
+.Wrapper-CheckHotelDate input ~ .needhotel-label::before {
+	position: absolute;
+	top: 0;
+	left: auto;
+	right: 0;
+	display: block;
+	width: 19px;
+	height: 19px;
+	border-radius: 5px;
+	content: "";
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	background-color: #eff1f4;
+	box-shadow: 0;
+	cursor: pointer;
+}
+.Wrapper-CheckHotelDate input:checked ~ .needhotel-label::after {
+	content: "\f00c";
+	position: absolute;
+	top: 0;
+	left: auto;
+	right: 0;
+	color: #fff;
+	font-family: 'FontAwesome';
+	font-size: 12px;
+	line-height: 19px;
+	width: 19px;
+	height: 19px;
+	text-align: center;
+	cursor: pointer;
+}
+.Wrapper-CheckHotelDate input:checked ~ .needhotel-label::before {
+	background-color: var(--primary);
+}
+.tour-gradient {
+    background: rgb(55,65,81);
+    background: linear-gradient(0deg, rgb(13, 13, 14) 0%, rgba(255,255,255,0) 44%);
+}
+.question-items .selected-item {
+    background-color: var(--primary-600);color: #fff;
+}
+.qu-contents.active-content {display: block!important;}
+.active-question .question-ans {display: block!important;}
+.active-question .question-qu svg {transform: rotate(180deg);}
+.content-search-form button svg:hover path {fill: var(--primary-600);}
+.ectText--2 {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+}
+.w-calc-134 {width: calc(100% - 134px);}
+.last-news article:last-child{border-bottom: unset;}
+#contact-form-resize input,#contact-form-resize textarea {width: 100%;height: 100%;background-color: unset;color: #71717a;font-size: 16px;margin-bottom:12px;}
+#contact-form-resize input {height: 65px;}
+#visa-form input,#cip-form input {height: 65px;width: 100%;background-color: unset;text-align: right;color: #71717a;font-size: 16px;margin-bottom:8px;}
+@media not all and (min-width: 1280px) {
+    #search-box{background-image: none;}
+    .rezervation-item li {
+        border-color: var(--primary-500);
+    }
+    .rezervation-item .inactive {border-color: #e4e4e7;}
+}
