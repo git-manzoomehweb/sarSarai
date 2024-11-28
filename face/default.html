@@ -27,19 +27,10 @@
         <meta property="og:image:width" content="512">
         <meta property="og:image:type" content="image/png">
         <meta property="seo:robots" content="index, follow" />
-        <!-- samandehi-enamad optional -->
+        <basis core="call" file="pwa.inc"/>
         <meta name="enamad" content="" />
         <meta name="samandehi" content="" />
-        <!-- pwa metatags -->
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="mobile-web-app-capable" content="yes">
-        <link rel="apple-touch-icon" href="[##cms.cms.cdn##]/images/custom_icon.png" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <link rel="manifest" href="homescreen-manifest.inc">
-        <!-- preload banner images -->
-        <!-- define -->
-        <!-- <link rel="preload" as="image" imageSrcSet="image address" fetchpriority="high" /> -->
-        <!-- common styles for all page -->
+        <link rel="preload" as="image" imageSrcSet="[##cms.cms.cdn##]/images/sarsara-popup.jpg" fetchpriority="high" />
         <basis core="call" file="style.inc" />
         <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js" type="text/javascript"></script>
     </head>
@@ -56,7 +47,6 @@
         </div>
     </div>
   <main>
-    <div class="loginRegister"></div>
      <basis core="call" file="header.inc"/>
     <div class="w-full bg-white">
       <div class="search-bg clear-both mb-[126px] rounded-b-[50px] m-auto max-xl:bg-none max-xl:h-auto max-xl:w-full max-xl:mb-7">

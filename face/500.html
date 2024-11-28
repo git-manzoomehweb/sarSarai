@@ -16,17 +16,11 @@
             <meta property="@key" content="@value" />
         </face>
     </basis>
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="mobile-web-app-capable" content="yes">
-    <link rel="apple-touch-icon" href="[##cms.cms.cdn##]/images/custom_icon.png" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <link rel="manifest" href="homescreen-manifest.inc">
+    <basis core="call" file="pwa.inc"/>
     <basis core="call" file="style.inc"/>
-    <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js" type="text/javascript"></script>
 </head>
 <body>
   <main>
-    <div class="loginRegister"></div>
     <basis core="call" file="header.inc"/>
     <div class="w-full relative py-[215px]">
         <div class="relative w-[1280px] m-auto dir-rtl max-xl:w-full max-xl:px-3">
