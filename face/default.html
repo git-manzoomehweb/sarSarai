@@ -7,6 +7,9 @@
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="211896">
   <member name="qu-list" type="list" link="article.bc" propertyid="" perpage="" typeid="159" order="ord"/>
 </basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db">
+  <member name="qu-tlt" type="tree" request="cat" parentid="211896" order=""></member>
+</basis>
 <!doctype html>
 <html lang="fa">
     <head>
@@ -93,7 +96,7 @@
           </layout>
           <face filter="link is null">
             <article class="w-[246px] h-[246px] relative overflow-hidden grow shrink basis-0 self-stretch bg-Backgerand rounded-2xl justify-center items-center gap-2.5 flex max-xl:block max-xl:w-[168px] max-xl:h-[168px] max-xl:m-auto max-xl:mb-5">
-              <a class="w-full h-full group" href="tour-list.bc?catidid=@catid" aria-label="@title">
+              <a class="w-full h-full group" href="tour-list.bc?catid=@catid" aria-label="@title">
                 <figure class="absolute top-0 right-0 w-full h-full"><img loading="lazy" src="[##cms.cms.cdn##]/@image" alt="@title" width="246" height="246"></figure>
                 <header class="absolute top-0 right-0 w-full h-full grow shrink basis-0 self-stretch px-4 py-6 tour-gradient flex-col justify-end items-center gap-2.5 inline-flex">
                   <h2 class="self-stretch text-center text-white text-3xl font-bold leading-9 group-hover:text-secondary-600">@title</h2>
@@ -114,8 +117,12 @@
         </basis>
         <div class="question-show block mb-[70px] max-xl:mb-7">
             <div class="block w-full mb-6">
-              <h3 class="text-right mb-3 text-Text 900 text-3xl font-bold leading-9">سوالات متداول</h3>
-              <div class="text-right text-Text 900 text-base font-normal leading-normal">آماده پاسخگویی شبانه روزی به شما هستیم. لطفا پیش از تماس تلفنی یا ارسال ایمیل، </div>
+              <basis core="list" datamembername="db.qu-tlt">
+                  <face>
+                      <h3 class="text-right mb-3 text-Text 900 text-3xl font-bold leading-9">@urltitle</h3>
+                      <div class="text-right text-Text 900 text-base font-normal leading-normal">@urldescription</div>
+                  </face>
+              </basis>
             </div>
             <basis core="list" datamembername="db.qu-list">
               <layout><ul class="question-items mb-6 justify-start items-center gap-2 inline-flex">@child</ul></layout>

@@ -1,194 +1,202 @@
 <basis core="dbsource" source="basiscore" name="db" mid="1" lid="1" usedforid="2369208">
-    <member name="sarsara-services" type="view" />
-  </basis>
-  <basis core="dbsource" source="basiscore" lid="1" mid="20" name="db">
-    <member name="tourcat" type="tree" request="cat" parentid="211890" perpage="5" order="[##cms.Host.tour-cat-order##]"></member>
-  </basis>
-  <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="211896">
-    <member name="qu-list" type="list" link="article.bc" propertyid="" perpage="" typeid="159" order="ord"/>
-  </basis>
+  <member name="sarsara-services" type="view" />
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="20" name="db">
+  <member name="tourcat" type="tree" request="cat" parentid="211890" perpage="5" order="[##cms.Host.tour-cat-order##]"></member>
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="211896">
+  <member name="qu-list" type="list" link="article.bc" propertyid="" perpage="" typeid="159" order="ord"/>
+</basis>
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db">
+  <member name="qu-tlt" type="tree" request="cat" parentid="211896" order=""></member>
+</basis>
 <!doctype html>
 <html lang="fa">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
-        <title>شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا</title>
-        <meta name="description" content="ارائه بهترین سفر ها و تورهای خارجی و تور های داخلی و طبیعتگردی با بهترین کیفیت بصورت صفر تا صد تمامی خدمات سفر بلیط هواپیما و رزرو هتل بصورت آنلاین و تهیه بیمه مسافرتی و ویزا های کشورهای مختلف مانند تور سوییس و تور استانبول و تور فرانسه و تورآلپ خدمات سرسرای گشـتا می باشد.">
-        <link rel="canonical" href="[##cms.request.:scheme##]://[##cms.request.full-url##]" />
-        <meta name="og:locale" content="fa_IR">
-        <meta property="og:title" content="شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا">
-        <meta property="og:url" content="[##cms.cms.cdn##]">
-        <meta property="og:type" content="website">
-        <meta property="og:site_name" content="sarsarai">
-        <meta property="og:image" content="[##cms.cms.cdn##]/images/logo.png">
-        <meta property="og:image:alt" content="سرسرای گشـتا">
-        <meta property="og:description" content="ارائه بهترین سفر ها و تورهای خارجی و تور های داخلی و طبیعتگردی با بهترین کیفیت بصورت صفر تا صد تمامی خدمات سفر بلیط هواپیما و رزرو هتل بصورت آنلاین و تهیه بیمه مسافرتی و ویزا های کشورهای مختلف مانند تور سوییس و تور استانبول و تور فرانسه و تورآلپ خدمات سرسرای گشـتا می باشد.">
-        <meta property="og:image:height" content="512">
-        <meta property="og:image:width" content="512">
-        <meta property="og:image:type" content="image/png">
-        <meta property="seo:robots" content="index, follow" />
-        <meta name="enamad" content="" />
-        <meta name="samandehi" content="" />
-        <basis core="call" file="pwa.inc"/>
-        <link rel="preload" as="image" imageSrcSet="[##cms.cms.cdn##]/images/sarsara-popup.jpg" fetchpriority="high" />
-        <basis core="call" file="style.inc" pageindex="[##cms.cms.pageindex##]"></basis>
-    </head>
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
+      <title>شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا</title>
+      <meta name="description" content="ارائه بهترین سفر ها و تورهای خارجی و تور های داخلی و طبیعتگردی با بهترین کیفیت بصورت صفر تا صد تمامی خدمات سفر بلیط هواپیما و رزرو هتل بصورت آنلاین و تهیه بیمه مسافرتی و ویزا های کشورهای مختلف مانند تور سوییس و تور استانبول و تور فرانسه و تورآلپ خدمات سرسرای گشـتا می باشد.">
+      <link rel="canonical" href="[##cms.request.:scheme##]://[##cms.request.full-url##]" />
+      <meta name="og:locale" content="fa_IR">
+      <meta property="og:title" content="شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا">
+      <meta property="og:url" content="[##cms.cms.cdn##]">
+      <meta property="og:type" content="website">
+      <meta property="og:site_name" content="sarsarai">
+      <meta property="og:image" content="[##cms.cms.cdn##]/images/logo.png">
+      <meta property="og:image:alt" content="سرسرای گشـتا">
+      <meta property="og:description" content="ارائه بهترین سفر ها و تورهای خارجی و تور های داخلی و طبیعتگردی با بهترین کیفیت بصورت صفر تا صد تمامی خدمات سفر بلیط هواپیما و رزرو هتل بصورت آنلاین و تهیه بیمه مسافرتی و ویزا های کشورهای مختلف مانند تور سوییس و تور استانبول و تور فرانسه و تورآلپ خدمات سرسرای گشـتا می باشد.">
+      <meta property="og:image:height" content="512">
+      <meta property="og:image:width" content="512">
+      <meta property="og:image:type" content="image/png">
+      <meta property="seo:robots" content="index, follow" />
+      <meta name="enamad" content="" />
+      <meta name="samandehi" content="" />
+      <basis core="call" file="pwa.inc"/>
+      <link rel="preload" as="image" imageSrcSet="[##cms.cms.cdn##]/images/sarsara-popup.jpg" fetchpriority="high" />
+      <basis core="call" file="style.inc" pageindex="[##cms.cms.pageindex##]"></basis>
+  </head>
 <body onload="loadContentHomaPage()">
-  <div id="bk-popup" class="hidden"></div>
-    <div id="image-popup" class="hidden w-full absolute z-60 right-0 left-0 m-auto text-center">
-        <div class="wrapper-popup">
-            <div class="checked-img">
-                <span id="close-popup" class="text-white float-left ml-6 mt-6 text-4xl cursor-pointer" onclick="closePopup()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M18.3 5.7a1 1 0 0 1 0 1.4L13.4 12l4.9 4.9a1 1 0 0 1-1.4 1.4L12 13.4l-4.9 4.9a1 1 0 1 1-1.4-1.4L10.6 12 5.7 7.1a1 1 0 0 1 1.4-1.4L12 10.6l4.9-4.9a1 1 0 0 1 1.4 0Z"/></svg></span>
-            </div>
-            <figure class="each-figure fade">
-                <div class="container-popup w-1/2 max-w-max m-auto block"><img class="w-full h-auto max-w-max" src="[##cms.cms.cdn##]/images/sarsara-popup-mobile.jpg" width="250" height="151" alt="sarsara popup"></div>
-            </figure>
-        </div>
-    </div>
-  <main>
-    <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"></basis>
-    <div class="w-full bg-white">
-      <div class="w-full bg-Backgerand flex-col justify-start items-center gap-[30px] inline-flex">
-        <div class="clear-both mb-[126px] rounded-b-[50px] m-auto max-xl:bg-none max-xl:h-auto max-xl:w-full max-xl:mb-7">
-          <div class="search-box-container fa w-[1280px] m-auto clear-both max-xl:w-full">
-              <div id="search-box" class="backdrop-opacity rounded-2xl mt-[250px] py-[30px] px-[22px] w-full m-auto float-right max-xl:bg-[#B7B7B7] max-xl:mt-8 max-xl:p-1"><div id="ballsWaveG"><div id="ballsWaveG_1" class="ballsWaveG"></div><div id="ballsWaveG_2" class="ballsWaveG"></div><div id="ballsWaveG_3" class="ballsWaveG"></div><div id="ballsWaveG_4" class="ballsWaveG"></div><div id="ballsWaveG_5" class="ballsWaveG"></div><div id="ballsWaveG_6" class="ballsWaveG"></div><div id="ballsWaveG_7" class="ballsWaveG"></div><div id="ballsWaveG_8" class="ballsWaveG"></div></div></div>
-              <div class="clr"></div>
+<div id="bk-popup" class="hidden"></div>
+  <div id="image-popup" class="hidden w-full absolute z-60 right-0 left-0 m-auto text-center">
+      <div class="wrapper-popup">
+          <div class="checked-img">
+              <span id="close-popup" class="text-white float-left ml-6 mt-6 text-4xl cursor-pointer" onclick="closePopup()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M18.3 5.7a1 1 0 0 1 0 1.4L13.4 12l4.9 4.9a1 1 0 0 1-1.4 1.4L12 13.4l-4.9 4.9a1 1 0 1 1-1.4-1.4L10.6 12 5.7 7.1a1 1 0 0 1 1.4-1.4L12 10.6l4.9-4.9a1 1 0 0 1 1.4 0Z"/></svg></span>
           </div>
-          <div class="clr"></div>
+          <figure class="each-figure fade">
+              <div class="container-popup w-1/2 max-w-max m-auto block"><img class="w-full h-auto max-w-max" src="[##cms.cms.cdn##]/images/sarsara-popup-mobile.jpg" width="250" height="151" alt="sarsara popup"></div>
+          </figure>
+      </div>
+  </div>
+<main>
+  <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"></basis>
+  <div class="w-full bg-white">
+    <div class="w-full bg-Backgerand flex-col justify-start items-center gap-[30px] inline-flex">
+      <div class="clear-both mb-[126px] rounded-b-[50px] m-auto max-xl:bg-none max-xl:h-auto max-xl:w-full max-xl:mb-7">
+        <div class="search-box-container fa w-[1280px] m-auto clear-both max-xl:w-full">
+            <div id="search-box" class="backdrop-opacity rounded-2xl mt-[250px] py-[30px] px-[22px] w-full m-auto float-right max-xl:bg-[#B7B7B7] max-xl:mt-8 max-xl:p-1"><div id="ballsWaveG"><div id="ballsWaveG_1" class="ballsWaveG"></div><div id="ballsWaveG_2" class="ballsWaveG"></div><div id="ballsWaveG_3" class="ballsWaveG"></div><div id="ballsWaveG_4" class="ballsWaveG"></div><div id="ballsWaveG_5" class="ballsWaveG"></div><div id="ballsWaveG_6" class="ballsWaveG"></div><div id="ballsWaveG_7" class="ballsWaveG"></div><div id="ballsWaveG_8" class="ballsWaveG"></div></div></div>
+            <div class="clr"></div>
         </div>
-        <basis core="print" datamembername="db.sarsara-services">
-            <layout>
-                <div class="self-stretch h-[304px] px-4 flex-col justify-start items-end gap-2 flex">
-                    <div class="self-stretch h-[34px] text-right text-zinc-900 text-base font-bold leading-[34px]">خدمات سرسرای گشتا</div>
-                    <div class="block w-full">
+        <div class="clr"></div>
+      </div>
+      <basis core="print" datamembername="db.sarsara-services">
+          <layout>
+              <div class="self-stretch h-[304px] px-4 flex-col justify-start items-end gap-2 flex">
+                  <div class="self-stretch h-[34px] text-right text-zinc-900 text-base font-bold leading-[34px]">خدمات سرسرای گشتا</div>
+                  <div class="block w-full">
+                    @child
+                  </div>
+                </div>
+          </layout>
+          <face filter="prpID=7246 and RowNumber<6">
+              <article class="justify-start items-center gap-2 flex w-full dir-rtl overflow-hidden mb-2.5">
+                <figure class="w-[62px] h-[62px] p-4 bg-secondary-500 rounded-2xl justify-center items-center gap-2.5 flex">
+                  <div class="w-12 h-12 p-[3px] justify-center items-center flex">
+                    <div class="w-[42px] h-[42px] pl-[5.87px] pr-[5px] py-[3.94px] justify-center items-center inline-flex"><img class="inline-block align-middle" loading="lazy" src="[##cms.cms.cdn##]/images/paper-icon.png" width="42" height="42" alt="paper-icon"></div>
+                  </div>
+                </figure>
+                  <div class="w-full">
+                    <header class="self-stretch text-right text-primary-500 ectText--1"><h3 class="text-base font-bold leading-[34px]">@text</h3></header>
+                    <footer class="self-stretch text-right text-zinc-900 text-sm font-normal leading-tight ectText--2">@largetext</footer>
+                  </div>
+              </article>
+          </face>
+      </basis>
+      <basis core="tree" dataMemberName="db.tourcat" idCol="catid" parentidCol="ParentID" nullvalue="211890">
+          <layout>
+              <div class="self-stretch px-4 flex-col justify-start items-end gap-4 flex">
+                  <h3 class="self-stretch h-11 text-right text-zinc-900 text-base font-bold leading-[34px]">مقاصد گردشگری خارجی</h3>
+                  <div class="swiper swiper-tours1 w-full">
+                    <div class="swiper-wrapper">
                       @child
                     </div>
                   </div>
-            </layout>
-            <face filter="prpID=7246 and RowNumber<6">
-                <article class="justify-start items-center gap-2 flex w-full dir-rtl overflow-hidden mb-2.5">
-                  <figure class="w-[62px] h-[62px] p-4 bg-secondary-500 rounded-2xl justify-center items-center gap-2.5 flex">
-                    <div class="w-12 h-12 p-[3px] justify-center items-center flex">
-                      <div class="w-[42px] h-[42px] pl-[5.87px] pr-[5px] py-[3.94px] justify-center items-center inline-flex"><img class="inline-block align-middle" loading="lazy" src="[##cms.cms.cdn##]/images/paper-icon.png" width="42" height="42" alt="paper-icon"></div>
-                    </div>
-                  </figure>
-                    <div class="w-full">
-                      <header class="self-stretch text-right text-primary-500 ectText--1"><h3 class="text-base font-bold leading-[34px]">@text</h3></header>
-                      <footer class="self-stretch text-right text-zinc-900 text-sm font-normal leading-tight ectText--2">@largetext</footer>
-                    </div>
-                </article>
-            </face>
-        </basis>
-        <basis core="tree" dataMemberName="db.tourcat" idCol="catid" parentidCol="ParentID" nullvalue="211890">
-            <layout>
-                <div class="self-stretch px-4 flex-col justify-start items-end gap-4 flex">
-                    <h3 class="self-stretch h-11 text-right text-zinc-900 text-base font-bold leading-[34px]">مقاصد گردشگری خارجی</h3>
-                    <div class="swiper swiper-tours1 w-full">
-                      <div class="swiper-wrapper">
-                        @child
-                      </div>
-                    </div>
-                    <div class="swiper-pagination swiper-pagination1 relative mt-5"></div>
-                  </div>
-            </layout>
-            <face filter="link is null">
-                <div class="swiper-slide">
-                    <article class="w-[168px] h-[168px] relative m-auto overflow-hidden rounded-2xl justify-center items-center gap-2.5 flex">
-                      <a class="w-full h-full group" href="tour-list.bc?catidid=@catid" aria-label="@title">
-                        <figure class="absolute top-0 right-0 w-full h-full"><img loading="lazy" src="[##cms.cms.cdn##]/@image" alt="@title" width="168" height="168"></figure>
-                        <header class="absolute top-0 right-0 w-full h-full tour-gradient grow shrink basis-0 self-stretch px-4 py-6 bg-gradient-to-b from-black to-black flex-col justify-end items-center gap-2.5 inline-flex">
-                          <h2 class="self-stretch text-center text-white text-3xl font-bold leading-9">@title</h2>
-                        </header>
-                      </a>
-                    </article>
+                  <div class="swiper-pagination swiper-pagination1 relative mt-5"></div>
                 </div>
-            </face>
-            <face>
-                <div class="swiper-slide">
-                    <article class="w-[168px] h-[168px] relative m-auto overflow-hidden rounded-2xl justify-center items-center gap-2.5 flex">
-                      <a class="w-full h-full group" href="@link" aria-label="@title">
-                        <figure class="absolute top-0 right-0 w-full h-full"><img loading="lazy" src="[##cms.cms.cdn##]/@image" alt="@title" width="168" height="168"></figure>
-                        <header class="absolute top-0 right-0 w-full h-full tour-gradient grow shrink basis-0 self-stretch px-4 py-6 bg-gradient-to-b from-black to-black flex-col justify-end items-center gap-2.5 inline-flex">
-                          <h2 class="self-stretch text-center text-white text-3xl font-bold leading-9">@title</h2>
-                        </header>
-                      </a>
-                    </article>
-                </div>
-            </face>
-        </basis>
-        <basis core="tree" dataMemberName="db.tourcat" idCol="catid" parentidCol="ParentID" nullvalue="211890">
-            <layout>
-                <div class="self-stretch px-4 flex-col justify-start items-end gap-4 flex">
-                    <h3 class="self-stretch h-11 text-right text-zinc-900 text-base font-bold leading-[34px]">مقاصد گردشگری داخلی</h3>
-                    <div class="swiper swiper-tours2 w-full">
-                      <div class="swiper-wrapper">
-                        @child
-                      </div>
-                    </div>
-                    <div class="swiper-pagination swiper-pagination2 relative mt-5"></div>
-                  </div>
-            </layout>
-            <face filter="link is null">
-                <div class="swiper-slide">
-                    <article class="w-[168px] h-[168px] relative m-auto overflow-hidden rounded-2xl justify-center items-center gap-2.5 flex">
-                      <a class="w-full h-full group" href="tour-list.bc?catidid=@catid" aria-label="@title">
-                        <figure class="absolute top-0 right-0 w-full h-full"><img loading="lazy" src="[##cms.cms.cdn##]/@image" alt="@title" width="168" height="168"></figure>
-                        <header class="absolute top-0 right-0 w-full h-full tour-gradient grow shrink basis-0 self-stretch px-4 py-6 bg-gradient-to-b from-black to-black flex-col justify-end items-center gap-2.5 inline-flex">
-                          <h2 class="self-stretch text-center text-white text-3xl font-bold leading-9">@title</h2>
-                        </header>
-                      </a>
-                    </article>
-                </div>
-            </face>
-            <face>
-                <div class="swiper-slide">
-                    <article class="w-[168px] h-[168px] relative m-auto overflow-hidden rounded-2xl justify-center items-center gap-2.5 flex">
-                      <a class="w-full h-full group" href="@link" aria-label="@title">
-                        <figure class="absolute top-0 right-0 w-full h-full"><img loading="lazy" src="[##cms.cms.cdn##]/@image" alt="@title" width="168" height="168"></figure>
-                        <header class="absolute top-0 right-0 w-full h-full tour-gradient grow shrink basis-0 self-stretch px-4 py-6 bg-gradient-to-b from-black to-black flex-col justify-end items-center gap-2.5 inline-flex">
-                          <h2 class="self-stretch text-center text-white text-3xl font-bold leading-9">@title</h2>
-                        </header>
-                      </a>
-                    </article>
-                </div>
-            </face>
-        </basis>
-        <div class="question-show self-stretch px-4 flex-col justify-start items-start gap-[93px] flex dir-rtl">
-          <div class="self-stretch flex-col justify-start items-end gap-6 flex">
-            <div class="self-stretch h-[100px] flex-col justify-start items-end gap-3 flex">
-              <h3 class="self-stretch text-right text-Text 900 text-base font-bold leading-[34px]">سوالات متداول</h3>
-              <div class="self-stretch h-[54px] text-right text-Text 900 text-sm font-normal leading-tight">آماده پاسخگویی شبانه روزی به شما هستیم. لطفا پیش از تماس تلفنی یا ارسال ایمیل، </div>
-            </div>
-            <basis core="list" datamembername="db.qu-list">
-                <layout><ul class="question-items mb-6 block w-full">@child</ul></layout>
-                <face>
-                    <li class="w-full mb-4 group cursor-pointer bg-zinc-200 text-zinc-500 text-base px-6 py-4 rounded-2xl hover:bg-primary-600 hover:text-white max-xl:h-[54px] max-xl:leading-[54px] max-xl:p-0" data-id="@id" onclick="load_questions(this)">
-                        <div class="text-center text-base font-normal leading-normal group-hover:text-white max-xl:text-sm max-xl:w-full max-xl:leading-[54px]">@title</div>
-                    </li>
-                </face>
-            </basis>
-            <div class="w-full m-auto py-12 float-right question-loading hidden">
-                <div id="ballsWaveG">
-                  <div id="ballsWaveG_1" class="ballsWaveG"></div>
-                  <div id="ballsWaveG_2" class="ballsWaveG"></div>
-                  <div id="ballsWaveG_3" class="ballsWaveG"></div>
-                  <div id="ballsWaveG_4" class="ballsWaveG"></div>
-                  <div id="ballsWaveG_5" class="ballsWaveG"></div>
-                  <div id="ballsWaveG_6" class="ballsWaveG"></div>
-                  <div id="ballsWaveG_7" class="ballsWaveG"></div>
-                  <div id="ballsWaveG_8" class="ballsWaveG"></div>
-                </div>
+          </layout>
+          <face filter="link is null">
+              <div class="swiper-slide">
+                  <article class="w-[168px] h-[168px] relative m-auto overflow-hidden rounded-2xl justify-center items-center gap-2.5 flex">
+                    <a class="w-full h-full group" href="tour-list.bc?catid=@catid" aria-label="@title">
+                      <figure class="absolute top-0 right-0 w-full h-full"><img loading="lazy" src="[##cms.cms.cdn##]/@image" alt="@title" width="168" height="168"></figure>
+                      <header class="absolute top-0 right-0 w-full h-full tour-gradient grow shrink basis-0 self-stretch px-4 py-6 bg-gradient-to-b from-black to-black flex-col justify-end items-center gap-2.5 inline-flex">
+                        <h2 class="self-stretch text-center text-white text-3xl font-bold leading-9">@title</h2>
+                      </header>
+                    </a>
+                  </article>
               </div>
-            <div class="load-question clear-both float-right w-full"></div>
+          </face>
+          <face>
+              <div class="swiper-slide">
+                  <article class="w-[168px] h-[168px] relative m-auto overflow-hidden rounded-2xl justify-center items-center gap-2.5 flex">
+                    <a class="w-full h-full group" href="@link" aria-label="@title">
+                      <figure class="absolute top-0 right-0 w-full h-full"><img loading="lazy" src="[##cms.cms.cdn##]/@image" alt="@title" width="168" height="168"></figure>
+                      <header class="absolute top-0 right-0 w-full h-full tour-gradient grow shrink basis-0 self-stretch px-4 py-6 bg-gradient-to-b from-black to-black flex-col justify-end items-center gap-2.5 inline-flex">
+                        <h2 class="self-stretch text-center text-white text-3xl font-bold leading-9">@title</h2>
+                      </header>
+                    </a>
+                  </article>
+              </div>
+          </face>
+      </basis>
+      <basis core="tree" dataMemberName="db.tourcat" idCol="catid" parentidCol="ParentID" nullvalue="211890">
+          <layout>
+              <div class="self-stretch px-4 flex-col justify-start items-end gap-4 flex">
+                  <h3 class="self-stretch h-11 text-right text-zinc-900 text-base font-bold leading-[34px]">مقاصد گردشگری داخلی</h3>
+                  <div class="swiper swiper-tours2 w-full">
+                    <div class="swiper-wrapper">
+                      @child
+                    </div>
+                  </div>
+                  <div class="swiper-pagination swiper-pagination2 relative mt-5"></div>
+                </div>
+          </layout>
+          <face filter="link is null">
+              <div class="swiper-slide">
+                  <article class="w-[168px] h-[168px] relative m-auto overflow-hidden rounded-2xl justify-center items-center gap-2.5 flex">
+                    <a class="w-full h-full group" href="tour-list.bc?catid=@catid" aria-label="@title">
+                      <figure class="absolute top-0 right-0 w-full h-full"><img loading="lazy" src="[##cms.cms.cdn##]/@image" alt="@title" width="168" height="168"></figure>
+                      <header class="absolute top-0 right-0 w-full h-full tour-gradient grow shrink basis-0 self-stretch px-4 py-6 bg-gradient-to-b from-black to-black flex-col justify-end items-center gap-2.5 inline-flex">
+                        <h2 class="self-stretch text-center text-white text-3xl font-bold leading-9">@title</h2>
+                      </header>
+                    </a>
+                  </article>
+              </div>
+          </face>
+          <face>
+              <div class="swiper-slide">
+                  <article class="w-[168px] h-[168px] relative m-auto overflow-hidden rounded-2xl justify-center items-center gap-2.5 flex">
+                    <a class="w-full h-full group" href="@link" aria-label="@title">
+                      <figure class="absolute top-0 right-0 w-full h-full"><img loading="lazy" src="[##cms.cms.cdn##]/@image" alt="@title" width="168" height="168"></figure>
+                      <header class="absolute top-0 right-0 w-full h-full tour-gradient grow shrink basis-0 self-stretch px-4 py-6 bg-gradient-to-b from-black to-black flex-col justify-end items-center gap-2.5 inline-flex">
+                        <h2 class="self-stretch text-center text-white text-3xl font-bold leading-9">@title</h2>
+                      </header>
+                    </a>
+                  </article>
+              </div>
+          </face>
+      </basis>
+      <div class="question-show self-stretch px-4 flex-col justify-start items-start gap-[93px] flex dir-rtl">
+        <div class="block w-full">
+          <div class="self-stretch h-[100px] flex-col justify-start items-end gap-3 flex mb-6">
+            <basis core="list" datamembername="db.qu-tlt">
+              <face>
+                <h3 class="self-stretch text-right text-Text 900 text-base font-bold leading-[34px]">@urltitle</h3>
+                <div class="self-stretch h-[54px] text-right text-Text 900 text-sm font-normal leading-tight">@urldescription</div>
+              </face>
+          </basis>
           </div>
+          <basis core="list" datamembername="db.qu-list">
+              <layout><ul class="question-items mb-6 block w-full">@child</ul></layout>
+              <face>
+                  <li class="w-full mb-4 group cursor-pointer bg-zinc-200 text-zinc-500 text-base px-6 py-4 rounded-2xl hover:bg-primary-600 hover:text-white max-xl:h-[54px] max-xl:leading-[54px] max-xl:p-0" data-id="@id" onclick="load_questions(this)">
+                      <div class="text-center text-base font-normal leading-normal group-hover:text-white max-xl:text-sm max-xl:w-full max-xl:leading-[54px]">@title</div>
+                  </li>
+              </face>
+          </basis>
+          <div class="w-full m-auto py-12 float-right question-loading hidden">
+              <div id="ballsWaveG">
+                <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                <div id="ballsWaveG_8" class="ballsWaveG"></div>
+              </div>
+            </div>
+          <div class="load-question clear-both float-right w-full"></div>
         </div>
       </div>
     </div>
-    <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"></basis>
-    <link href="https://cdn.basiscore.net/basisfly.com/css/reservation_multiLang_css_calendar.css" type="text/css" rel="stylesheet" />
-     <link rel="stylesheet" href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css">
-     <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js" type="text/javascript"></script>  
-     <script src="js/sarsara-swipper-functions.js" type="text/javascript"></script>
-  </main>
+  </div>
+  <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"></basis>
+  <link href="https://cdn.basiscore.net/basisfly.com/css/reservation_multiLang_css_calendar.css" type="text/css" rel="stylesheet" />
+   <link rel="stylesheet" href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css">
+   <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js" type="text/javascript"></script>
+   <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js" type="text/javascript" defer></script>  
+   <script src="js/sarsara-swipper-functions.js" type="text/javascript" defer></script>
+</main>
 </body>
 </html>
