@@ -35,9 +35,9 @@ function openParentdropDown(e) {
     document.getElementById("menu-box").classList.remove("header-visible")
  }
 
-function loadContentHomaPage(){
+//function loadContentHomaPage(){
    loadSearchEngine('search-engine.bc' , 'search-box');
-}
+//}
 async function loadSearchEngine(url, sectionload) {
    try {
        var xhrobj = new XMLHttpRequest();
