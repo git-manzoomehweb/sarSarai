@@ -1,0 +1,100 @@
+@charset "utf-8";
+@font-face{font-family:'fontawesome';src:url('../fonts/reservation_fontawesome-webfont.eot') format('embedded-opentype'), url('../fonts/reservation_fontawesome-webfont.woff') format('woff'), url('../fonts/reservation_fontawesome-webfont.ttf') format('truetype'), url('../fonts/reservation_fontawesome-webfont.svg') format('svg'), url('../fonts/reservation_fa-brands.eot') format('embedded-opentype');font-weight:normal;font-style:normal;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+.sr-only-focusable:active, .sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto;}
+@font-face{font-family:'fontawesome';font-style:normal;font-weight:400;font-display:block;src:url("../fonts/reservation_fa-brands.eot");src:url("../fonts/reservation_fa-brands.eot") format("embedded-opentype"), url("../fonts/reservation_fa-brands.woff") format("woff"), url("../fonts/reservation_fa-brands.ttf") format("truetype"), url("../fonts/reservation_fa-brands.svg") format("svg");}
+.fab{font-family:'fontawesome';font-weight:400;}
+@font-face{font-family:'fontawesome';font-style:normal;font-weight:400;font-display:block;src:url("../fonts/reservation_fa-regular.eot");src:url("../fonts/reservation_fa-regular.eot") format("embedded-opentype"), url("../fonts/reservation_fa-regular.woff") format("woff"), url("../fonts/reservation_fa-regular.ttf") format("truetype"), url("../fonts/reservation_fa-regular.svg") format("svg");}
+.far{font-family:'fontawesome';font-weight:400;}
+@font-face{font-family:'fontawesome';font-style:normal;font-weight:900;font-display:block;src:url("../fonts/reservation_fa-solid.eot");src:url("../fonts/reservation_fa-solid.eot") format("embedded-opentype"), url("../fonts/reservation_fa-solid.woff") format("woff"), url("../fonts/reservation_fa-solid.ttf") format("truetype"), url("../fonts/reservation_fa-solid.svg") format("svg");}
+.fa,
+.fas{font-family:'fontawesome';font-weight:900;}
+@font-face{font-family:'IRANSansWeb';src:url('../fonts/reservation_IRANSansWeb(FaNum).ttf') format('truetype'), url('../fonts/reservation_IRANSansWeb(FaNum).eot') format('embedded-opentype');font-weight:normal;font-style:normal;}
+@font-face{font-family:'IRANSansWebEnNum';font-style:normal;font-weight:lighter;src:url('../fonts/reservation_IRANSansWeb_Medium.eot');src:url('../fonts/reservation_IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'),
+url('../fonts/reservation_IRANSansWeb_Medium.woff2') format('woff2'),
+url('../fonts/reservation_IRANSansWeb_Medium.woff') format('woff'),
+url('../fonts/reservation_IRANSansWeb_Medium.ttf') format('truetype');}
+.font-color_1{color:#506dff;}
+.background-color_1{background:#506dff !important;}
+.mm-spn li:before{color:#506dff;}
+.mm-spn.mm-spn--navbar:before{color:#506dff;}
+.item-search:before{border: 1px dashed#506dff;}
+.fa-times{ color:#506dff; }
+.top-menu {background: linear-gradient(-135deg,#506dff, #3a434a);  }
+.createChildDropdown select { background:#506dff;  }
+.reserve-button:hover { color:#506dff }
+.total-cost { color: #00a703; font-size: 15px; }
+.reserve-button { border: 1px solid#506dff; }
+.title-result { border-bottom: 1px solid#506dff; }
+.confirm {  background: linear-gradient(-90deg, #506dff 0%, #a7e5da 100%);  }
+.confirm:hover { background: linear-gradient(-90deg, #a7e5da 0%, #506dff 100%); }
+.details-item-title { border-bottom: 2px solid#506dff;  }
+.section-details button{border: 2px solid#506dff;}
+.section-details button:hover { background:#506dff;  }
+.section-research-left button:hover ,.after-btn:hover,.before-btn:hover,.section-filter-icon button:hover{ color:#506dff; }
+.progress-bar {background:#506dff; }
+.progress-bar {background-image: -webkit-linear-gradient(top,#506dff 0,#055784  100%);background-image: -o-linear-gradient(top,#506dff 0,#055784  100%);background-image: -webkit-gradient(linear,left top,left bottom,from(#506dff),to(#055784 ));background-image: linear-gradient(to bottom,#506dff 0,#055784  100%);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff286090', GradientType=0);background-repeat: repeat-x;}
+.sort-box .sort-items li.active {color:#506dff}
+.section-input_2 span.checkbox::before{border: 2px solid#506dff;}
+.radioButton:checked+label span::after {color:#506dff;border: 2px solid#506dff;}
+.link-2:hover:after{border-color:#506dff;}
+.section-input_2 span.checkbox::before{  border: 2px solid#506dff;}
+.section-input_2 input[type="checkbox"]:checked + label span.checkbox::after {background:#506dff;}
+.select-arrow::before{color:#506dff;}
+.selectCountry i{color:#506dff;}
+.highlight { color:#506dff; }
+.ui-datepicker-buttonpane .ui-state-default:hover,.ui-datepicker-buttonpane .ui-state-default:focus,.ui-datepicker-buttonpane .ui-datepicker-current:hover,.ui-datepicker-buttonpane .ui-datepicker-current:focus{background-color:#506dff;}
+.ui-state-active,.ui-widget-content .ui-state-active,.ui-widget-header .ui-state-active{border:1px solid#506dff;background:#506dff!important;}
+.section-input_2 input[type="checkbox"]:checked + label span.checkbox::after {background:#506dff;}
+.loader {border-top: 5px solid#506dff; }
+.Link-Forgetpass:hover, .Link-Register:hover, .Link-ResendMail:hover, .Link-Login:hover { color: #506dff!important; }
+.ChangeFlight-header {background: linear-gradient(-135deg,#506dff, #a7e5da);}
+.active_tab_tour{color: #fff !important; background: #506dff;}
+.second-part-header .col1-second-part-header a:after,.second-part-header .col1-second-part-header a:before,
+.second-part-header .col1-second-part-header a:after{background:#506dff;}
+.second-part-header .col1-second-part-header a span{background:#506dff;}
+.active-item-search img { background:#465f88 !important; }
+.active-item-search .fa-arrow-down:before { color:#465f88 !important; }
+.active-item-search .item-search:before { border: 1px dashed#465f88 !important; display: none; }
+.radioButton:checked + label span::after {color:#465f88;border: 3px solid#465f88;}
+.category-title:hover { background:#465f88 !important; }
+.highlight { color:#465f88; }
+.font-color_2{color: #506dff;}
+.background-color_2{background:#465f88 !important;}
+.CountPassenger.room::before{color: #465f88 !important;}
+.add-room { background: linear-gradient(-90deg,#465f88 0%, #FFD700 100%); }
+.row1-footer .fa,.row1-footer .far {  border: 1px solid#465f88; }
+.circle {color:#465f88; }
+.details-button,.Others-Button { border: 1px solid#465f88;  }
+.details-button:hover,.Others-Button:hover {color:#465f88 }
+.row1-footer .fa:hover,.row1-footer .far:hover { color:#465f88; }
+.row1-footer .fa,.row1-footer .far{background:#465f88; }
+.fa-angle-double-left:hover,  .fa-angle-double-right:hover ,.controlsPage:hover{ background:#465f88;  }
+.right-border-d {  border-left: 2px dashed#465f88;}
+.right-border-d::after {background:#465f88;}
+.right-border-d::before {background:#465f88;}
+.sort-box .sort-items li.active {color:#465f88}
+.CountPassenger.room::before{color: #465f88;}
+.ui-datepicker-today .ui-state-highlight{background:#465f88;}
+.ui-datepicker table thead th{background-color:#465f88;}
+.ui-datepicker .ui-datepicker-buttonpane button{background-color:#465f88}
+.fa.fa-user.is-login { color:  #00a703; }
+.section_tour_room.active_room span{background:  #00a703;}
+.selected{color: #00a703;}
+.width_100 button{ background: #00a703 ;}
+.submit:hover { color:#34495e; }
+.font-color_3{color:#FFD700;}
+.background-color_3{background:#FFD700;}
+.font-color_4{color: #fff;}
+.top-menu img{width: 70px; height: auto; filter: none;-webkit-filter: none;}
+.col2-second-part-header img {width: 50px; height: auto; }
+/*-----------------------------*/
+.Basis_Calendar .selected_date{background: #465f88!important;}
+.Basis_Calendar .month_day_list table td:hover{background:#465f88 }
+.Basis_Calendar .month_detail{background:#465f88}
+.Basis_Calendar .basis_s_day{color:#506dff;}
+.Basis_Calendar .day_of_date{color:#506dff;}
+.Basis_Calendar .month_of_date{color:#506dff;}
+.Basis_Calendar .date_info_selected{border-bottom: 2px solid #506dff;}
+.Basis_Calendar .month_detail{border-bottom: 2px solid #506dff;}
+.Basis_Calendar .selected_day {background: #506dff;}
+.warning {color: red;}

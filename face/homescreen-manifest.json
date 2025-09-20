@@ -1,0 +1,21 @@
+{
+    "name": "سرسرای گشـتا",
+    "short_name": "سرسرای گشـتا",
+    "description": "ارائه بهترین سفر ها و تورهای خارجی و تور های داخلی و طبیعتگردی با بهترین کیفیت بصورت صفر تا صد تمامی خدمات سفر بلیط هواپیما و رزرو هتل بصورت آنلاین و تهیه بیمه مسافرتی و ویزا های کشورهای مختلف مانند تور سوییس و تور استانبول و تور فرانسه و تورآلپ خدمات سرسرای گشـتا می باشد.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0E82F0",
+    "icons": [
+        {
+            "src": "[##cms.cms.cdn##]/images/custom_icon_192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "[##cms.cms.cdn##]/images/custom_icon_512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

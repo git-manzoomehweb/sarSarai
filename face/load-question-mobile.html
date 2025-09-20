@@ -1,0 +1,32 @@
+<basis core="dbsource" source="basiscore" name="db" mid="1" lid="1" usedforid="[##cms.query.id##]" >
+    <member name="questions" type="view"/>
+</basis>
+<basis core="print" datamembername="db.questions">
+    <layout><ul class="qu-contents w-full">@child</ul></layout>
+    <face filter="prpid not in (7243,8358,8359,8360,54539)">
+        <li class="question-item mb-3 px-6 py-4 bg-zinc-50 rounded-2xl flex-col justify-start items-start gap-2.5 flex">
+            <div class="question-qu cursor-pointer self-stretch justify-between items-center inline-flex">
+              <h3 class="ectText--1 grow shrink basis-0 text-right text-zinc-900 text-base font-normal leading-normal hover:text-primary-600 max-xl:text-sm max-xl:overflow-visible max-xl:block">@text</h3>
+              <div class="w-12 h-12 p-3 origin-top-left justify-center items-center flex">
+                <div class="w-6 h-6 justify-center items-center inline-flex">
+                  <svg class="align-middle inline-block" fill="none" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m20.414 8.2501-8.414 8.414-8.414-8.414 1.414-1.414 7 7 7-7 1.414 1.414z" clip-rule="evenodd" fill="#18181B" fill-rule="evenodd"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="question-ans hidden">
+              <div class="grow shrink basis-0 text-right text-zinc-700 text-sm font-normal leading-5">@largetext</div>
+            </div>
+        </li>
+    </face>
+</basis>
+<script>
+    document.querySelectorAll(".question-item").forEach(function (item) {
+        item.classList.remove("active-question");
+        const questionQu = item.querySelector(".question-qu");
+        if (questionQu) {
+           questionQu.addEventListener("click", function () {
+              item.classList.toggle("active-question");
+           });
+        }
+     });
+    </script>
