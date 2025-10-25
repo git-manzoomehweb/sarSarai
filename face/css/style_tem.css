@@ -200,16 +200,15 @@ html {
 }
 
 :root {
-  --primary: #153fab;
-  --primary-600: #0e82f0;
-  --primary-500: #0091ff;
-  --primary-300: #5cb1ff;
-  --secondary: #fe6806;
-  --secondary-800: #fe8903;
-  --secondary-600: #ffad00;
-  --secondary-500: #fb0;
+  --primary: #0a0573;
+  --primary-600: #1d1c87;
+  --primary-500: #262792;
+  --primary-300: #2f309e;
+  --secondary: #f96c01;
+  --secondary-800: #fa9c02;
+  --secondary-600: #faaf02;
+  --secondary-500: #fabd09;
 }
-
 .social-art-footer ul li a:hover {
   color: var(--primary-600);
 }
@@ -2108,4 +2107,3 @@ li#Tour {
 .fa-paper-plane:before {
   font-weight: 400;
 }
-
