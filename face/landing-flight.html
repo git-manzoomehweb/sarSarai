@@ -1,0 +1,421 @@
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id##]">
+    <member request="json-ld" type="scalar" name="json" />
+</basis>
+<basis core="dbsource" source="basiscore" name="db" mid="1" lid="1" usedforid="[##cms.query.id##]">
+    <member name="view" type="view" propertyid="7249" />
+</basis>
+<basis core="dbsource" source="media" lid="1" name="view" usedforid="[##cms.query.id##]" sourcemid="article">
+    <member type="list" name="gallery" format="4" order="ord"></member>
+</basis>
+<basis core="dbsource" source="basiscore" name="db" lid="1" mid="1" usedforid="[##cms.query.id##]">
+    <member name="navigation" type="tree" request="navigationcat" />
+</basis>
+<basis core="dbsource" source="userbehavior" mid="1" name="db" usedforid="[##cms.query.id##]">
+    <member name="comment" type="list" order="ord" request="listcomment" />
+</basis>
+<basis core="dbsource" name="captcha" source="trust_login">
+    <member name="code" type="scalar" request="captcha"></member>
+</basis>
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
+    <title>[##cms.seo.title|(شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا)##]</title>
+    <meta name="description" content="[##cms.seo.description|(شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا)##]">
+    <basis core="dbsource" source="hosting" name="tag" urlid="[##cms.seo.urlid##]">
+        <member type="list" name="list" request="taglist" preview=""></member>
+    </basis>
+    <basis core="print" datamembername="tag.list">
+        <face filter="key = 'canonical'">
+            <link rel="canonical" href="@value" />
+        </face>
+        <face>
+            <meta property="@key" content="@value" />
+        </face>
+    </basis>
+    <basis core="call" file="pwa.inc" />
+    <link href="https://cdn.basiscore.net/basisfly.com/css/reservation_multiLang_css_calendar.css" type="text/css"
+        rel="stylesheet" />
+    <basis core="call" file="style.inc" />
+    <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js" type="text/javascript"></script>
+</head>
+
+<body onload="loadContentHomaPage()">
+    <basis core="call" file="header.inc" />
+    <main>
+        <section>
+            <div id="top-banner-resize"
+                class="search-bg clear-both mb-16 rounded-b-[50px] m-auto max-xl:bg-none max-xl:h-auto max-xl:w-full max-xl:mb-7">
+                <div class="search-box-container fa w-[1280px] m-auto clear-both max-xl:w-full">
+                    <div id="search-box"
+                        class="backdrop-opacity rounded-2xl mt-[250px] py-[30px] px-[22px] w-full m-auto float-right max-xl:bg-[#B7B7B7] max-xl:mt-8 max-xl:p-1">
+                        <div class="animate-pulse w-full flex justify-center items-center">
+                            <img width="100" height="100" src="[##cms.cms.cdn##]/images/travel-now.png" alt="loader">
+                        </div>
+                        <!-- <div id="ballsWaveG">
+                  <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                  <div id="ballsWaveG_8" class="ballsWaveG"></div>
+                </div> -->
+                    </div>
+                    <div class="clr"></div>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </section>
+
+        <div class="flex gap-6 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-8 mb-16">
+            <div class="flex-1 min-w-0">
+                <basis core="print" datamembername="db.view">
+                    <layout>
+                        <div>
+                            @child
+                        </div>
+                    </layout>
+                    <face filter="TypeID in(150)">
+                        <h1 class="font-bold text-zinc-900">@text</h1>
+                    </face>
+                </basis>
+                <basis core="print" datamembername="db.view">
+                    <layout>
+                        <section>
+                            @child
+                        </section>
+                    </layout>
+                    <face filter="TypeID in(129)">
+                        <h2 id="@valueID" class="text-2xl font-bold text-zinc-900 mb-3">@text</h2>
+                        <div class="text-sm text-justify text-zinc-900 leading-7 hyphens-auto mb-8">
+                            @largetext
+                        </div>
+                    </face>
+                    <face filter="TypeID in(250)">
+                        <h2 id="@valueID" class="text-2xl font-bold text-zinc-900 mb-3">@text</h2>
+                        <div class="text-sm text-justify text-zinc-900 leading-7 hyphens-auto mb-8">
+                            @largetext
+                        </div>
+                    </face>
+                </basis>
+
+
+            </div>
+            <basis core="print" datamembername="db.view">
+                <layout>
+                    <aside class="sticky h-fit top-0 w-80">
+                        <div class="bg-zinc-100 p-3 rounded-xl">
+                            <div class="border-b border-solid border-zinc-300 pb-2">
+                                <h2 class="text-zinc-900 font-medium">فهرست عناوین</h2>
+                            </div>
+                            <div class="flex flex-col gap-1 mt-2">
+                                @child
+                            </div>
+                        </div>
+                    </aside>
+                </layout>
+                <face filter="TypeID in(250 , 129)">
+                    <a href="#@valueID"
+                        class="group flex items-center gap-1 transition-all duration-300 hover:text-primary-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M32.0193 21.9955L27.9193 21.4045C27.6873 21.3755 27.4853 21.2305 27.3783 21.0165L25.5503 17.3565C25.5473 17.3525 25.5453 17.3485 25.5433 17.3435C25.3753 17.0325 25.1143 16.7715 24.7993 16.6045C23.9523 16.1735 22.9013 16.5055 22.4543 17.3565L20.6243 21.0155C20.5163 21.2295 20.3123 21.3755 20.0713 21.4055L15.9803 21.9955C15.5843 22.0545 15.2373 22.2305 14.9793 22.5025C14.6613 22.8315 14.4913 23.2655 14.5003 23.7235C14.5093 24.1815 14.6963 24.6065 15.0243 24.9205L17.9913 27.7765C18.1563 27.9305 18.2333 28.1655 18.1933 28.3945L17.4923 32.4125C17.4323 32.7875 17.4963 33.1745 17.6703 33.4945C17.8883 33.9045 18.2513 34.2035 18.6933 34.3395C18.8603 34.3905 19.0313 34.4155 19.2003 34.4155C19.4783 34.4155 19.7533 34.3475 20.0023 34.2145L23.6623 32.3225C23.8743 32.2095 24.1293 32.2095 24.3463 32.3245L27.9883 34.2085C28.3153 34.3885 28.6883 34.4535 29.0813 34.3935C30.0203 34.2395 30.6633 33.3495 30.5103 32.4045L29.8103 28.3945C29.7693 28.1585 29.8453 27.9275 30.0183 27.7615L32.9763 24.9205C33.2533 24.6535 33.4353 24.2965 33.4853 23.9155C33.6083 22.9835 32.9493 22.1215 32.0193 21.9955Z"
+                                fill="#18181b" />
+                        </svg>
+                        <h3 class="text-xs text-zinc-900 transition-all duration-300 group-hover:text-primary-600">
+                            @text</h3>
+                    </a>
+                </face>
+            </basis>
+
+        </div>
+
+        <div id="contact-form-resize" class="free-form-container form-container w-full mb-16">
+            <basis core="schema" run="atclient"
+                schemaurl="/schema/domainform/73984926-AF32-424E-ADF4-FDC2EB72A64F/36E97D21-6D48-4485-AF09-0A5FA00CE940/fa/contact"
+                displaymode="new" button="[data-btn-uploadfooter]" resultsourceid="upload.datafooter"
+                OnRendered="RenderFormFooter"></basis>
+            <basis core="api" if="{##cms.uploadFooter.run|(false)##}" run="atclient"
+                url="/schema/domainform/73984926-AF32-424E-ADF4-FDC2EB72A64F/fa/editobject" method="post"
+                body="object_edit={##cms.uploadFooter.value##}&captcha={##cms.uploadFooter.captcha##}&captchaid={##cms.uploadFooter.captchaid##}"
+                content-type="application/x-www-form-urlencoded" triggers='cms.uploadFooter'
+                OnProcessed="OnProcessedEditObjectFooter"></basis>
+            <div class="free-form-content">
+                <basis core="callback" run="atclient" method="uploadDocumentFooter" triggers="upload.datafooter">
+                </basis>
+                <div class="captcha-button">
+                    <div id="captchaContainer"
+                        class="captchaContainerclass captcha-sefaresh ml-2.5 max-xl:ml-0 max-xl:mb-[20px]"
+                        data-bc-answer-container data-bc-schema-info-multi="0" data-bc-schema-info-word="58"
+                        data-bc-schema-info-part="1" data-bc-schema-info-part-0-type="text">
+                        <basis core="dbsource" source="trust_login" name="captcha" run="atclient"
+                            triggers="captcha.refreshFooter">
+                            <member name="code" type="scalar" request="captcha"></member>
+                        </basis>
+                        <basis datamembername="captcha.code" core="print" run="atclient"
+                            OnRendered="captchaRenderedFooter">
+                            <face>
+                                <script type="text/template"><div class="d-inline-block"><div class="d-flex">
+        
+                                    <div class="float-right"><input type="text" class="contactUsInput codeinputm" name="captcha" maxlength="4" placeholder="Security code"/><input type="hidden" name="captchaid" value="@captcha@" /></div>
+                                    <div class="float-right h-[65px] leading-[65px]">
+                                        <img src="https://www.basispanel.ir/@captcha@" width="120" height="60" alt="captcha" />
+                                        <svg class="cursor-pointer inline-block align-middle" onclick="refreshCaptchaFooter()" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.1247 8.56165H18.1238C18.0007 8.56175 17.8788 8.5861 17.7651 8.63331C17.6514 8.68052 17.5481 8.74967 17.4611 8.8368C17.3741 8.92393 17.3052 9.02734 17.2581 9.14113C17.2111 9.25492 17.187 9.37685 17.1871 9.49997C17.1859 10.8143 16.8245 12.1032 16.1421 13.2265C15.4597 14.3498 14.4824 15.2646 13.3166 15.8714C12.1507 16.4782 10.8408 16.7538 9.52921 16.6683C8.21765 16.5827 6.95463 16.1393 5.87744 15.3862C2.63134 13.1132 1.83959 8.62309 4.11255 5.37696C6.38552 2.13083 10.8757 1.33899 14.1218 3.61204C14.6129 3.95501 15.0592 4.358 15.4504 4.81165H12.8121C12.5635 4.81165 12.325 4.91042 12.1492 5.08623C11.9734 5.26205 11.8746 5.5005 11.8746 5.74915C11.8746 5.99779 11.9734 6.23624 12.1492 6.41206C12.325 6.58787 12.5635 6.68665 12.8121 6.68665H17.1871C17.4358 6.68665 17.6742 6.58787 17.85 6.41206C18.0259 6.23624 18.1246 5.99779 18.1246 5.74915V1.37415C18.1246 1.12551 18.0259 0.887048 17.85 0.711233C17.6742 0.535418 17.4358 0.436646 17.1871 0.436646C16.9385 0.436646 16.7 0.535418 16.5242 0.711233C16.3484 0.887048 16.2496 1.12551 16.2496 1.37415V2.93536C15.9206 2.62321 15.5689 2.33596 15.1973 2.07598C14.2225 1.39342 13.1228 0.909542 11.9609 0.651979C10.7991 0.394417 9.59797 0.368213 8.42603 0.574863C7.25409 0.781513 6.13433 1.21697 5.13067 1.85637C4.12702 2.49578 3.25914 3.3266 2.57658 4.30141C1.19808 6.27013 0.658111 8.70582 1.07546 11.0727C1.49281 13.4395 2.83329 15.5436 4.80201 16.9221C6.31776 17.9898 8.12639 18.563 9.98041 18.5633C10.5144 18.5631 11.0474 18.5162 11.5732 18.4233C13.6714 18.0531 15.5722 16.9556 16.9417 15.3235C18.3112 13.6914 19.062 11.6289 19.0621 9.49833C19.0619 9.24983 18.963 9.01159 18.7873 8.83596C18.6115 8.66032 18.3732 8.56166 18.1247 8.56165Z" fill="#18181B"/></svg>
+                                    </div>
+                                    
+                                </div></div></script>
+                            </face>
+                        </basis>
+                    </div>
+                    <button
+                        class="data-body-btn w-[126px] h-12 px-4 py-2 bg-primary-600 rounded-2xl justify-center items-center gap-2.5 flex cursor-pointer hover:bg-secondary-600"
+                        type="button" data-btn-uploadfooter><span
+                            class="text-zinc-50 text-base font-normal leading-normal">ارسال</span></button>
+                    <div
+                        class="Loading_Form data-body-btn w-[126px] h-12 px-4 py-2 bg-secondary-800 rounded-2xl justify-center items-center gap-2.5 flex">
+                        <div id="ballsWaveG" class="ext-zinc-50 text-base font-normal leading-normal">
+                            <div id="ballsWaveG_1" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_2" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_3" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_4" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_5" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_6" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_7" class="ballsWaveG"></div>
+                            <div id="ballsWaveG_8" class="ballsWaveG"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="message-api text-center"></div>
+        </div>
+    </main>
+    <div class="mt-[150px]">
+        <basis core="call" file="footer.inc" />
+    </div>
+
+    <script type="text/javascript">
+        // انتخاب ریشه‌ی فرم
+        const __FOOTER_ROOT__ = document.getElementById('contact-form-resize');
+        const $_f = (sel) => __FOOTER_ROOT__ ? __FOOTER_ROOT__.querySelector(sel) : null;
+
+        // پیام را به‌صورت متن نمایش بده (XSS-safe)
+        function __showMsg__(txt) {
+            const box = $_f('.message-api');
+            if (box) box.textContent = String(txt ?? '');
+        }
+
+        // هایلایت خطا
+        function __markInvalid__(el, bad) {
+            if (!el) return;
+            el.classList.toggle('border-red-500', !!bad); // اگر Tailwind داری
+        }
+
+        // نرمال‌سازی اعداد فارسی/عربی و حذف کاراکترهای نامرئی RTL
+        const __PERS__ = '۰۱۲۳۴۵۶۷۸۹', __ARAB__ = '٠١٢٣٤٥٦٧٨٩';
+        function __toEnglishDigits__(s) {
+            return String(s || '').replace(/[۰-۹٠-٩]/g, ch => {
+                const i = __PERS__.indexOf(ch); if (i > -1) return String(i);
+                const j = __ARAB__.indexOf(ch); if (j > -1) return String(j);
+                return ch;
+            });
+        }
+        function __stripBidi__(s) { return String(s || '').replace(/[\u200c\u200e\u200f\u061c\u202a-\u202e]/g, ''); }
+
+        function __sanitizeCaptcha__(v) { return __stripBidi__(v ?? ''); }
+        function __sanitizeCaptchaId__(v) { return __stripBidi__(String(v || '')).replace(/[^A-Za-z0-9_-]/g, ''); }
+        function __hasTags__(s) { return /<[^>]+>/.test(String(s || '')); }
+
+        // اعتبارسنجی ورودی‌ها (فقط روی همین فرم)
+        function __validateFooter__() {
+            const fullNameEl = $_f('.contact-fullname-ans input[data-bc-text-input]');
+            const phoneEl = $_f('.contact-phone-ans input[data-bc-text-input]');
+            const msgEl = $_f('.contact-desc-ans textarea');
+            const capEl = $_f('#captchaContainer input[name="captcha"]');
+            const capIdEl = $_f('#captchaContainer input[name="captchaid"]');
+
+            const fullName = (fullNameEl?.value || '').trim();
+            const phoneDigits = __toEnglishDigits__(phoneEl?.value || '').replace(/\D/g, '');
+            const message = (msgEl?.value || '').trim();
+            const captcha = __sanitizeCaptcha__(capEl?.value);
+            const captchaid = __sanitizeCaptchaId__(capIdEl?.value);
+
+            const errors = [];
+            let firstBad = null;
+
+            // ریست هایلایت
+            __markInvalid__(fullNameEl, false);
+            __markInvalid__(phoneEl, false);
+            __markInvalid__(msgEl, false);
+            __markInvalid__(capEl, false);
+
+            if (fullName.length < 3) { errors.push('نام و نام خانوادگی را درست وارد کنید.'); __markInvalid__(fullNameEl, true); firstBad = firstBad || fullNameEl; }
+
+            // قانون عمومی: 7 تا 15 رقم؛ اگر خواستی شماره موبایل ایران چک شود بگو تا RegExp بگذارم
+            if (phoneDigits.length < 7 || phoneDigits.length > 15) { errors.push('شماره تماس معتبر نیست.'); __markInvalid__(phoneEl, true); firstBad = firstBad || phoneEl; }
+
+            if (message.length < 3 || message.length > 1000 || __hasTags__(message)) { errors.push('پیام باید متن ساده و بین ۳ تا ۱۰۰۰ کاراکتر باشد.'); __markInvalid__(msgEl, true); firstBad = firstBad || msgEl; }
+
+            const rawCaptcha = capEl?.value ?? '';
+            const capLen = String(rawCaptcha)
+                .replace(/[\u200c\u200e\u200f\u061c\u202a-\u202e]/g, '') // حذف bidi invisibles
+                .replace(/\s/g, '')                                       // حذف فاصله
+                .length;
+
+            if (capLen !== 4) {
+                errors.push('کد امنیتی باید دقیقاً ۴ کاراکتر باشد.');
+                __markInvalid__(capEl, true); firstBad = firstBad || capEl;
+            }
+            if (!captchaid) { errors.push('کپچا معتبر نیست. لطفاً رفرش کنید.'); }
+
+            return { ok: errors.length === 0, errors, focusEl: firstBad, values: { captcha, captchaid } };
+        }
+
+
+        function uploadDocumentFooter(args) {
+            // 1) اعتبارسنجی روی کلیک
+            const { ok, errors, focusEl, values } = __validateFooter__();
+            if (!ok) {
+                __showMsg__('لطفاً موارد زیر را اصلاح کنید:\n• ' + errors.join('\n• '));
+                if (focusEl) focusEl.focus();
+                return; // جلوی ارسال را می‌گیریم
+            }
+
+            // 2) اگر اوکی بود، بعد ارسال کن (دستورات $bc دست‌نخورده)
+            document.querySelector("#contact-form-resize .Loading_Form").style.display = 'block';
+
+            const captcha = values.captcha;
+            const captchaid = values.captchaid;
+
+            const stringJson = JSON.stringify(args.source?.rows[0] ?? {});
+            $bc.setSource("cms.uploadFooter", {
+                value: stringJson,
+                captcha: captcha,
+                captchaid: captchaid,
+                run: true
+            });
+        };
+
+
+
+        function refreshCaptchaFooter(e) {
+            $bc.setSource("captcha.refreshFooter", true);
+        };
+
+        function captchaRenderedFooter() {
+            document.querySelector("#contact-form-resize .contactUsInput").placeholder = "کد امنیتی";
+        }
+
+        async function OnProcessedEditObjectFooter(args) {
+            var response = args.response;
+            var json = await response.json();
+            var errorid = json.errorid;
+            if (errorid == "6") {
+                document.querySelector("#contact-form-resize .Loading_Form").style.display = 'none';
+                document.querySelector("#contact-form-resize .message-api").textContent = "درخواست شما با موفقیت ثبت شد.";
+            } else {
+                refreshCaptchaFooter()
+                setTimeout(() => {
+                    document.querySelector("#contact-form-resize .Loading_Form").style.display = 'none';
+                    document.querySelector("#contact-form-resize .message-api").textContent = "خطایی رخ داده, لطفا مجدد اقدام کنید.";
+                }, 2000);
+            }
+        }
+
+        async function RenderFormFooter() {
+
+
+            var inputElementVisa7 = document.querySelector('#contact-form-resize .contact-fullname-ans input[data-bc-text-input]');
+            inputElementVisa7.setAttribute('placeholder', 'نام و نام خانوادگی');
+
+            var inputElementVisa7 = document.querySelector('#contact-form-resize .contact-phone-ans input[data-bc-text-input]');
+            inputElementVisa7.setAttribute('placeholder', 'شماره تماس');
+
+            var inputElementVisa7 = document.querySelector('#contact-form-resize .contact-desc-ans textarea');
+            inputElementVisa7.setAttribute('placeholder', 'پیام');
+
+        }
+    </script>
+    <script>
+        (function () {
+            const ROOT = document.getElementById('contact-form-resize');
+            if (!ROOT) return;
+
+            const getInput = () =>
+                ROOT.querySelector('#captchaContainer input[name="captcha"]');
+
+            const showMsg = (t) => {
+                const b = ROOT.querySelector('.message-api');
+                if (b) b.textContent = String(t ?? '');
+            };
+
+            // فقط برای شمارش طول: حذف فاصله و کاراکترهای نامرئی جهت‌دهی
+            const normalizeForLength = (s) =>
+                String(s || '')
+                    .replace(/[\u200c\u200e\u200f\u061c\u202a-\u202e]/g, '')
+                    .replace(/\s/g, '');
+
+            // هیچ محدودیت کاراکتری نذار؛ فقط محدودیت‌های مزاحم قبلی رو خنثی کن
+            function relaxCaptchaRestrictions(input) {
+                if (!input) return;
+
+                // اجازه‌ی تایپ هر کاراکتر
+                input.type = 'text';
+                input.setAttribute('maxlength', '4');
+                input.setAttribute('autocomplete', 'off');
+
+                // الگوها/حالت‌های قبلی که فقط عدد می‌خواستن رو بردار
+                ['pattern', 'inputmode', 'dir',
+                    'onkeypress', 'onkeydown', 'onkeyup', 'oninput', 'onchange', 'onbeforeinput', 'onpaste'
+                ].forEach(a => input.removeAttribute(a));
+
+                // اگر اسکریپت دیگری با event delegation جلوی حروف را می‌گیرد، این‌ها خنثی‌اش می‌کنند
+                const allow = (e) => { e.stopImmediatePropagation(); };
+                ['keypress', 'keydown', 'keyup', 'beforeinput', 'input', 'paste'].forEach(ev => {
+                    input.addEventListener(ev, allow, { capture: true });
+                });
+            }
+
+            // اگر CMS کپچا را دوباره رندر کرد، دوباره آزادش کن
+            const prevCaptchaRendered = window.captchaRenderedFooter;
+            window.captchaRenderedFooter = function () {
+                try { if (typeof prevCaptchaRendered === 'function') prevCaptchaRendered(); } catch { }
+                relaxCaptchaRestrictions(getInput());
+            };
+
+            // فقط طول = ۴ کاراکتر را چک کن؛ نوع کاراکتر مهم نیست
+            const prevUpload = window.uploadDocumentFooter;
+            window.uploadDocumentFooter = function (args) {
+                const input = getInput();
+                if (input) relaxCaptchaRestrictions(input);
+
+                const raw = input ? input.value : '';
+                const val = normalizeForLength(raw);
+
+                if (val.length !== 4) {
+                    showMsg('کد امنیتی باید دقیقاً ۴ کاراکتر باشد.');
+                    if (input) input.focus();
+                    return; // جلوی ارسال را بگیر
+                }
+
+                // عبور: فلو اصلی و $bc مثل قبل
+                return prevUpload.call(this, args);
+            };
+
+            // بار اول هم اعمال کن
+            relaxCaptchaRestrictions(getInput());
+        })();
+    </script>
+
+
+
+    <script type="application/ld+json">
+        [##db.json.Column1##]
+      </script>
+</body>
+
+</html>
