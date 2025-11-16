@@ -1,4 +1,27 @@
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="218813">
+  <member name="article-routes" type="list" link="landing-flight.bc" propertyid="3088103,3088104,3088105,3088106" perpage="10" order="ord"/>
+</basis>
 <footer id="footer-resize" class="w-full h-auto relative bg-white dir-rtl clear-both">
+    <basis core="list" datamembername="db.article-routes">
+    <layout>
+      <div class="w-full  flex justify-center article-routes     ">
+       <div class="w-full  flex flex-col   px-6  ">
+         <p class="text-base font-bold">مسیرهای پرتردد</p>
+        <div class="grid grid-cols-4 max-md:!grid-cols-1 gap-4">
+          @child
+        </div>
+       </div>
+    </div>
+  </layout>
+  <face>
+    <a href="@link" class="route-container flex w-full justify-between">@title
+
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <path d="M10.333 12.6668L5.66634 8.00016L10.333 3.3335" stroke="#0C0A09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+ </svg>
+    </a>
+  </face>
+  </basis>
   <div class="self-stretch px-6 py-4 bg-primary-600 flex-col justify-center items-center gap-2.5 flex h-auto">
     <div class="self-stretch m-auto flex-col justify-start items-start gap-2.5 flex w-full h-auto px-0">
       <div class="self-stretch flex-col justify-start items-end gap-4 flex w-[150px] h-auto">
@@ -77,19 +100,23 @@
             <div class="self-stretch flex-col justify-start items-end gap-3 block">
               <div class="self-stretch text-right text-base font-bold  leading-[34px] mb-3">اطلاعات تکمیلی</div>
               <ul class="self-stretch justify-between items-center dir-rtl leading-tight block">
-                <li class="mb-3 block"><a href="https://sadadpsp.ir/tollpayment#/tax/departuretax"
-                    class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">عوارض خروج از کشور</a>
-                </li>
-                <li class="mb-3 block"><a href="سوالات-متداول"
-                    class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">سوالات متداول</a></li>
+              
+               <!-- <li class="mb-3 block"><a href="سوالات-متداول"-->
+                  <!--  class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">سوالات متداول</a></li>-->
                 <!-- <li class="mb-3 block"><a href="" class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">قوانین و مقررات</a></li>
                   <li class="mb-3 block"><a href="" class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">راهنمای خرید</a></li>
                   <li class="mb-3 block"><a href="" class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">راهنمای استرداد</a></li> -->
-                <li class="mb-3 block"><a href="https://www.ikac.ir/flight-status" rel="noopener"
+                <li class="mb-3 block"><a href="https://www.ikac.ir/fa-IR/airport.ikac/5257/page/%D9%84%DB%8C%D8%B3%D8%AA-%D9%BE%D8%B1%D9%88%D8%A7%D8%B2-%D9%87%D8%A7" rel="noopener"
                     class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">اطلاعات فرودگاه امام
                     خمینی</a></li>
                 <li class="mb-3 block"><a href="https://fids.airport.ir/" rel="noopener"
-                    class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">اطلاعات فرودگاه ها </a>
+                    class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">اطلاعات فرودگاه های ایران </a>
+                </li>
+<li class="mb-3 block"><a href="https://www.sarsarai.ir/%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C-%DA%A9%D8%A7%D9%85%D9%84-%D8%AA%D8%B1%D9%85%DB%8C%D9%86%D8%A7%D9%84-%D9%87%D8%A7%DB%8C-%D9%81%D8%B1%D9%88%D8%AF%DA%AF%D8%A7%D9%87-%D9%85%D9%87%D8%B1%D8%A2%D8%A8%D8%A7%D8%AF-%D8%AA%D9%87%D8%B1%D8%A7%D9%86/" rel="noopener"
+                    class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">اطلاعات فرودگاه مهرآباد </a>
+                </li>
+  <li class="mb-3 block"><a href="https://sadadpsp.ir/tollpayment#/tax/departuretax"
+                    class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">عوارض خروج از کشور</a>
                 </li>
               </ul>
             </div>

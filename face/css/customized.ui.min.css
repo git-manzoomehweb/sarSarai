@@ -1464,6 +1464,11 @@ textarea {
   }
 }
 @media not all and (min-width: 1024px) {
+  .landing-flight .hotel-btn,
+  .landing-flight .rezervation-item,
+  .landing-flight .flighthotel-btn {
+    display: none !important;
+  }
   .max-lg\: static {
     position: static;
   }
@@ -1550,8 +1555,72 @@ img[alt="sarsara-gashta"] {
   display: none !important;
 }
 @media (min-width: 1024px) {
-.btnstyle::after {padding-left: 30px;}
-.hasNot-login-icon{background-color: var(--secondary-600);border-radius: 100%;padding: 5px;position: absolute;top: 33px;left: 0;}
-.Login_Information .btnstyle svg {fill: #000;stroke: #000;display: block;}
-.btnstyle{position: unset;}
+  .landing-flight .hotel-btn,
+  .landing-flight .rezervation-item,
+  .landing-flight .flighthotel-btn {
+    display: none !important;
+  }
+  .btnstyle::after {
+    padding-left: 30px;
+  }
+  .hasNot-login-icon {
+    background-color: var(--secondary-600);
+    border-radius: 100%;
+    padding: 5px;
+    position: absolute;
+    top: 33px;
+    left: 0;
+  }
+  .Login_Information .btnstyle svg {
+    fill: #000;
+    stroke: #000;
+    display: block;
+  }
+  .btnstyle {
+    position: unset;
+  }
+}
+.grid {
+  display: grid;
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+@media not all and (min-width: 768px) {
+  .max-md\:\!grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+}
+.article-routes {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #c1c1e5ac;
+}
+.article-routes p {
+  text-align: center;
+}
+.route-container {
+  color: rgb(39, 39, 39) !important;
+  font-weight: 500;
+  position: relative;
+  padding: 8px 23px !important;
+  border-radius: 12px;
+  align-items: center;
+  position: relative;
+}
+.route-container::before {
+  position: absolute;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  right: 6px;
+}
+.route-container:hover {
+  background-color: var(--primary);
+  color: white !important;
+}
+.route-container:hover svg path {
+  stroke: white;
 }

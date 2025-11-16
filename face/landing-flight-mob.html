@@ -39,6 +39,8 @@
     <basis core="call" file="pwa.inc" />
     <link href="https://cdn.basiscore.net/basisfly.com/css/reservation_multiLang_css_calendar.css" type="text/css"
         rel="stylesheet" />
+    <link href="[##cms.cms.cdn##]/css/sarsara-mob.ui.min.css"
+        rel="stylesheet" />
     <basis core="call" file="style.inc" />
     <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js" type="text/javascript"></script>
 </head>
@@ -70,17 +72,16 @@
                         <div class="des-id">@text</div>
                     </face>
                 </basis>
-                
+
             </div>
-            <div id="top-banner-resize"
-                class="search-bg clear-both mb-16 rounded-b-[50px] m-auto max-xl:bg-none max-xl:h-auto max-xl:w-full max-xl:mb-7">
-                <div class="search-box-container fa w-[1280px] m-auto clear-both max-xl:w-full">
+            <div
+                class="clear-both mb-[126px] rounded-b-[50px] m-auto max-xl:bg-none max-xl:h-auto max-xl:w-full max-xl:mb-7">
+                <div class="search-box-container fa w-full  m-auto clear-both max-xl:w-full">
                     <div id="search-box"
                         class="backdrop-opacity rounded-2xl mt-[250px] py-[30px] px-[22px] w-full m-auto float-right max-xl:bg-[#B7B7B7] max-xl:mt-8 max-xl:p-1">
                         <div class="animate-pulse w-full flex justify-center items-center">
                             <img width="100" height="100" src="[##cms.cms.cdn##]/images/travel-now.png" alt="loader">
                         </div>
-                        
                     </div>
                     <div class="clr"></div>
                 </div>
@@ -88,7 +89,33 @@
             </div>
         </section>
 
-        <div class="flex gap-6 mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mt-8 mb-16">
+        <div class="flex gap-6 w-full flex-col px-6 mt-8 mb-16">
+            <basis core="print" datamembername="db.view">
+                <layout>
+                    <aside class="w-full px-6">
+                        <div class="bg-zinc-100 p-3 rounded-xl">
+                            <div class="border-b border-solid border-zinc-300 pb-2">
+                                <h2 class="text-zinc-900 font-medium">فهرست عناوین</h2>
+                            </div>
+                            <div class="flex flex-col gap-1 mt-2">
+                                @child
+                            </div>
+                        </div>
+                    </aside>
+                </layout>
+                <face filter="TypeID in(250 , 129)">
+                    <a href="#@valueID"
+                        class="group flex items-center gap-1 transition-all duration-300 hover:text-primary-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M32.0193 21.9955L27.9193 21.4045C27.6873 21.3755 27.4853 21.2305 27.3783 21.0165L25.5503 17.3565C25.5473 17.3525 25.5453 17.3485 25.5433 17.3435C25.3753 17.0325 25.1143 16.7715 24.7993 16.6045C23.9523 16.1735 22.9013 16.5055 22.4543 17.3565L20.6243 21.0155C20.5163 21.2295 20.3123 21.3755 20.0713 21.4055L15.9803 21.9955C15.5843 22.0545 15.2373 22.2305 14.9793 22.5025C14.6613 22.8315 14.4913 23.2655 14.5003 23.7235C14.5093 24.1815 14.6963 24.6065 15.0243 24.9205L17.9913 27.7765C18.1563 27.9305 18.2333 28.1655 18.1933 28.3945L17.4923 32.4125C17.4323 32.7875 17.4963 33.1745 17.6703 33.4945C17.8883 33.9045 18.2513 34.2035 18.6933 34.3395C18.8603 34.3905 19.0313 34.4155 19.2003 34.4155C19.4783 34.4155 19.7533 34.3475 20.0023 34.2145L23.6623 32.3225C23.8743 32.2095 24.1293 32.2095 24.3463 32.3245L27.9883 34.2085C28.3153 34.3885 28.6883 34.4535 29.0813 34.3935C30.0203 34.2395 30.6633 33.3495 30.5103 32.4045L29.8103 28.3945C29.7693 28.1585 29.8453 27.9275 30.0183 27.7615L32.9763 24.9205C33.2533 24.6535 33.4353 24.2965 33.4853 23.9155C33.6083 22.9835 32.9493 22.1215 32.0193 21.9955Z"
+                                fill="#18181b" />
+                        </svg>
+                        <h3 class="text-xs text-zinc-900 transition-all duration-300 group-hover:text-primary-600">
+                            @text</h3>
+                    </a>
+                </face>
+            </basis>
             <div class="flex-1 min-w-0">
                 <basis core="print" datamembername="db.view">
                     <layout>
@@ -122,36 +149,12 @@
 
 
             </div>
-            <basis core="print" datamembername="db.view">
-                <layout>
-                    <aside class="sticky h-fit top-0 w-80">
-                        <div class="bg-zinc-100 p-3 rounded-xl">
-                            <div class="border-b border-solid border-zinc-300 pb-2">
-                                <h2 class="text-zinc-900 font-medium">فهرست عناوین</h2>
-                            </div>
-                            <div class="flex flex-col gap-1 mt-2">
-                                @child
-                            </div>
-                        </div>
-                    </aside>
-                </layout>
-                <face filter="TypeID in(250 , 129)">
-                    <a href="#@valueID"
-                        class="group flex items-center gap-1 transition-all duration-300 hover:text-primary-600">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M32.0193 21.9955L27.9193 21.4045C27.6873 21.3755 27.4853 21.2305 27.3783 21.0165L25.5503 17.3565C25.5473 17.3525 25.5453 17.3485 25.5433 17.3435C25.3753 17.0325 25.1143 16.7715 24.7993 16.6045C23.9523 16.1735 22.9013 16.5055 22.4543 17.3565L20.6243 21.0155C20.5163 21.2295 20.3123 21.3755 20.0713 21.4055L15.9803 21.9955C15.5843 22.0545 15.2373 22.2305 14.9793 22.5025C14.6613 22.8315 14.4913 23.2655 14.5003 23.7235C14.5093 24.1815 14.6963 24.6065 15.0243 24.9205L17.9913 27.7765C18.1563 27.9305 18.2333 28.1655 18.1933 28.3945L17.4923 32.4125C17.4323 32.7875 17.4963 33.1745 17.6703 33.4945C17.8883 33.9045 18.2513 34.2035 18.6933 34.3395C18.8603 34.3905 19.0313 34.4155 19.2003 34.4155C19.4783 34.4155 19.7533 34.3475 20.0023 34.2145L23.6623 32.3225C23.8743 32.2095 24.1293 32.2095 24.3463 32.3245L27.9883 34.2085C28.3153 34.3885 28.6883 34.4535 29.0813 34.3935C30.0203 34.2395 30.6633 33.3495 30.5103 32.4045L29.8103 28.3945C29.7693 28.1585 29.8453 27.9275 30.0183 27.7615L32.9763 24.9205C33.2533 24.6535 33.4353 24.2965 33.4853 23.9155C33.6083 22.9835 32.9493 22.1215 32.0193 21.9955Z"
-                                fill="#18181b" />
-                        </svg>
-                        <h3 class="text-xs text-zinc-900 transition-all duration-300 group-hover:text-primary-600">
-                            @text</h3>
-                    </a>
-                </face>
-            </basis>
+
 
         </div>
 
-        <div id="contact-form-resize" class="free-form-container form-container  mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mb-16">
+        <div id="contact-form-resize"
+            class="free-form-container form-container  mx-auto max-lg:w-[90%] max-xl:w-[97%] xl:max-w-7xl mb-16">
             <basis core="schema" run="atclient"
                 schemaurl="/schema/domainform/73984926-AF32-424E-ADF4-FDC2EB72A64F/36E97D21-6D48-4485-AF09-0A5FA00CE940/fa/contact"
                 displaymode="new" button="[data-btn-uploadfooter]" resultsourceid="upload.datafooter"
@@ -211,7 +214,7 @@
         </div>
     </main>
     <div class="mt-[150px]">
-        <basis core="call" file="footer.inc" />
+        <basis core="call" file="footer.inc"  pageindex="[##cms.cms.pageindex##]"/>
     </div>
 
     <script type="text/javascript">

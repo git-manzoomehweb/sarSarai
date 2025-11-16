@@ -8,17 +8,17 @@
   <member name="navigation" type="tree" request="navcatid" parentid="[##cms.query.catid##]" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
-  <member name="article-top" type="list" link="article.bc" propertyid="7244" perpage="1" size="828x351" order="ord"/>
+  <member name="article-top" type="list" link="article.bc" propertyid="7244" perpage="1" size="828x351" order="date desc"/>
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="201117">
-  <member name="article-side" type="list" link="article.bc" propertyid="7244" perpage="10" size="134x134" order="ord"/>
+  <member name="article-side" type="list" link="article.bc" propertyid="7244" perpage="10" size="134x134" order="date desc"/>
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="[##cms.query.catid##]">
-  <member name="article-list" type="list" link="article.bc" propertyid="7244" perpage="20" pageno="[##cms.query.pagenum|(1)##]" size="407x245" order="ord"/>
+  <member name="article-list" type="list" link="article.bc" propertyid="7244" perpage="20" pageno="[##cms.query.pagenum|(1)##]" size="407x245" order="date desc"/>
   <member name="paging" type="list" request="paging" count="5" parentname="article-list" /> 
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="201487">
-  <member name="tour-popular" type="list" link="tour.bc" propertyid="3087374,8181,8076,10000504" perpage="4" size="311x196" typeid="" order="[##cms.Host.tour-list-order|(ord)##]" />
+  <member name="tour-popular" type="list" link="tour.bc" propertyid="3087374,8181,8076,10000504" size="311x196" typeid="" order="[##cms.Host.tour-list-order|(ord)##]" />
 </basis>
 <basis core="dbsource" source="basiscore" mid="1" name="list" lid="1" schemaid="987" term="[##cms.query.term##]">
   <member name="airline" type="list" request="spelist" />
@@ -44,9 +44,12 @@
             <meta property="@key" content="@value" />
         </face>
     </basis>
-    <basis core="call" file="pwa.inc"/>
+<basis core="call" file="pwa.inc"/>
     <basis core="call" file="style.inc" />
-</head>
+    <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/_css/swiper-bundle.min.css" />
+
+  </head>
 
 <body>
   <main>
@@ -110,7 +113,7 @@
                         <else-layout>
                           <div class="w-full block py-10">
                             <div class="self-stretch text-center text-zinc-900 text-base font-normal eading-normal">بارگزاری صفحه با مشکل مواجه شد </div>
-                            <span class="block w-[126px] h-12 border border-solid border-secondary-600 rounded-2xl text-center text-secondary-600 text-base font-normal leading-[48px] cursor-pointer hover:text-primary-500 m-auto mt-[30px]">تلاش مجدد</span>
+                            <a href="javascript:location.reload()" class="block w-[126px] h-12 border border-solid border-secondary-600 rounded-2xl text-center text-secondary-600 text-base font-normal leading-[48px] cursor-pointer hover:text-primary-500 m-auto mt-[30px]">تلاش مجدد</a>
                           </div>
                         </else-layout>
                         <layout>
@@ -262,9 +265,15 @@
               <div class="block w-full">
                 <h3 class="mb-6 text-right text-zinc-900 text-2xl font-semibold">تور های محبوب</h3>
                 <basis core="list" datamembername="joining.list">
-                  <layout><div class="items-center grid grid-cols-4 gap-4 max-xl:grid-cols-2  max-xl:w-full">@child</div></layout>
+                  <layout>
+                    <div class="w-full flex justify-center">
+                      <div class="h-[411px] swiper swiper-4  max-xl:w-full">
+                        <div class="swiper-wrapper">@child</div>
+                      </div>
+                    </div>
+                  </layout>
                   <face filter="link is null">
-                    <article class="w-[311px] h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
+                    <article class="swiper-slide w-[311px] h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
                       <a href="/tour.bc?id=@db.tour-popular.id" aria-label="@db.tour-popular.title" class="w-full h-full block group">
                         <header class="px-[17px] py-3">
                           <h2 class="w-[276px] text-right text-zinc-900 text-xl font-semibold leading-[34px] group-hover:text-primary-600">@db.tour-popular.title</h2>
@@ -308,7 +317,7 @@
                     </article>
                   </face>
                   <face>
-                    <article class="w-[311px] h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
+                    <article class="swiper-slide w-[311px] h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
                       <a href="@db.tour-popular.link" aria-label="@db.tour-popular.title" class="w-full h-full block group">
                         <header class="px-[17px] py-3">
                           <h2 class="w-[276px] text-right text-zinc-900 text-xl font-semibold leading-[34px] group-hover:text-primary-600">@db.tour-popular.title</h2>
@@ -356,6 +365,8 @@
             </div>
           </div>
     </div>
+        <script src="[##cms.cms.cdn##]/_js/swiper-bundle.11.2.5.min.js "></script>
+
     <basis core="call" file="footer.inc"/>
   </main>
 </body>

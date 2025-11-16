@@ -1,4 +1,27 @@
+<basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="218813">
+  <member name="article-routes" type="list" link="landing-flight.bc" propertyid="3088103,3088104,3088105,3088106" perpage="10" order="ord"/>
+</basis>
 <footer id="footer-resize" class="w-full h-auto relative bg-white dir-rtl">
+  <basis core="list" datamembername="db.article-routes">
+    <layout>
+      <div class="  flex justify-center article-routes   m-auto ">
+       <div class="  flex flex-col  self-stretch w-[1280px] m-auto ">
+         <p class="text-xl font-bold">مسیرهای پرتردد</p>
+        <div class="grid grid-cols-4 max-md:!grid-cols-1 gap-4">
+          @child
+        </div>
+       </div>
+    </div>
+  </layout>
+  <face>
+    <a href="@link" class="route-container flex w-full justify-between">@title
+
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+ <path d="M10.333 12.6668L5.66634 8.00016L10.333 3.3335" stroke="#0C0A09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+ </svg>
+    </a>
+  </face>
+  </basis>
   <div
     class="self-stretch h-[148px] px-6 py-4 bg-primary-600 flex-col justify-center items-center gap-2.5 flex max-xl:h-auto">
     <div
@@ -90,23 +113,27 @@
             <div class="self-stretch flex-col justify-start items-end gap-3 flex max-xl:block">
               <div class="self-stretch text-right text-base font-bold  leading-[34px] max-xl:mb-3">اطلاعات تکمیلی</div>
               <ul class="self-stretch justify-between items-center inline-flex dir-rtl leading-tight max-xl:block">
-                <li class="max-xl:mb-3 max-xl:block"><a href="https://sadadpsp.ir/tollpayment#/tax/departuretax"
+               
+<li class="max-xl:mb-3 max-xl:block"><a href="https://www.ikac.ir/fa-IR/airport.ikac/5257/page/%D9%84%DB%8C%D8%B3%D8%AA-%D9%BE%D8%B1%D9%88%D8%A7%D8%B2-%D9%87%D8%A7" rel="noopener"
+                    class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">اطلاعات فرودگاه امام
+                    خمینی</a></li>
+  <li class="max-xl:mb-3 max-xl:block"><a href="https://fids.airport.ir/" rel="noopener"
+                    class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">اطلاعات فرودگاه های ایران </a>
+                </li>
+                <li class="max-xl:mb-3 max-xl:block"><a href="https://www.sarsarai.ir/%D8%B1%D8%A7%D9%87%D9%86%D9%85%D8%A7%DB%8C-%DA%A9%D8%A7%D9%85%D9%84-%D8%AA%D8%B1%D9%85%DB%8C%D9%86%D8%A7%D9%84-%D9%87%D8%A7%DB%8C-%D9%81%D8%B1%D9%88%D8%AF%DA%AF%D8%A7%D9%87-%D9%85%D9%87%D8%B1%D8%A2%D8%A8%D8%A7%D8%AF-%D8%AA%D9%87%D8%B1%D8%A7%D9%86"
+                    class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">اطلاعات فرودگاه مهرآباد</a></li>
+ <li class="max-xl:mb-3 max-xl:block"><a href="https://sadadpsp.ir/tollpayment#/tax/departuretax"
                     rel="noopener" class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">عوارض خروج
                     از کشور</a></li>
-                <li class="max-xl:mb-3 max-xl:block"><a href="سوالات-متداول"
-                    class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">سوالات متداول</a></li>
+
                 <!-- <li class="max-xl:mb-3 max-xl:block"><a href="" class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">قوانین و مقررات</a></li>
                   <li class="max-xl:mb-3 max-xl:block"><a href="" class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">راهنمای خرید</a></li>
                   <li class="max-xl:mb-3 max-xl:block"><a href="" class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">راهنمای استرداد</a></li> -->
 
-                <li class="max-xl:mb-3 max-xl:block"><a href="https://www.ikac.ir/flight-status" rel="noopener"
-                    class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">اطلاعات فرودگاه امام
-                    خمینی</a></li>
-                <li class="max-xl:mb-3 max-xl:block"><a href="https://fids.airport.ir/" rel="noopener"
-                    class="text-right text-zinc-600 text-sm font-normal  hover:text-secondary">اطلاعات فرودگاه ها </a>
-                </li>
+                
               </ul>
             </div>
+              
             <div class="self-stretch flex-col justify-start items-start gap-3 flex max-xl:block ">
               <div class="self-stretch text-right text-base font-bold  leading-[34px] max-xl:mb-3">لینک های مفید</div>
               <ul id="access-link-footer"

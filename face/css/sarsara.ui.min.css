@@ -42,3 +42,38 @@
 	margin: 0 auto;
 }
 .r-btn.active-r-btn span{color: var(--primary-500);} 
+.setbefore-tours{
+	position: relative;
+}
+.setbefore-tours div.mb-\[70px\]{
+	z-index: 1;
+}
+.setbefore-tours::after{
+	content: '';
+	width: 100vw;
+	bottom: 30px;
+	position: absolute !important;
+	height: 224px;
+	z-index: 0;
+	background-image: linear-gradient(90deg, #fbc62804 0%, #fbc728 21.09%, #fbc728 77.66%, #eebb2405 100%);
+}
+.setbefore-tours figure img{
+	width: 100%;
+}
+.setbefore-tours article{
+	/* padding: 2px !important; */
+	border: 1px solid var(--secondary-600) !important;
+	border-top-left-radius: 16px !important;
+	border-top-right-radius: 16px !important;
+	border-bottom-right-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+	 
+}
+.flighttype-items.flighttype-items-ul li{
+	 background-color: #fff;
+	 padding: 4px 10px;
+	 border-radius: 30px !important;
+}
+body{
+	overflow-x: hidden;
+}

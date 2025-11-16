@@ -1968,3 +1968,16 @@ input:focus {
 	margin: 0 auto;
 }
 .r-btn.active-r-btn span{color: var(--primary-500);} 
+
+.tour-mob-itms  article{
+	 
+	border: 1px solid var(--secondary-600) !important;
+	border-top-left-radius: 16px !important;
+	border-top-right-radius: 16px !important;
+	border-bottom-right-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+    margin-bottom: 10px !important;
+	 
+}.tour-mob-itms  figure img{
+	width: 100%;
+}
