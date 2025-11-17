@@ -243,11 +243,10 @@ if (document.querySelectorAll(".swiper-4").length > 0)
     grabCursor: !0,
     autoplay: { delay: 2500, disableOnInteraction: !1 },
     loop: 1,
-    //  pagination: { el: ".swiper-pagination", clickable: !0 },
-    //  navigation: {
-    //    nextEl: ".swiper-button-next-f",
-    //    prevEl: ".swiper-button-prev-f",
-    //  },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     breakpoints: {
       640: { slidesPerView: 4, spaceBetween: 16 },
       768: { slidesPerView: 4, spaceBetween: 16 },
@@ -264,11 +263,10 @@ if (document.querySelectorAll(".swiper-1").length > 0)
     grabCursor: !0,
     autoplay: { delay: 2500, disableOnInteraction: !1 },
     loop: 1,
-    //  pagination: { el: ".swiper-pagination", clickable: !0 },
-    //  navigation: {
-    //    nextEl: ".swiper-button-next-f",
-    //    prevEl: ".swiper-button-prev-f",
-    //  },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
     breakpoints: {
       640: { slidesPerView: 1.3, spaceBetween: 8 },
       768: { slidesPerView: 1.3, spaceBetween: 8 },
