@@ -1981,3 +1981,6 @@ input:focus {
 }.tour-mob-itms  figure img{
 	width: 100%;
 }
+.pr-4{
+    padding-right: 1rem !important;
+}

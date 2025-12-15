@@ -6,11 +6,13 @@
   <member name="sarsara-services" type="view" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="20" name="db">
-  <member name="tourcat1" type="tree" request="cat" parentid="211890" perpage="" order="[##cms.Host.tour-cat-order##]" postsql="select * from [db.tourcat1] LIMIT 4">
+  <member name="tourcat1" type="tree" request="cat" parentid="211890" perpage="" order="[##cms.Host.tour-cat-order##]"
+    postsql="select * from [db.tourcat1] LIMIT 4">
   </member>
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="20" name="db">
-  <member name="tourcat2" type="tree" request="cat" parentid="201119" perpage="" order="[##cms.Host.tour-cat-order##]" postsql="select * from [db.tourcat2] where parentid=201119  LIMIT 4">
+  <member name="tourcat2" type="tree" request="cat" parentid="201119" perpage="" order="[##cms.Host.tour-cat-order##]"
+    postsql="select * from [db.tourcat2] where parentid=201119  LIMIT 4">
   </member>
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="211896">
@@ -21,7 +23,7 @@
 </basis>
 
 <basis core="dbsource" source="basiscore" lid="1" mid="20" name="db" catid="201487">
-  <member name="tour-popular" type="list" link="tour.bc" propertyid="8077,8181,8076,10000504,3087369" perpage="4"
+  <member name="tour-popular" type="list" link="tour.bc" propertyid="8077,8181,8076,10000504,3087369"
     size="311x196" typeid="" order="[##cms.Host.tour-list-order|(date desc)##]" />
 </basis>
 <basis core="dbsource" source="basiscore" mid="1" name="list" lid="1" schemaid="987" term="[##cms.query.term##]">
@@ -37,7 +39,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no,viewport-fit=cover">
-<title>شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا</title>
+  <title>شرکت خدمات مسافرت هوایی و گردشگری سرسرای گشـتا</title>
   <meta name="description"
     content="ارائه بهترین سفر ها و تورهای خارجی و تور های داخلی و طبیعتگردی با بهترین کیفیت بصورت صفر تا صد تمامی خدمات سفر بلیط هواپیما و رزرو هتل بصورت آنلاین و تهیه بیمه مسافرتی و ویزا های کشورهای مختلف مانند تور سوییس و تور استانبول و تور فرانسه و تورآلپ خدمات سرسرای گشـتا می باشد.">
   <link rel="canonical" href="[##cms.request.:scheme##]://[##cms.request.full-url##]" />
@@ -60,21 +62,28 @@
   <link rel="preload" as="image" imageSrcSet="[##cms.cms.cdn##]/images/sarsara-popup.jpg" fetchpriority="high" />
   <basis core="call" file="style.inc" />
   <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js" type="text/javascript"></script>
+   <link rel="stylesheet" href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css">
 
 </head>
 
 <body onload="loadContentHomaPage()">
-   <div id="bk-popup" class="hidden"></div>
-      <div id="image-popup" class="hidden w-full fixed z-60 right-0 left-0 m-auto text-center">
-          <div class="wrapper-popup">
-              <div class="checked-img">
-                  <span id="close-popup" class="text-white float-left ml-6 mt-6 text-4xl cursor-pointer" onclick="closePopup()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M18.3 5.7a1 1 0 0 1 0 1.4L13.4 12l4.9 4.9a1 1 0 0 1-1.4 1.4L12 13.4l-4.9 4.9a1 1 0 1 1-1.4-1.4L10.6 12 5.7 7.1a1 1 0 0 1 1.4-1.4L12 10.6l4.9-4.9a1 1 0 0 1 1.4 0Z"/></svg></span>
-              </div>
-              <figure class="each-figure fade">
-                  <div class="container-popup w-1/2 max-w-max m-auto block"><img class="w-full h-auto max-w-max" src="[##cms.cms.cdn##]/images/sarsara-popup.jpg" width="500" height="301" alt="sarsara popup"></div>
-              </figure>
-          </div>
+  <div id="bk-popup" class="hidden"></div>
+  <div id="image-popup" class="hidden w-full fixed z-60 right-0 left-0 m-auto text-center">
+    <div class="wrapper-popup">
+      <div class="checked-img">
+        <span id="close-popup" class="text-white float-left ml-6 mt-6 text-4xl cursor-pointer"
+          onclick="closePopup()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white"
+            viewBox="0 0 24 24">
+            <path
+              d="M18.3 5.7a1 1 0 0 1 0 1.4L13.4 12l4.9 4.9a1 1 0 0 1-1.4 1.4L12 13.4l-4.9 4.9a1 1 0 1 1-1.4-1.4L10.6 12 5.7 7.1a1 1 0 0 1 1.4-1.4L12 10.6l4.9-4.9a1 1 0 0 1 1.4 0Z" />
+          </svg></span>
       </div>
+      <figure class="each-figure fade">
+        <div class="container-popup w-1/2 max-w-max m-auto block"><img class="w-full h-auto max-w-max"
+            src="[##cms.cms.cdn##]/images/sarsara-popup.jpg" width="500" height="301" alt="sarsara popup"></div>
+      </figure>
+    </div>
+  </div>
   <main>
     <basis core="call" file="header.inc" />
     <div class="w-full bg-white">
@@ -184,8 +193,7 @@
             <div class="block mb-[70px] max-xl:mb-7">
               <h3 class="self-stretch mb-9 text-right text-zinc-900 text-3xl font-bold leading-9 max-xl:text-base">مقاصد
                 گردشگری خارجی</h3>
-              <div
-                class="dir-rtl max-xl:block grid grid-cols-4 gap-24 dir-rtl max-xl:block">
+              <div class="dir-rtl max-xl:block grid grid-cols-4 gap-24 dir-rtl max-xl:block">
                 @child
               </div>
             </div>
@@ -226,8 +234,7 @@
             <div class="block mb-[70px] max-xl:mb-7">
               <h3 class="self-stretch mb-9 text-right text-zinc-900 text-3xl font-bold leading-9 max-xl:text-base">تور
                 های گردشگری داخلی</h3>
-              <div
-                class="dir-rtl max-xl:block grid grid-cols-4 gap-24 dir-rtl max-xl:block">
+              <div class="dir-rtl max-xl:block grid grid-cols-4 gap-24 dir-rtl max-xl:block">
                 @child
               </div>
             </div>
@@ -265,235 +272,253 @@
         </basis>
         <div class="w-full flex justify-center setbefore-tours">
           <div class="block w-full  mb-[70px] max-xl:mb-7">
-          <h3 class="mb-6 text-right text-zinc-900 text-2xl font-semibold">تور های پاییزی 1404</h3>
-          <basis core="list" datamembername="joining.list">
-            <layout>
-              <div class="items-center grid grid-cols-4 gap-4 max-xl:grid-cols-2  max-xl:w-full">@child</div>
-            </layout>
-            <face filter="link is null">
-              <article class="w-[311px] h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
-                <a href="/tour.bc?id=@db.tour-popular.id" aria-label="@db.tour-popular.title"
-                  class="w-full h-full block group">
-                  <header class="px-[17px] py-3">
-                    <h2
-                      class="w-[276px] text-right text-zinc-900 text-xl font-semibold leading-[34px] group-hover:text-primary-600">
-                      @db.tour-popular.title</h2>
-                  </header>
-                  <figure>
-                    <img class="w-[311px] h-[196px] rounded-2xl rounded-b-none" loading="lazy"
-                      src="[##cms.cms.cdn##]/@db.tour-popular.00311X00196prp" alt="@db.tour-popular.title" width="311"
-                      height="196">
-                  </figure>
-                  <footer class="relative mt-5 px-[17px] w-full flex-col justify-start items-end gap-3 inline-flex">
-                    <div
-                      class="absolute -top-[55px] right-[17px] w-[100px] h-12 px-4 py-2 bg-secondary-600 rounded-2xl justify-center items-center gap-2.5 inline-flex group-hover:bg-primary-500">
-                      <div class="text-zinc-900 text-base font-normal leading-normal">مشاهده</div>
-                    </div>
-                    <div class="self-stretch h-[102px] flex-col justify-start items-start flex">
-                      <div class="bg-white w-full justify-center items-center inline-flex">
-                        <div class="self-stretch justify-between items-center inline-flex leading-[48px] h-12 w-full">
-                          <div class="justify-start items-center gap-1 flex">
-                            <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8077</div>
-                            <div class="w-12 h-12 justify-center items-center gap-2.5 flex">
-                              <div class="w-[30px] h-[30px] p-[5px] justify-center items-center gap-2.5 flex"><img
-                                  loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal2.png" width="30"
-                                  height="30" alt="article-list-cal2"></div>
-                            </div>
-                          </div>
-                          <div
-                            class="w-auto h-[29px] px-3 py-1 bg-[#b2e1ff]/50 rounded-3xl justify-end items-center flex">
-                            <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8076</div>
-                          </div>
-                        </div>
+            <h3 class="mb-6 text-right text-zinc-900 text-2xl font-semibold">تور های پاییزی 1404</h3>
+            <basis core="list" datamembername="joining.list">
+              <layout>
+                <div class="items-center swiper swiper-4  max-xl:w-full">
+                  <div class="swiper-wrapper">@child</div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </layout>
+              <face filter="link is null">
+                <article class="swiper-slide h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
+                  <a href="/tour.bc?id=@db.tour-popular.id" aria-label="@db.tour-popular.title"
+                    class="w-full h-full block group">
+                    <header class="px-[17px] py-3">
+                      <h2
+                        class="w-[276px] text-right text-zinc-900 text-xl font-semibold leading-[34px] group-hover:text-primary-600">
+                        @db.tour-popular.title</h2>
+                    </header>
+                    <figure>
+                      <img class="w-[311px] h-[196px] rounded-2xl rounded-b-none" loading="lazy"
+                        src="[##cms.cms.cdn##]/@db.tour-popular.00311X00196prp" alt="@db.tour-popular.title" width="311"
+                        height="196">
+                    </figure>
+                    <footer class="relative mt-5 px-[17px] w-full flex-col justify-start items-end gap-3 inline-flex">
+                      <div
+                        class="absolute -top-[55px] right-[17px] w-[100px] h-12 px-4 py-2 bg-secondary-600 rounded-2xl justify-center items-center gap-2.5 inline-flex group-hover:bg-primary-500">
+                        <div class="text-zinc-900 text-base font-normal leading-normal">مشاهده</div>
                       </div>
-                      <div class="block w-full">
-                        <div class="dir-ltr flex-col justify-start items-start inline-flex w-full">
-                          <div class="text-left text-primary-500 text-sm font-normal leading-tight">بهای تور</div>
-                          <div class="text-zinc-900 text-xl font-normal leading-[34px] tour-price">
-                            @db.tour-popular.prp_8181</div>
-                        </div>
-                        <div class="py-2 justify-end items-center flex border-t">
-                          <div class="self-stretch justify-start items-center gap-1 inline-flex w-full justify-between">
-                            <img class="w-auto h-5" src="@list.airline.pic" width="auto" height="20"
-                              alt="@db.tour-popular.title airline" />
-                            <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_10000504
+                      <div class="self-stretch h-[102px] flex-col justify-start items-start flex">
+                        <div class="bg-white w-full justify-center items-center inline-flex">
+                          <div class="self-stretch justify-between items-center inline-flex leading-[48px] h-12 w-full">
+                            <div class="justify-start items-center gap-1 flex">
+                              <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8077
+                              </div>
+                              <div class="w-12 h-12 justify-center items-center gap-2.5 flex">
+                                <div class="w-[30px] h-[30px] p-[5px] justify-center items-center gap-2.5 flex"><img
+                                    loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal2.png" width="30"
+                                    height="30" alt="article-list-cal2"></div>
+                              </div>
+                            </div>
+                            <div
+                              class="w-auto h-[29px] px-3 py-1 bg-[#b2e1ff]/50 rounded-3xl justify-end items-center flex">
+                              <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8076
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  </footer>
-                </a>
-              </article>
-            </face>
-            <face filter="link is null and list.airline.pic is null">
-              <article class="w-[311px] h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
-                <a href="/tour.bc?id=@db.tour-popular.id" aria-label="@db.tour-popular.title"
-                  class="w-full h-full block group">
-                  <header class="px-[17px] py-3">
-                    <h2
-                      class="w-[276px] text-right text-zinc-900 text-xl font-semibold leading-[34px] group-hover:text-primary-600">
-                      @db.tour-popular.title</h2>
-                  </header>
-                  <figure>
-                    <img class="w-[311px] h-[196px] rounded-2xl rounded-b-none" loading="lazy"
-                      src="[##cms.cms.cdn##]/@db.tour-popular.00311X00196prp" alt="@db.tour-popular.title" width="311"
-                      height="196">
-                  </figure>
-                  <footer class="relative mt-5 px-[17px] w-full flex-col justify-start items-end gap-3 inline-flex">
-                    <div
-                      class="absolute -top-[55px] right-[17px] w-[100px] h-12 px-4 py-2 bg-secondary-600 rounded-2xl justify-center items-center gap-2.5 inline-flex group-hover:bg-primary-500">
-                      <div class="text-zinc-900 text-base font-normal leading-normal">مشاهده</div>
-                    </div>
-                    <div class="self-stretch h-[102px] flex-col justify-start items-start flex">
-                      <div class="bg-white w-full justify-center items-center inline-flex">
-                        <div class="self-stretch justify-between items-center inline-flex leading-[48px] h-12 w-full">
-                          <div class="justify-start items-center gap-1 flex">
-                            <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8077</div>
-                            <div class="w-12 h-12 justify-center items-center gap-2.5 flex">
-                              <div class="w-[30px] h-[30px] p-[5px] justify-center items-center gap-2.5 flex"><img
-                                  loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal2.png" width="30"
-                                  height="30" alt="article-list-cal2"></div>
-                            </div>
+                        <div class="block w-full">
+                          <div class="dir-ltr flex-col justify-start items-start inline-flex w-full">
+                            <div class="text-left text-primary-500 text-sm font-normal leading-tight">بهای تور</div>
+                            <div class="text-zinc-900 text-xl font-normal leading-[34px] tour-price">
+                              @db.tour-popular.prp_8181</div>
                           </div>
-                          <div
-                            class="w-auto h-[29px] px-3 py-1 bg-[#b2e1ff]/50 rounded-3xl justify-end items-center flex">
-                            <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8076</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="block w-full">
-                        <div class="dir-ltr flex-col justify-start items-start inline-flex w-full">
-                          <div class="text-left text-primary-500 text-sm font-normal leading-tight">بهای تور</div>
-                          <div class="text-zinc-900 text-xl font-normal leading-[34px] tour-price">
-                            @db.tour-popular.prp_8181</div>
-                        </div>
-                        <div class="py-2 justify-end items-center flex border-t">
-                          <div class="self-stretch justify-start items-center gap-1 inline-flex w-full justify-between">
-                            <img class="w-auto h-5" src="[##cms.cms.cdn##]/images/@db.tour-popular.prp_3087369-icon.png"
-                              width="50" height="30" alt="@db.tour-popular.title icon" />
-                            <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_3087369
+                          <div class="py-2 justify-end items-center flex border-t">
+                            <div
+                              class="self-stretch justify-start items-center gap-1 inline-flex w-full justify-between">
+                              <img class="w-auto h-5" src="@list.airline.pic" width="auto" height="20"
+                                alt="@db.tour-popular.title airline" />
+                              <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_10000504
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </footer>
-                </a>
-              </article>
-            </face>
-            <face filter="list.airline.pic is null">
-              <article class="w-[311px] h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
-                <a href="@db.tour-popular.link" aria-label="@db.tour-popular.title" class="w-full h-full block group">
-                  <header class="px-[17px] py-3">
-                    <h2
-                      class="w-[276px] text-right text-zinc-900 text-xl font-semibold leading-[34px] group-hover:text-primary-600">
-                      @db.tour-popular.title</h2>
-                  </header>
-                  <figure>
-                    <img class="w-[311px] h-[196px] rounded-2xl rounded-b-none" loading="lazy"
-                      src="[##cms.cms.cdn##]/@db.tour-popular.00311X00196prp" alt="@db.tour-popular.title" width="311"
-                      height="196">
-                  </figure>
-                  <footer class="relative mt-5 px-[17px] w-full flex-col justify-start items-end gap-3 inline-flex">
-                    <div
-                      class="absolute -top-[55px] right-[17px] w-[100px] h-12 px-4 py-2 bg-secondary-600 rounded-2xl justify-center items-center gap-2.5 inline-flex group-hover:bg-primary-500">
-                      <div class="text-zinc-900 text-base font-normal leading-normal">مشاهده</div>
-                    </div>
-                    <div class="self-stretch h-[102px] flex-col justify-start items-start flex">
-                      <div class="bg-white w-full justify-center items-center inline-flex">
-                        <div class="self-stretch justify-between items-center inline-flex leading-[48px] h-12 w-full">
-                          <div class="justify-start items-center gap-1 flex">
-                            <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8077</div>
-                            <div class="w-12 h-12 justify-center items-center gap-2.5 flex">
-                              <div class="w-[30px] h-[30px] p-[5px] justify-center items-center gap-2.5 flex"><img
-                                  loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal2.png" width="30"
-                                  height="30" alt="article-list-cal2"></div>
-                            </div>
-                          </div>
-                          <div
-                            class="w-auto h-[29px] px-3 py-1 bg-[#b2e1ff]/50 rounded-3xl justify-end items-center flex">
-                            <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8076</div>
-                          </div>
-                        </div>
+                    </footer>
+                  </a>
+                </article>
+              </face>
+              <face filter="link is null and list.airline.pic is null">
+                <article class="swiper-slide h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
+                  <a href="/tour.bc?id=@db.tour-popular.id" aria-label="@db.tour-popular.title"
+                    class="w-full h-full block group">
+                    <header class="px-[17px] py-3">
+                      <h2
+                        class="w-[276px] text-right text-zinc-900 text-xl font-semibold leading-[34px] group-hover:text-primary-600">
+                        @db.tour-popular.title</h2>
+                    </header>
+                    <figure>
+                      <img class="w-[311px] h-[196px] rounded-2xl rounded-b-none" loading="lazy"
+                        src="[##cms.cms.cdn##]/@db.tour-popular.00311X00196prp" alt="@db.tour-popular.title" width="311"
+                        height="196">
+                    </figure>
+                    <footer class="relative mt-5 px-[17px] w-full flex-col justify-start items-end gap-3 inline-flex">
+                      <div
+                        class="absolute -top-[55px] right-[17px] w-[100px] h-12 px-4 py-2 bg-secondary-600 rounded-2xl justify-center items-center gap-2.5 inline-flex group-hover:bg-primary-500">
+                        <div class="text-zinc-900 text-base font-normal leading-normal">مشاهده</div>
                       </div>
-                      <div class="block w-full">
-                        <div class="dir-ltr flex-col justify-start items-start inline-flex w-full">
-                          <div class="text-left text-primary-500 text-sm font-normal leading-tight">بهای تور</div>
-                          <div class="text-zinc-900 text-xl font-normal leading-[34px] tour-price">
-                            @db.tour-popular.prp_8181</div>
-                        </div>
-                        <div class="py-2 justify-end items-center flex border-t">
-                          <div class="self-stretch justify-start items-center gap-1 inline-flex w-full justify-between">
-                            <img class="w-auto h-5" src="[##cms.cms.cdn##]/images/@db.tour-popular.prp_3087369-icon.png"
-                              width="50" height="30" alt="@db.tour-popular.title icon" />
-                            <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_3087369
+                      <div class="self-stretch h-[102px] flex-col justify-start items-start flex">
+                        <div class="bg-white w-full justify-center items-center inline-flex">
+                          <div class="self-stretch justify-between items-center inline-flex leading-[48px] h-12 w-full">
+                            <div class="justify-start items-center gap-1 flex">
+                              <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8077
+                              </div>
+                              <div class="w-12 h-12 justify-center items-center gap-2.5 flex">
+                                <div class="w-[30px] h-[30px] p-[5px] justify-center items-center gap-2.5 flex"><img
+                                    loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal2.png" width="30"
+                                    height="30" alt="article-list-cal2"></div>
+                              </div>
+                            </div>
+                            <div
+                              class="w-auto h-[29px] px-3 py-1 bg-[#b2e1ff]/50 rounded-3xl justify-end items-center flex">
+                              <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8076
+                              </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </div>
-                  </footer>
-                </a>
-              </article>
-            </face>
-            <face>
-              <article class="w-[311px] h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
-                <a href="@db.tour-popular.link" aria-label="@db.tour-popular.title" class="w-full h-full block group">
-                  <header class="px-[17px] py-3">
-                    <h2
-                      class="w-[276px] text-right text-zinc-900 text-xl font-semibold leading-[34px] group-hover:text-primary-600">
-                      @db.tour-popular.title</h2>
-                  </header>
-                  <figure>
-                    <img class="w-[311px] h-[196px] rounded-2xl rounded-b-none" loading="lazy"
-                      src="[##cms.cms.cdn##]/@db.tour-popular.00311X00196prp" alt="@db.tour-popular.title" width="311"
-                      height="196">
-                  </figure>
-                  <footer class="relative mt-5 px-[17px] w-full flex-col justify-start items-end gap-3 inline-flex">
-                    <div
-                      class="absolute -top-[55px] right-[17px] w-[100px] h-12 px-4 py-2 bg-secondary-600 rounded-2xl justify-center items-center gap-2.5 inline-flex group-hover:bg-primary-500">
-                      <div class="text-zinc-900 text-base font-normal leading-normal">مشاهده</div>
-                    </div>
-                    <div class="self-stretch h-[102px] flex-col justify-start items-start flex">
-                      <div class="bg-white w-full justify-center items-center inline-flex">
-                        <div class="self-stretch justify-between items-center inline-flex leading-[48px] h-12 w-full">
-                          <div class="justify-start items-center gap-1 flex">
-                            <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8077</div>
-                            <div class="w-12 h-12 justify-center items-center gap-2.5 flex">
-                              <div class="w-[30px] h-[30px] p-[5px] justify-center items-center gap-2.5 flex"><img
-                                  loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal2.png" width="30"
-                                  height="30" alt="article-list-cal2"></div>
-                            </div>
+                        <div class="block w-full">
+                          <div class="dir-ltr flex-col justify-start items-start inline-flex w-full">
+                            <div class="text-left text-primary-500 text-sm font-normal leading-tight">بهای تور</div>
+                            <div class="text-zinc-900 text-xl font-normal leading-[34px] tour-price">
+                              @db.tour-popular.prp_8181</div>
                           </div>
-                          <div
-                            class="w-auto h-[29px] px-3 py-1 bg-[#b2e1ff]/50 rounded-3xl justify-end items-center flex">
-                            <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8076</div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="block w-full">
-                        <div class="dir-ltr flex-col justify-start items-start inline-flex w-full">
-                          <div class="text-left text-primary-500 text-sm font-normal leading-tight">بهای تور</div>
-                          <div class="text-zinc-900 text-xl font-normal leading-[34px] tour-price">
-                            @db.tour-popular.prp_8181</div>
-                        </div>
-                        <div class="py-2 justify-end items-center flex border-t">
-                          <div class="self-stretch justify-start items-center gap-1 inline-flex w-full justify-between">
-                            <img class="w-auto h-5" src="@list.airline.pic" width="auto" height="20"
-                              alt="@db.tour-popular.title airline" />
-                            <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_10000504
+                          <div class="py-2 justify-end items-center flex border-t">
+                            <div
+                              class="self-stretch justify-start items-center gap-1 inline-flex w-full justify-between">
+                              <img class="w-auto h-5"
+                                src="[##cms.cms.cdn##]/images/@db.tour-popular.prp_3087369-icon.png" width="50"
+                                height="30" alt="@db.tour-popular.title icon" />
+                              <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_3087369
+                              </div>
                             </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </footer>
-                </a>
-              </article>
-            </face>
-          </basis>
-        </div>
+                    </footer>
+                  </a>
+                </article>
+              </face>
+              <face filter="list.airline.pic is null">
+                <article class="swiper-slide h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
+                  <a href="@db.tour-popular.link" aria-label="@db.tour-popular.title" class="w-full h-full block group">
+                    <header class="px-[17px] py-3">
+                      <h2
+                        class="w-[276px] text-right text-zinc-900 text-xl font-semibold leading-[34px] group-hover:text-primary-600">
+                        @db.tour-popular.title</h2>
+                    </header>
+                    <figure>
+                      <img class="w-[311px] h-[196px] rounded-2xl rounded-b-none" loading="lazy"
+                        src="[##cms.cms.cdn##]/@db.tour-popular.00311X00196prp" alt="@db.tour-popular.title" width="311"
+                        height="196">
+                    </figure>
+                    <footer class="relative mt-5 px-[17px] w-full flex-col justify-start items-end gap-3 inline-flex">
+                      <div
+                        class="absolute -top-[55px] right-[17px] w-[100px] h-12 px-4 py-2 bg-secondary-600 rounded-2xl justify-center items-center gap-2.5 inline-flex group-hover:bg-primary-500">
+                        <div class="text-zinc-900 text-base font-normal leading-normal">مشاهده</div>
+                      </div>
+                      <div class="self-stretch h-[102px] flex-col justify-start items-start flex">
+                        <div class="bg-white w-full justify-center items-center inline-flex">
+                          <div class="self-stretch justify-between items-center inline-flex leading-[48px] h-12 w-full">
+                            <div class="justify-start items-center gap-1 flex">
+                              <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8077
+                              </div>
+                              <div class="w-12 h-12 justify-center items-center gap-2.5 flex">
+                                <div class="w-[30px] h-[30px] p-[5px] justify-center items-center gap-2.5 flex"><img
+                                    loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal2.png" width="30"
+                                    height="30" alt="article-list-cal2"></div>
+                              </div>
+                            </div>
+                            <div
+                              class="w-auto h-[29px] px-3 py-1 bg-[#b2e1ff]/50 rounded-3xl justify-end items-center flex">
+                              <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8076
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="block w-full">
+                          <div class="dir-ltr flex-col justify-start items-start inline-flex w-full">
+                            <div class="text-left text-primary-500 text-sm font-normal leading-tight">بهای تور</div>
+                            <div class="text-zinc-900 text-xl font-normal leading-[34px] tour-price">
+                              @db.tour-popular.prp_8181</div>
+                          </div>
+                          <div class="py-2 justify-end items-center flex border-t">
+                            <div
+                              class="self-stretch justify-start items-center gap-1 inline-flex w-full justify-between">
+                              <img class="w-auto h-5"
+                                src="[##cms.cms.cdn##]/images/@db.tour-popular.prp_3087369-icon.png" width="50"
+                                height="30" alt="@db.tour-popular.title icon" />
+                              <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_3087369
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </footer>
+                  </a>
+                </article>
+              </face>
+              <face>
+                <article class="swiper-slide h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
+                  <a href="@db.tour-popular.link" aria-label="@db.tour-popular.title" class="w-full h-full block group">
+                    <header class="px-[17px] py-3">
+                      <h2
+                        class="w-[276px] text-right text-zinc-900 text-xl font-semibold leading-[34px] group-hover:text-primary-600">
+                        @db.tour-popular.title</h2>
+                    </header>
+                    <figure>
+                      <img class="w-[311px] h-[196px] rounded-2xl rounded-b-none" loading="lazy"
+                        src="[##cms.cms.cdn##]/@db.tour-popular.00311X00196prp" alt="@db.tour-popular.title" width="311"
+                        height="196">
+                    </figure>
+                    <footer class="relative mt-5 px-[17px] w-full flex-col justify-start items-end gap-3 inline-flex">
+                      <div
+                        class="absolute -top-[55px] right-[17px] w-[100px] h-12 px-4 py-2 bg-secondary-600 rounded-2xl justify-center items-center gap-2.5 inline-flex group-hover:bg-primary-500">
+                        <div class="text-zinc-900 text-base font-normal leading-normal">مشاهده</div>
+                      </div>
+                      <div class="self-stretch h-[102px] flex-col justify-start items-start flex">
+                        <div class="bg-white w-full justify-center items-center inline-flex">
+                          <div class="self-stretch justify-between items-center inline-flex leading-[48px] h-12 w-full">
+                            <div class="justify-start items-center gap-1 flex">
+                              <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8077
+                              </div>
+                              <div class="w-12 h-12 justify-center items-center gap-2.5 flex">
+                                <div class="w-[30px] h-[30px] p-[5px] justify-center items-center gap-2.5 flex"><img
+                                    loading="lazy" src="[##cms.cms.cdn##]/images/article-list-cal2.png" width="30"
+                                    height="30" alt="article-list-cal2"></div>
+                              </div>
+                            </div>
+                            <div
+                              class="w-auto h-[29px] px-3 py-1 bg-[#b2e1ff]/50 rounded-3xl justify-end items-center flex">
+                              <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_8076
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="block w-full">
+                          <div class="dir-ltr flex-col justify-start items-start inline-flex w-full">
+                            <div class="text-left text-primary-500 text-sm font-normal leading-tight">بهای تور</div>
+                            <div class="text-zinc-900 text-xl font-normal leading-[34px] tour-price">
+                              @db.tour-popular.prp_8181</div>
+                          </div>
+                          <div class="py-2 justify-end items-center flex border-t">
+                            <div
+                              class="self-stretch justify-start items-center gap-1 inline-flex w-full justify-between">
+                              <img class="w-auto h-5" src="@list.airline.pic" width="auto" height="20"
+                                alt="@db.tour-popular.title airline" />
+                              <div class="text-zinc-900 text-sm font-normal leading-tight">@db.tour-popular.prp_10000504
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </footer>
+                  </a>
+                </article>
+              </face>
+            </basis>
+          </div>
         </div>
         <div class="question-show block mb-[70px] max-xl:mb-7">
           <div class="block w-full mb-6">
@@ -560,13 +585,12 @@
 
     </div>
 
+     <script src="[##cms.cms.cdn##]/_js/swiper-bundle.11.2.5.min.js "></script>
     <basis core="call" file="footer.inc" />
   </main>
   <link href="https://cdn.basiscore.net/basisfly.com/css/reservation_multiLang_css_calendar.css" type="text/css"
     rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.basiscore.net/basisfly.com/css/swiper-bundle.min.css">
-  <script src="https://cdn.basiscore.net/basisfly.com/js/swiper-bundle.min.js" type="text/javascript" defer></script>
-  <script src="js/sarsara-swipper-functions.js" type="text/javascript" defer></script>
+ <script src="js/sarsara-swipper-functions.js" type="text/javascript" defer></script>
 </body>
 
 </html>

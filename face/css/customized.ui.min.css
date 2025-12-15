@@ -1591,12 +1591,16 @@ img[alt="sarsara-gashta"] {
     grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
   }
 }
+footer .eita-svg{
+transform: scale(0.85);
+}
 .article-routes {
   padding-top: 70px;
   padding-bottom: 70px;
-  background-color: #c1c1e5ac;
+  background-color: #fff;
+  border-top: 1px solid var(--primary);
 }
-.article-routes p {
+.article-routes p{
   text-align: center;
 }
 footer .route-container {

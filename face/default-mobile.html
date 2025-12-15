@@ -259,14 +259,18 @@
             </div>
           </face>
         </basis>
-        <div class="self-stretch px-4 flex-col justify-start items-end gap-4 flex w-full">
-          <h3 class="mb-6 text-right text-zinc-900 text-2xl font-semibold">تور های پاییزی 1404</h3>
+        <div dir="rtl" class="self-stretch  flex-col justify-start gap-4 flex w-full">
+          <h3 class="mb-6 text-right text-zinc-900 px-4 text-2xl font-semibold">تور های پاییزی 1404</h3>
           <basis core="list" datamembername="joining.list">
             <layout>
-              <div class="items-center tour-mob-itms grid grid-cols-4 gap-4 max-xl:grid-cols-2  max-xl:w-full">@child</div>
+              <div class="w-full overflow-hidden pr-4">
+                <div class="items-center tour-mob-itms   w-full swiper swiper-1">
+                <div class="swiper-wrapper">@child</div>
+              </div>
+              </div>
             </layout>
             <face filter="link is null">
-              <article class="w-[311px] h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
+              <article class="swiper-slide h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
                 <a href="/tour.bc?id=@db.tour-popular.id" aria-label="@db.tour-popular.title"
                   class="w-full h-full block group">
                   <header class="px-[17px] py-3">
@@ -322,7 +326,7 @@
               </article>
             </face>
             <face filter="link is null and list.airline.pic is null">
-              <article class="w-[311px] h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
+              <article class="swiper-slide h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
                 <a href="/tour.bc?id=@db.tour-popular.id" aria-label="@db.tour-popular.title"
                   class="w-full h-full block group">
                   <header class="px-[17px] py-3">
@@ -378,7 +382,7 @@
               </article>
             </face>
             <face filter="list.airline.pic is null">
-              <article class="w-[311px] h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
+              <article class="swiper-slide h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
                 <a href="@db.tour-popular.link" aria-label="@db.tour-popular.title" class="w-full h-full block group">
                   <header class="px-[17px] py-3">
                     <h2
@@ -433,7 +437,7 @@
               </article>
             </face>
             <face>
-              <article class="w-[311px] h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
+              <article class="swiper-slide h-[411px] relative bg-white rounded-2xl overflow-hidden max-xl:m-auto">
                 <a href="@db.tour-popular.link" aria-label="@db.tour-popular.title" class="w-full h-full block group">
                   <header class="px-[17px] py-3">
                     <h2
@@ -554,6 +558,7 @@
 
 
     </div>
+         <script src="[##cms.cms.cdn##]/_js/swiper-bundle.11.2.5.min.js "></script>
     <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"></basis>
     <link href="https://cdn.basiscore.net/basisfly.com/css/reservation_multiLang_css_calendar.css" type="text/css"
       rel="stylesheet" />
