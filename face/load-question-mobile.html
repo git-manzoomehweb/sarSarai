@@ -3,7 +3,7 @@
 </basis>
 <basis core="print" datamembername="db.questions">
     <layout><ul class="qu-contents w-full">@child</ul></layout>
-    <face filter="prpid not in (7243,8358,8359,8360,54539)">
+    <face filter="prpid not in (7243,8358,8359,8360,54539) and text not in('')">
         <li class="question-item mb-3 px-6 py-4 bg-zinc-50 rounded-2xl flex-col justify-start items-start gap-2.5 flex">
             <div class="question-qu cursor-pointer self-stretch justify-between items-center inline-flex">
               <h3 class="ectText--1 grow shrink basis-0 text-right text-zinc-900 text-base font-normal leading-normal hover:text-primary-600 max-xl:text-sm max-xl:overflow-visible max-xl:block">@text</h3>

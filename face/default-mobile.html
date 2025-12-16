@@ -6,11 +6,13 @@
   <member name="sarsara-services" type="view" />
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="20" name="db">
-  <member name="tourcat1" type="tree" request="cat" parentid="211890" perpage="" order="[##cms.Host.tour-cat-order##]" postsql="select * from [db.tourcat1] LIMIT 4">
+  <member name="tourcat1" type="tree" request="cat" parentid="211890" perpage="" order="[##cms.Host.tour-cat-order##]"
+    postsql="select * from [db.tourcat1] LIMIT 4">
   </member>
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="20" name="db">
-  <member name="tourcat2" type="tree" request="cat" parentid="201119" perpage="" order="[##cms.Host.tour-cat-order##]" postsql="select * from [db.tourcat2] where parentid=201119  LIMIT 4">
+  <member name="tourcat2" type="tree" request="cat" parentid="201119" perpage="" order="[##cms.Host.tour-cat-order##]"
+    postsql="select * from [db.tourcat2] where parentid=201119  LIMIT 4">
   </member>
 </basis>
 <basis core="dbsource" source="basiscore" lid="1" mid="1" name="db" catid="211896">
@@ -63,7 +65,7 @@
 </head>
 
 <body onload="loadContentHomaPage()">
-<div id="bk-popup" class="hidden"></div>
+  <div id="bk-popup" class="hidden"></div>
   <div id="image-popup" class="hidden w-full absolute z-60 right-0 left-0 m-auto text-center">
     <div class="wrapper-popup">
       <div class="checked-img">
@@ -81,6 +83,8 @@
     </div>
   </div>
   <main>
+    <h1 class="sr-only"> خرید بلیط هواپیما و قطار - رزرو هتل و تور مسافرتی</h1>
+
     <basis core="call" file="header.inc" pageindex="[##cms.cms.pageindex##]"></basis>
     <div class="w-full bg-white">
       <div class="w-full bg-Backgerand flex-col justify-start items-center gap-[30px] inline-flex">
@@ -265,8 +269,8 @@
             <layout>
               <div class="w-full overflow-hidden pr-4">
                 <div class="items-center tour-mob-itms   w-full swiper swiper-1">
-                <div class="swiper-wrapper">@child</div>
-              </div>
+                  <div class="swiper-wrapper">@child</div>
+                </div>
               </div>
             </layout>
             <face filter="link is null">
@@ -558,7 +562,7 @@
 
 
     </div>
-         <script src="[##cms.cms.cdn##]/_js/swiper-bundle.11.2.5.min.js "></script>
+    <script src="[##cms.cms.cdn##]/_js/swiper-bundle.11.2.5.min.js "></script>
     <basis core="call" file="footer.inc" pageindex="[##cms.cms.pageindex##]"></basis>
     <link href="https://cdn.basiscore.net/basisfly.com/css/reservation_multiLang_css_calendar.css" type="text/css"
       rel="stylesheet" />
