@@ -2407,6 +2407,7 @@ body {
 }
 .new-search-box .module-name {
   font-weight: bold !important;
+  font-size: 20px !important;
 }
 .new-search-box .flighttype-items input.hidden {
   display: flex !important;
@@ -2513,6 +2514,9 @@ body {
   background-color: var(--secondary) !important;
   border-radius: 50% !important;
 }
+.new-search-box .exchangeRoute:hover {
+  background-color: var(--primary-500) !important;
+}
 .new-search-box .exchangeRoute svg {
   width: 26px !important;
   height: 20px !important;
@@ -2532,9 +2536,21 @@ body {
 .new-search-box .Flightclass-Passenger {
   width: 29% !important;
 }
+.new-search-box .multiroute-fields .reserve-search button span {
+  display: flex !important;
+  color: white !important;
+}
+.new-search-box .multiroute-fields .reserve-search button svg {
+  display: none !important;
+}
 .new-search-box .reserve-search button span {
   display: none !important;
 }
+.new-search-box .multiroute-fields .reserve-search {
+  width: 150px !important;
+  height: 48px !important;
+}
+
 .new-search-box .reserve-search {
   width: 64px !important;
   height: 64px !important;
@@ -2542,7 +2558,7 @@ body {
 .new-search-box .reserve-search button {
   height: 100%;
   width: 100%;
-  background-color: var(--primary) !important;
+  background-color: var(--primary-500) !important;
   border-radius: 16px !important;
 }
 .new-search-box .reserve-search svg {
@@ -2640,7 +2656,7 @@ body {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  width: 130px !important;
+  width: 150px !important;
 }
 .new-search-box .add-routs:hover,
 .new-search-box .reserve-search button:hover {
@@ -2683,4 +2699,27 @@ body {
   color: #71717a !important;
   font-weight: bold !important;
   font-size: 14px !important;
+}
+.new-search-box .confirm-passenger {
+  height: 38px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 100% !important;
+  color: white !important;
+  background-color: var(--primary-500) !important;
+  border-radius: 8px !important;
+  cursor: pointer;
+}
+.new-search-box .confirm-passenger:hover {
+  background-color: var(--secondary-800) !important;
+}
+.module-banner-background {
+  background-image: url(../images/searchbox-bg.jpg) !important;
+}
+.hotel-banner-background.module-banner-background {
+  background-image: url(../images/hotel-search-bg.jpg) !important;
+}
+.flighthotel-banner-background.module-banner-background {
+  background-image: url(../images/fh-search-bg.jpg) !important;
 }
