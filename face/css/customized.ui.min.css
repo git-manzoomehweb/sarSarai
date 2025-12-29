@@ -1648,3 +1648,12 @@ footer .route-container:hover svg path {
   left: 0 !important;
   top: 70% !important;
 }
+button.book-card__btn,.book-modal__btn__container{
+  cursor: pointer !important;
+}
+.book-baseFare__btn:hover{
+  background-color: var(--primary) !important;
+}
+.book-baseFare__btn:hover span{
+  color: white !important;
+}
