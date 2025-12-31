@@ -1,3 +1,91 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const isMobileSarSara = window.innerWidth <= 968;
+  const requiredFiles = [
+    isMobileSarSara ? "sarsara-mob.ui.min.css" : "sarsara.ui.min.css",
+  ];
+
+  function checkAllResourcesLoaded() {
+    const resources = performance.getEntriesByType("resource");
+    const loadedFiles = resources
+      .map((res) => res.name.split("/").pop())
+      .filter((name) => requiredFiles.includes(name));
+
+    return requiredFiles.every((file) => loadedFiles.includes(file));
+  }
+
+  if (document.getElementById("search-box")) {
+    function fetchEngine() {
+      try {
+        const xhrobj = new XMLHttpRequest();
+        xhrobj.open("GET", "search-engine.bc");
+        xhrobj.send();
+
+        xhrobj.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            const container = document.getElementById("search-box");
+            container.innerHTML = xhrobj.responseText;
+
+            if (document.querySelector(".landing-flight")) {
+              const dep = document.querySelector(
+                ".landing-flight .dep-name"
+              ).innerText;
+              const des = document.querySelector(
+                ".landing-flight .des-name"
+              ).innerText;
+
+              const depId = document.querySelector(
+                ".landing-flight .dep-id"
+              ).innerText;
+
+              const desId = document.querySelector(
+                ".landing-flight .des-id"
+              ).innerText;
+
+              document.querySelector("#r-flight .departure.text-value ").value =
+                dep;
+              document.querySelector(
+                "#r-flight .locationId.from"
+              ).value = depId;
+
+              document.querySelector(
+                "#r-flight .destination.text-value"
+              ).value = des;
+              document.querySelector(
+                "#r-flight .locationId.to"
+              ).value = desId;
+            }
+            const scripts = container.getElementsByTagName("script");
+            for (let i = 0; i < scripts.length; i++) {
+              const scriptTag = document.createElement("script");
+              if (scripts[i].src) {
+                scriptTag.src = scripts[i].src;
+                scriptTag.async = false;
+              } else {
+                scriptTag.text = scripts[i].textContent;
+              }
+              document.head
+                .appendChild(scriptTag)
+                .parentNode.removeChild(scriptTag);
+            }
+          }
+        };
+      } catch (error) {
+        console.error("مشکلی پیش آمده است. لطفا صبور باشید", error);
+      }
+    }
+
+    function waitForFiles() {
+      if (checkAllResourcesLoaded()) {
+        fetchEngine();
+      } else {
+        setTimeout(waitForFiles, 500);
+      }
+    }
+
+    waitForFiles();
+  }
+});
+
 function openParentdropDown(e) {
   let o = e.closest("li").querySelector(".dropdownmenu"),
     t = o.classList.contains("hidden");
@@ -244,9 +332,9 @@ if (document.querySelectorAll(".swiper-4").length > 0)
     autoplay: { delay: 2500, disableOnInteraction: !1 },
     loop: 1,
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
     breakpoints: {
       640: { slidesPerView: 4, spaceBetween: 16 },
       768: { slidesPerView: 4, spaceBetween: 16 },
@@ -264,9 +352,9 @@ if (document.querySelectorAll(".swiper-1").length > 0)
     autoplay: { delay: 2500, disableOnInteraction: !1 },
     loop: 1,
     navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
     breakpoints: {
       640: { slidesPerView: 1.3, spaceBetween: 8 },
       768: { slidesPerView: 1.3, spaceBetween: 8 },

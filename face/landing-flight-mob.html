@@ -38,14 +38,14 @@
             <meta property="@key" content="@value" />
         </face>
     </basis>
-  
+
     <basis core="call" file="pwa.inc" />
     <link href="https://cdn.basiscore.net/basisfly.com/css/reservation_multiLang_css_calendar.css" type="text/css"
         rel="stylesheet" />
     <link href="[##cms.cms.cdn##]/css/sarsara-mob.ui.min.css" rel="stylesheet" />
-    <basis core="call" file="style.inc" />
+    <!-- <basis core="call" file="style.inc" /> -->
     <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.6.3.min.js" type="text/javascript"></script>
-  <style>
+    <style>
         .arrow {
             transition: transform 0.3s ease;
         }
@@ -53,11 +53,13 @@
         details[open] .arrow {
             transform: rotate(180deg);
         }
-        p img{
+
+        p img {
             width: 100%;
 
         }
-    </style></head>
+    </style>
+</head>
 
 <body class="landing-flight" onload="loadContentHomaPage()">
     <basis core="call" file="header.inc" />
@@ -90,9 +92,9 @@
             </div>
             <div
                 class="clear-both mb-[126px] rounded-b-[50px] m-auto max-xl:bg-none max-xl:h-auto max-xl:w-full max-xl:mb-7">
-                <div class="search-box-container fa w-full  m-auto clear-both max-xl:w-full">
-                    <div id="search-box"
-                        class="backdrop-opacity rounded-2xl mt-[250px] py-[30px] px-[22px] w-full m-auto float-right max-xl:bg-[#B7B7B7] max-xl:mt-8 max-xl:p-1">
+                <div class="search-box-container mobile-search-box fa w-full m-auto clear-both max-xl:w-full">
+                    <div id="search-box" dir="rtl"
+                        class="backdrop-opacity new-search-box rounded-2xl  py-[30px] px-[22px] w-full m-auto float-right max-xl:bg-[#B7B7B7] max-xl:mt-8 max-xl:p-1">
                         <div class="animate-pulse w-full flex justify-center items-center">
                             <img width="100" height="100" src="[##cms.cms.cdn##]/images/travel-now.png" alt="loader">
                         </div>
@@ -169,25 +171,25 @@
 
         <div class="w-full px-6">
             <basis core="print" datamembername="db.faq">
-            <layout>
-                <p id="faq-section" class="mb-8 text-2xl font-bold text-zinc-900">سوالات متداول</p>
-                <div class="w-full flex flex-col gap-4">@child</div>
-            </layout>
-            <face>
-                <details class="px-6 py-4 bg-zinc-50 rounded-2xl flex flex-col gap-2.5  mb-3">
-                    <summary>
-                        <div class="w-full cursor-pointer flex justify-between items-center ">
-                            <p class="font-bold  text-zinc-900">@text</p>
-                            <svg class="arrow" width="16" height="16" viewBox="0 0 24 24">
-                                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" />
-                            </svg>
-                        </div>
+                <layout>
+                    <p id="faq-section" class="mb-8 text-2xl font-bold text-zinc-900">سوالات متداول</p>
+                    <div class="w-full flex flex-col gap-4">@child</div>
+                </layout>
+                <face>
+                    <details class="px-6 py-4 bg-zinc-50 rounded-2xl flex flex-col gap-2.5  mb-3">
+                        <summary>
+                            <div class="w-full cursor-pointer flex justify-between items-center ">
+                                <p class="font-bold  text-zinc-900">@text</p>
+                                <svg class="arrow" width="16" height="16" viewBox="0 0 24 24">
+                                    <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                            </div>
 
-                    </summary>
-                    <div class="text-sm "> @largetext</div>
-                </details>
-            </face>
-        </basis>
+                        </summary>
+                        <div class="text-sm "> @largetext</div>
+                    </details>
+                </face>
+            </basis>
         </div>
     </main>
     <div class="mt-[150px]">

@@ -2105,6 +2105,14 @@ input:focus {
   border-radius: 8px !important;
   cursor: pointer;
 }
+.new-search-box .plus-count div,
+.new-search-box .minus-count div {
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  height: 100% !important;
+}
 .new-search-box .confirm-passenger:hover {
   background-color: var(--secondary-800) !important;
 }

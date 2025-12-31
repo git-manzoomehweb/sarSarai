@@ -1161,6 +1161,9 @@ i.fal {
 :root {
   --primary: #0a0573;
   --primary-800: #0a0573;
+  --primary-50: #e6e7f4;
+  --primary-100: #c1c1e5;
+  --primary-200: #989ad3;
   --primary-600: #1d1c87;
   --primary-500: #262792;
   --primary-400: #262792;
@@ -1648,12 +1651,33 @@ footer .route-container:hover svg path {
   left: 0 !important;
   top: 70% !important;
 }
-button.book-card__btn,.book-modal__btn__container{
+button.book-card__btn,
+.book-modal__btn__container {
   cursor: pointer !important;
 }
-.book-baseFare__btn:hover{
+.book-baseFare__btn:hover {
   background-color: var(--primary) !important;
 }
-.book-baseFare__btn:hover span{
+.book-baseFare__btn:hover span {
   color: white !important;
+}
+.book-research__container
+  .route-content
+  div.book-bg-primary-500.book-rounded-lg.book-px-2.book-text-center.book-cursor-pointer
+  svg {
+  height: 18px !important;
+  transform: scale(1.36) !important;
+  margin-top: 17px !important;
+}
+.route__delete,
+.book-research__container button {
+  cursor: pointer !important;
+}
+.book-plus,
+.book-minus {
+  width: 34px !important;
+  height: 34px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

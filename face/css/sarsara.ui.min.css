@@ -2444,13 +2444,13 @@ body {
 }
 .new-search-box #r-flight .flightclass-field {
   position: absolute !important;
-  top: -48px !important;
-  width: 172px !important;
-  border-radius: 16px !important;
+  top: -27px !important;
+  width: 142px !important;
+  border-radius: 13px !important;
   background: #fff;
   left: 0 !important;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  height: 76px !important;
+  height: 48px !important;
 }
 .new-search-box .label-flightclass svg:first-child,
 .new-search-box .label-flightclass .label-text {
@@ -2593,15 +2593,17 @@ body {
   margin-right: 54px !important;
 }
 .new-search-box #r-flighthotel .flightclass-field {
-  top: -93px !important;
   position: absolute !important;
-
-  width: 172px !important;
-  border-radius: 16px !important;
+  top: -59px !important;
+  width: 142px !important;
+  border-radius: 13px !important;
   background: #fff;
   left: 0 !important;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  height: 76px !important;
+  height: 48px !important;
+}
+.new-search-box .Add-Remove {
+  margin-left: -522px !important;
 }
 .new-search-box .plus-count,
 .new-search-box .minus-count {
@@ -2614,6 +2616,14 @@ body {
   align-items: center;
   border: 1px solid var(--primary);
   transition: all 0.4s ease-in-out;
+}
+.new-search-box .plus-count div,
+.new-search-box .minus-count div {
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  height: 100% !important;
 }
 .new-search-box .plus-count:hover,
 .new-search-box .minus-count:hover {
